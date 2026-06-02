@@ -3,8 +3,7 @@ name: Python CI
 on:
   push:
     branches:
-      
-main
+      - main
 
 jobs:
   test:
@@ -13,16 +12,13 @@ jobs:
 
     steps:
 
-      
-name: Repository herunterladen
-      uses: actions/checkout@v4
+      - name: Repository herunterladen
+        uses: actions/checkout@v4
 
-      
-name: Python installieren
-      uses: actions/setup-python@v5
-      with:
-        python-version: "3.12"
+      - name: Python installieren
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
 
-      
-name: Tests ausführen
-      run: python tests.py
+      - name: Tests ausführen
+        run: python tests.py
