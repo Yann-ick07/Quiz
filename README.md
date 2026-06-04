@@ -47,6 +47,24 @@ brainbuster/
     └── accounts.json    # Benutzerkonten (auto-erstellt)
 ```
 
+## Sequenzdiagramm
+
+Entwickler        GitHub         GitHub Actions      Testsystem
+     |               |                  |                |
+     | git push      |                  |                |
+     |-------------->|                  |                |
+     |               | Workflow Trigger |                |
+     |               |----------------->|                |
+     |               |                  | Checkout Repo  |
+     |               |                  |--------------->|
+     |               |                  | Python Setup   |
+     |               |                  |--------------->|
+     |               |                  | Tests starten  |
+     |               |                  |--------------->|
+     |               |                  | Testergebnis   |
+     |               |<-----------------|                |
+     | Status sehen  |                  |                |
+
 ## MoSCoW Anforderungen (Teil 2: Quiz Game)
 
 ### Must Have ✅
