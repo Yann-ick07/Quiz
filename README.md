@@ -49,21 +49,23 @@ brainbuster/
 
 ## Sequenzdiagramm
 
-Entwickler        GitHub         GitHub Actions      Testsystem
-     |               |                  |                |
-     | git push      |                  |                |
-     |-------------->|                  |                |
-     |               | Workflow Trigger |                |
-     |               |----------------->|                |
-     |               |                  | Checkout Repo  |
-     |               |                  |--------------->|
-     |               |                  | Python Setup   |
-     |               |                  |--------------->|
-     |               |                  | Tests starten  |
-     |               |                  |--------------->|
-     |               |                  | Testergebnis   |
-     |               |<-----------------|                |
-     | Status sehen  |                  |                |
+```text
+Entwickler        GitHub         GitHub Actions      Runner (Ubuntu)
+    |               |                  |                   |
+    | git push      |                  |                   |
+    |-------------->|                  |                   |
+    |               | Workflow startet |                   |
+    |               |----------------->|                   |
+    |               |                  | Code holen        |
+    |               |                  |------------------>|
+    |               |                  | Python installieren|
+    |               |                  |------------------>|
+    |               |                  | Tests ausführen   |
+    |               |                  |------------------>|
+    |               |                  | Ergebnis zurück   |
+    |<--------------|                  |                   |
+    | Ergebnis sehen|                  |                   |
+```
 
 ## MoSCoW Anforderungen (Teil 2: Quiz Game)
 
