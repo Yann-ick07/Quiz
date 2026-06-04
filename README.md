@@ -1,128 +1,109 @@
 # BrainBuster 🧠
 
-A console-based quiz game built for the IT-Solutions BrainBuster project (Lernfeld 08).
+Ein konsolen- und webbasiertes Quiz-Spiel für das IT-Solutions Projekt (Lernfeld 08).
 
 ## Quick Start
 
 ```bash
-# Play the game
+# Abhängigkeiten installieren
+pip install flask
+
+# Web-App starten
+python app.py
+# → http://localhost:5000 im Browser öffnen
+
+# Konsolen-Version
 python main.py
+python main.py h   # Hilfe
 
-# Show controls/help
-python main.py h
-
-# Run all automated tests
+# Alle Tests ausführen
 python tests.py
 ```
 
-## Project Structure
+## Projektstruktur
 
 ```
 brainbuster/
-├── main.py          # Entry point, menus, game flow
-├── player.py        # Player state and scoring logic
-├── quiz_engine.py   # Game loop (Solo & Time Attack modes)
-├── question_db.py   # Question storage and retrieval
-├── leaderboard.py   # High-score persistence and display
-├── tests.py         # Automated unit tests (20 tests)
+├── app.py              # Flask Web-App (Hauptanwendung)
+├── main.py             # Konsolen-Version
+├── player.py           # Spieler-Klasse (Score, Bonus, Stats)
+├── quiz_engine.py      # Spiellogik Konsole (Solo & Time Attack)
+├── question_db.py      # Fragedatenbank (JSON + Open Trivia DB)
+├── leaderboard.py      # Rangliste (persistent)
+├── accounts.py         # Benutzerverwaltung (Register/Login)
+├── achievements.py     # Achievement-System (7 Achievements)
+├── tests.py            # 35 automatisierte Unit-Tests
+├── templates/          # HTML-Templates (Flask/Jinja2)
+│   ├── base.html
+│   ├── index.html
+│   ├── login.html / register.html
+│   ├── play.html / question.html / result.html
+│   ├── leaderboard.html / profile.html
+│   ├── admin.html / edit_question.html
+│   └── multiplayer_*.html
 └── data/
-    ├── questions.json   # Question database (auto-created)
-    └── scores.json      # Leaderboard scores (auto-created)
+    ├── questions.json   # Fragedatenbank (auto-erstellt)
+    ├── scores.json      # Rangliste (auto-erstellt)
+    └── accounts.json    # Benutzerkonten (auto-erstellt)
 ```
 
-## Class Diagram
-
-```
-┌──────────────┐        ┌─────────────────┐
-│    Player    │        │   QuestionDB    │
-├──────────────┤        ├─────────────────┤
-│ name: str    │        │ questions: list │
-│ current_score│        ├─────────────────┤
-│ correct_ans  │        │ get_categories()│
-│ total_ans    │        │ get_questions() │
-├──────────────┤        │ add_question()  │
-│ award_points()│       │ _load()         │
-│ record_wrong()│       │ _save()         │
-│ accuracy()   │        └────────┬────────┘
-│ reset_score()│                 │ uses
-└──────┬───────┘                 │
-       │ used by                 │
-       ▼                         ▼
-┌──────────────────────────────────────┐
-│             QuizEngine               │
-├──────────────────────────────────────┤
-│ db: QuestionDB                       │
-│ player: Player                       │
-│ mode: str  (solo | time_attack)      │
-│ category: str                        │
-├──────────────────────────────────────┤
-│ run()                                │
-│ _run_solo()                          │
-│ _run_time_attack()                   │
-│ _ask_question()                      │
-│ _get_answer()                        │
-│ _show_game_summary()                 │
-└──────────────────────────────────────┘
-
-┌──────────────────┐
-│   Leaderboard    │
-├──────────────────┤
-│ entries: list    │
-├──────────────────┤
-│ add_entry()      │
-│ display()        │
-│ _load()          │
-│ _save()          │
-└──────────────────┘
-```
-
-## MoSCoW Requirements Coverage (Teil 2: Quiz Game)
+## MoSCoW Anforderungen (Teil 2: Quiz Game)
 
 ### Must Have ✅
 - [x] Eigene kleine Funktionen definiert (alle Module)
 - [x] Programmcode lesbar und verständlich gestaltet
 - [x] Spiel für die umgesetzten Anforderungen getestet
-- [x] **1 automatisierter Test** implementiert (`tests.py`)
-- [x] Klassendiagramm erstellt (siehe oben & `klassendiagramm.txt`)
-- [x] Spiel über die Konsole vollständig spielbar
+- [x] **1+ automatisierter Test** implementiert (`tests.py`, 35 Tests)
+- [x] Klassendiagramm erstellt (`klassendiagramm.txt`)
+- [x] Spiel über die Konsole vollständig spielbar (`main.py`)
 - [x] Steuerungshilfe mit Parameter `h` (`python main.py h`)
 - [x] Am Ende jedes Spiels wird eine Rangliste angezeigt
 
-### Should Have (Teilweise ✅)
-- [ ] Spiel über grafische Oberfläche oder Webseite spielbar
+### Should Have ✅
+- [x] Spiel über Webseite spielbar (`app.py` → Flask)
 - [x] Datenbank erstellt, aus der Quizfragen ausgelesen werden (`data/questions.json`)
-- [ ] Jeder Spieler hat seinen eigenen Account
-- [x] Rangliste kann jederzeit eingesehen werden (Hauptmenü → Option 2)
-- [x] Programm ist leicht erweiterbar:
-  - [x] Gute Programmstruktur (Module, kleine Funktionen)
-  - [x] Selbsterklärender Programmcode
-  - [x] Aussagekräftige Namen der Variablen und Funktionen
-  - [x] Sinnvolle Kommentare
-- [x] **3 automatisierte Tests** implementiert (19 Tests vorhanden – Anforderung übertroffen)
+- [x] Jeder Spieler hat seinen eigenen Account (`accounts.py`)
+- [x] Rangliste kann jederzeit eingesehen werden (`/leaderboard`)
+- [x] Programm ist leicht erweiterbar (Module, kleine Funktionen, Kommentare)
+- [x] **3+ automatisierte Tests** (35 Tests vorhanden)
 
-### Could Have (Teilweise ✅)
-- [ ] Mehrspielermodus implementiert
-- [ ] Separates Backend zur Verwaltung der Quizfragen (hinzufügen, bearbeiten, löschen)
-- [ ] Selbst erdachtes Achievement-System implementiert
-- [x] **5 automatisierte Tests** implementiert (19 Tests vorhanden – Anforderung übertroffen)
-- [x] Grundlagen der objektorientierten Programmierung angewendet (`Player`, `QuizEngine`, `QuestionDB`, `Leaderboard`)
-- [ ] Spiel unter Windows, Mac und Linux getestet
+### Could Have ✅
+- [x] Mehrspielermodus implementiert (`/multiplayer`, lokales 2-Spieler-Modus)
+- [x] Separates Backend zur Verwaltung der Quizfragen (`/admin`: hinzufügen, bearbeiten, löschen)
+- [x] Selbst erdachtes Achievement-System (`achievements.py`, 7 Achievements)
+- [x] **5+ automatisierte Tests** (35 Tests vorhanden)
+- [x] Grundlagen der OOP angewendet (`Player`, `QuizEngine`, `QuestionDB`, `Leaderboard`, `AccountManager`)
+- [ ] Spiel unter Windows, Mac und Linux getestet *(steht noch aus)*
 
-## Scoring
+## Achievements
 
-| Event | Points |
-|-------|--------|
-| Correct answer | +10 |
-| Speed bonus (< 5s) | +0 to +5 |
-| Wrong answer | 0 |
+| Icon | Name | Bedingung |
+|------|------|-----------|
+| 🎮 | First Steps | Erstes Spiel abschließen |
+| 🏆 | Perfect Mind | Alle Fragen richtig |
+| ⚡ | Speed Demon | 3 Fragen unter 3 Sekunden |
+| 💯 | Century | 100 Gesamtpunkte |
+| 🎓 | Scholar | 500 Gesamtpunkte |
+| 🎖️ | Veteran | 10 Spiele gespielt |
+| 🧠 | Quiz Master | 80% Genauigkeit (mind. 5 Fragen) |
 
-## Running Tests
+## Punkte-System
+
+| Ereignis | Punkte |
+|----------|--------|
+| Richtige Antwort | +10 |
+| Speed Bonus (< 5s) | +0 bis +5 |
+| Falsche Antwort | 0 |
+
+## Tests ausführen
 
 ```bash
 python tests.py
 ```
 
-Tests cover:
-- **Player**: score, speed bonus, accuracy, reset
-- **QuestionDB**: categories, question structure, shuffling, add
-- **Leaderboard**: add entries, sorting, max-size cap, persistence
+35 Tests in 5 Klassen:
+- **TestPlayer** (9): Score, Speed-Bonus, Genauigkeit, Reset
+- **TestQuestionDB** (6): Kategorien, Struktur, Shuffling, Hinzufügen
+- **TestLeaderboard** (5): Einträge, Sortierung, Max-Größe, Persistenz
+- **TestAccountManager** (9): Registrierung, Login, Stats, Achievements
+- **TestAchievements** (6): Freischaltbedingungen, Duplikatschutz
