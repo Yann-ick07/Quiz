@@ -20,33 +20,6 @@ python main.py h   # Hilfe
 python tests.py
 ```
 
-## Projektstruktur
-
-```
-brainbuster/
-├── app.py              # Flask Web-App (Hauptanwendung)
-├── main.py             # Konsolen-Version
-├── player.py           # Spieler-Klasse (Score, Bonus, Stats)
-├── quiz_engine.py      # Spiellogik Konsole (Solo & Time Attack)
-├── question_db.py      # Fragedatenbank (JSON + Open Trivia DB)
-├── leaderboard.py      # Rangliste (persistent)
-├── accounts.py         # Benutzerverwaltung (Register/Login)
-├── achievements.py     # Achievement-System (7 Achievements)
-├── tests.py            # 35 automatisierte Unit-Tests
-├── templates/          # HTML-Templates (Flask/Jinja2)
-│   ├── base.html
-│   ├── index.html
-│   ├── login.html / register.html
-│   ├── play.html / question.html / result.html
-│   ├── leaderboard.html / profile.html
-│   ├── admin.html / edit_question.html
-│   └── multiplayer_*.html
-└── data/
-    ├── questions.json   # Fragedatenbank (auto-erstellt)
-    ├── scores.json      # Rangliste (auto-erstellt)
-    └── accounts.json    # Benutzerkonten (auto-erstellt)
-```
-
 ## Sequenzdiagramm
 
 ```text
@@ -67,34 +40,6 @@ Entwickler        GitHub         GitHub Actions      Runner (Ubuntu)
     | Ergebnis sehen|                  |                   |
 ```
 
-## MoSCoW Anforderungen (Teil 2: Quiz Game)
-
-### Must Have ✅
-- [x] Eigene kleine Funktionen definiert (alle Module)
-- [x] Programmcode lesbar und verständlich gestaltet
-- [x] Spiel für die umgesetzten Anforderungen getestet
-- [x] **1+ automatisierter Test** implementiert (`tests.py`, 35 Tests)
-- [x] Klassendiagramm erstellt (`klassendiagramm.txt`)
-- [x] Spiel über die Konsole vollständig spielbar (`main.py`)
-- [x] Steuerungshilfe mit Parameter `h` (`python main.py h`)
-- [x] Am Ende jedes Spiels wird eine Rangliste angezeigt
-
-### Should Have ✅
-- [x] Spiel über Webseite spielbar (`app.py` → Flask)
-- [x] Datenbank erstellt, aus der Quizfragen ausgelesen werden (`data/questions.json`)
-- [x] Jeder Spieler hat seinen eigenen Account (`accounts.py`)
-- [x] Rangliste kann jederzeit eingesehen werden (`/leaderboard`)
-- [x] Programm ist leicht erweiterbar (Module, kleine Funktionen, Kommentare)
-- [x] **3+ automatisierte Tests** (35 Tests vorhanden)
-
-### Could Have ✅
-- [x] Mehrspielermodus implementiert (`/multiplayer`, lokales 2-Spieler-Modus)
-- [x] Separates Backend zur Verwaltung der Quizfragen (`/admin`: hinzufügen, bearbeiten, löschen)
-- [x] Selbst erdachtes Achievement-System (`achievements.py`, 7 Achievements)
-- [x] **5+ automatisierte Tests** (35 Tests vorhanden)
-- [x] Grundlagen der OOP angewendet (`Player`, `QuizEngine`, `QuestionDB`, `Leaderboard`, `AccountManager`)
-- [ ] Spiel unter Windows, Mac und Linux getestet *(steht noch aus)*
-
 ## Achievements
 
 | Icon | Name | Bedingung |
@@ -114,22 +59,6 @@ Entwickler        GitHub         GitHub Actions      Runner (Ubuntu)
 | Richtige Antwort | +10 |
 | Speed Bonus (< 5s) | +0 bis +5 |
 | Falsche Antwort | 0 |
-
-## Tests ausführen
-
-```bash
-python tests.py
-```
-
-35 Tests in 5 Klassen:
-
-```
-- **TestPlayer** (9): Score, Speed-Bonus, Genauigkeit, Reset
-- **TestQuestionDB** (6): Kategorien, Struktur, Shuffling, Hinzufügen
-- **TestLeaderboard** (5): Einträge, Sortierung, Max-Größe, Persistenz
-- **TestAccountManager** (9): Registrierung, Login, Stats, Achievements
-- **TestAchievements** (6): Freischaltbedingungen, Duplikatschutz
-```
 
 ```text
 ## Team-Organisation im Scrum
