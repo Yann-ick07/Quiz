@@ -123,6 +123,14 @@ python tests.py
 
 35 Tests in 5 Klassen:
 
+```
+- **TestPlayer** (9): Score, Speed-Bonus, Genauigkeit, Reset
+- **TestQuestionDB** (6): Kategorien, Struktur, Shuffling, Hinzufügen
+- **TestLeaderboard** (5): Einträge, Sortierung, Max-Größe, Persistenz
+- **TestAccountManager** (9): Registrierung, Login, Stats, Achievements
+- **TestAchievements** (6): Freischaltbedingungen, Duplikatschutz
+```
+
 ```text
 ## Team-Organisation im Scrum
 ==========================
@@ -155,9 +163,4 @@ Aufgaben:
 
 Hinweis:
 Da es sich um ein kleines Projektteam handelt, übernehmen alle Teammitglieder zusätzlich Entwicklungsaufgaben und unterstützen sich gegenseitig bei Tests, Dokumentation und Qualitätssicherung.
-```
-- **TestPlayer** (9): Score, Speed-Bonus, Genauigkeit, Reset
-- **TestQuestionDB** (6): Kategorien, Struktur, Shuffling, Hinzufügen
-- **TestLeaderboard** (5): Einträge, Sortierung, Max-Größe, Persistenz
-- **TestAccountManager** (9): Registrierung, Login, Stats, Achievements
-- **TestAchievements** (6): Freischaltbedingungen, Duplikatschutz
+
