@@ -76,28 +76,37 @@ brainbuster/
 └──────────────────┘
 ```
 
-## MoSCoW Requirements Coverage
+## MoSCoW Requirements Coverage (Teil 2: Quiz Game)
 
 ### Must Have ✅
-- [x] Own small functions defined (every module)
-- [x] Readable and well-commented code
-- [x] Game tested for implemented features
-- [x] **20 automated tests** implemented (`tests.py`)
-- [x] Class diagram (see above)
-- [x] Fully playable via console
-- [x] Help via `python main.py h`
-- [x] Leaderboard shown at end of each game
+- [x] Eigene kleine Funktionen definiert (alle Module)
+- [x] Programmcode lesbar und verständlich gestaltet
+- [x] Spiel für die umgesetzten Anforderungen getestet
+- [x] **1 automatisierter Test** implementiert (`tests.py`)
+- [x] Klassendiagramm erstellt (siehe oben & `klassendiagramm.txt`)
+- [x] Spiel über die Konsole vollständig spielbar
+- [x] Steuerungshilfe mit Parameter `h` (`python main.py h`)
+- [x] Am Ende jedes Spiels wird eine Rangliste angezeigt
 
-### Should Have ✅
-- [x] Questions stored in a JSON database
-- [x] Leaderboard viewable at any time from the menu
-- [x] Good code structure (modules, small functions, clear names)
-- [x] **20 automated tests** (exceeds the "3 tests" requirement)
+### Should Have (Teilweise ✅)
+- [ ] Spiel über grafische Oberfläche oder Webseite spielbar
+- [x] Datenbank erstellt, aus der Quizfragen ausgelesen werden (`data/questions.json`)
+- [ ] Jeder Spieler hat seinen eigenen Account
+- [x] Rangliste kann jederzeit eingesehen werden (Hauptmenü → Option 2)
+- [x] Programm ist leicht erweiterbar:
+  - [x] Gute Programmstruktur (Module, kleine Funktionen)
+  - [x] Selbsterklärender Programmcode
+  - [x] Aussagekräftige Namen der Variablen und Funktionen
+  - [x] Sinnvolle Kommentare
+- [x] **3 automatisierte Tests** implementiert (19 Tests vorhanden – Anforderung übertroffen)
 
-### Could Have (Partial)
-- [x] Open Trivia DB integration (`fetch_questions_from_opentdb` in `question_db.py`)
-- [ ] Multiplayer mode (planned for next sprint)
-- [ ] Separate backend admin panel
+### Could Have (Teilweise ✅)
+- [ ] Mehrspielermodus implementiert
+- [ ] Separates Backend zur Verwaltung der Quizfragen (hinzufügen, bearbeiten, löschen)
+- [ ] Selbst erdachtes Achievement-System implementiert
+- [x] **5 automatisierte Tests** implementiert (19 Tests vorhanden – Anforderung übertroffen)
+- [x] Grundlagen der objektorientierten Programmierung angewendet (`Player`, `QuizEngine`, `QuestionDB`, `Leaderboard`)
+- [ ] Spiel unter Windows, Mac und Linux getestet
 
 ## Scoring
 
