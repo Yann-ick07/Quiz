@@ -1,7 +1,28 @@
 """
-Question database - loads questions from JSON file and provides
-category/question access. Falls back to built-in questions if the
-file is missing or the Open Trivia DB is unreachable.
+question_db.py – Fragedatenbank für BrainBuster
+
+Verwaltet alle Quizfragen: Laden, Speichern, Filtern nach Kategorie
+und optionaler Abruf aus der Open Trivia Database API.
+
+Datenformat einer Frage (JSON):
+    {
+        "category": "Science",
+        "question": "What is H2O?",
+        "options":  ["Water", "Oxygen", "Hydrogen", "Salt"],
+        "answer":   0          ← 0-basierter Index der richtigen Antwort
+    }
+
+Warum JSON statt einer echten Datenbank?
+    Für diesen Prototyp reicht JSON vollständig aus: keine Datenbankinstallation,
+    direktes Lesen/Schreiben, portabel auf allen Betriebssystemen.
+    Das Format ist einfach genug, dass das Lehrerteam Fragen auch manuell
+    in der Datei ergänzen kann. In einer Produktionsversion würde man
+    SQLite oder PostgreSQL verwenden.
+
+Warum eingebaute Fallback-Fragen?
+    Das Spiel soll auch ohne Internetverbindung und ohne vorhandene
+    questions.json funktionieren. Die 15 Fallback-Fragen decken alle
+    Grundkategorien ab und ermöglichen sofortiges Spielen.
 """
 
 import json
@@ -11,9 +32,11 @@ import urllib.request
 import urllib.error
 from typing import Optional
 
+# Pfad zur Fragedatei – liegt im data/-Unterordner neben dieser Datei
 DATA_FILE = os.path.join(os.path.dirname(__file__), "data", "questions.json")
 
-# Built-in fallback questions so the game works without internet
+# Eingebaute Fallback-Fragen für den Offline-Betrieb.
+# Jede Frage hat genau 4 Antwortoptionen und einen 0-basierten Korrektheitsindex.
 FALLBACK_QUESTIONS = [
     {
         "category": "Science",
@@ -119,13 +142,25 @@ FALLBACK_QUESTIONS = [
 
 
 class QuestionDB:
-    """Manages quiz questions stored in a JSON file."""
+    """
+    Lädt, speichert und filtert Quizfragen aus einer JSON-Datei.
+
+    Beim ersten Start ohne vorhandene questions.json werden die eingebauten
+    Fallback-Fragen verwendet. Über das Admin-Backend oder add_question()
+    hinzugefügte Fragen werden dauerhaft in data/questions.json gespeichert.
+    """
 
     def __init__(self):
+        """Lädt Fragen beim Start – aus Datei oder Fallback."""
         self.questions = self._load_questions()
 
     def _load_questions(self) -> list:
-        """Load questions from the JSON file, or fall back to built-ins."""
+        """
+        Versucht, Fragen aus data/questions.json zu laden.
+        Fällt auf die eingebauten Fragen zurück, wenn:
+          - die Datei nicht existiert (erster Start)
+          - die Datei beschädigt/ungültiges JSON enthält
+        """
         if os.path.exists(DATA_FILE):
             try:
                 with open(DATA_FILE, "r", encoding="utf-8") as f:
@@ -139,20 +174,36 @@ class QuestionDB:
         return FALLBACK_QUESTIONS
 
     def get_categories(self) -> list:
-        """Return a sorted list of unique categories."""
+        """
+        Gibt alle vorhandenen Kategorien alphabetisch sortiert zurück.
+        Verwendet ein Set, um Duplikate zu vermeiden.
+        """
         return sorted(set(q["category"] for q in self.questions))
 
     def get_question_count(self, category: str) -> int:
-        """Return the number of questions in a given category."""
+        """
+        Zählt die Fragen einer bestimmten Kategorie.
+        Wird in der Kategorienauswahl (Konsole) für die Anzeige verwendet.
+        """
         return sum(1 for q in self.questions if q["category"] == category)
 
     def get_questions(self, category: str, count: Optional[int] = None) -> list:
         """
-        Return a shuffled list of questions for a category.
-        If category is 'random', pull from all categories.
+        Gibt eine zufällig gemischte Liste von Fragen zurück.
+
+        Wenn category == "random", werden Fragen aus allen Kategorien gemischt.
+        random.shuffle() mischt die Liste in-place, daher wird zuerst eine
+        Kopie erstellt (list(...)), um die Original-Liste unverändert zu lassen.
+
+        Args:
+            category: Kategoriename oder "random" für alle Kategorien
+            count:    Maximale Anzahl zurückgegebener Fragen (None = alle)
+
+        Returns:
+            Gemischte Liste von Frage-Dicts
         """
         if category == "random":
-            pool = list(self.questions)
+            pool = list(self.questions)     # Kopie, damit Original unverändert bleibt
         else:
             pool = [q for q in self.questions if q["category"] == category]
 
@@ -165,8 +216,13 @@ class QuestionDB:
 
     def add_question(self, category: str, question: str, options: list, answer: int):
         """
-        Add a new question to the database and persist to file.
-        answer is the 0-based index of the correct option.
+        Fügt eine neue Frage zur Datenbank hinzu und speichert sie dauerhaft.
+
+        Args:
+            category: Kategorie der Frage (kann neue oder bestehende sein)
+            question: Fragetext
+            options:  Liste von genau 4 Antwortoptionen
+            answer:   0-basierter Index der richtigen Antwort (0–3)
         """
         new_q = {
             "category": category,
@@ -179,7 +235,10 @@ class QuestionDB:
         print(f"Question added to category '{category}'.")
 
     def _save_questions(self):
-        """Persist questions to the JSON data file."""
+        """
+        Schreibt alle Fragen in data/questions.json.
+        ensure_ascii=False erlaubt Umlaute und Sonderzeichen direkt im JSON.
+        """
         os.makedirs(os.path.dirname(DATA_FILE), exist_ok=True)
         with open(DATA_FILE, "w", encoding="utf-8") as f:
             json.dump(self.questions, f, indent=2, ensure_ascii=False)
@@ -187,21 +246,36 @@ class QuestionDB:
 
 def fetch_questions_from_opentdb(amount: int = 20, category_id: int = 9) -> list:
     """
-    Fetch questions from the Open Trivia Database API.
-    Returns a list of question dicts compatible with our format,
-    or an empty list on failure.
+    Ruft Fragen von der Open Trivia Database API ab (https://opentdb.com).
+
+    Die API gibt Fragen mit einer richtigen und drei falschen Antworten
+    zurück. Diese Funktion mischt die Optionen und merkt sich den neuen
+    Index der richtigen Antwort, damit das interne Format eingehalten wird.
+
+    Warum urllib statt requests?
+        urllib ist in der Python-Standardbibliothek enthalten –
+        kein extra Paket nötig.
+
+    Args:
+        amount:      Anzahl der abzurufenden Fragen (max. 50 bei opentdb)
+        category_id: Kategorie-ID der Open Trivia DB (9 = General Knowledge)
+
+    Returns:
+        Liste von Frage-Dicts im internen Format, oder [] bei Fehler
     """
     url = (
         f"https://opentdb.com/api.php?amount={amount}"
         f"&category={category_id}&type=multiple"
     )
     try:
-        with urllib.request.urlopen(url, timeout=5) as resp:
+        with urllib.request.urlopen(url, timeout=5) as resp:  # nosec B310
             data = json.loads(resp.read().decode())
         questions = []
         for item in data.get("results", []):
+            # Richtige + falsche Antworten zusammenführen und mischen
             options = item["incorrect_answers"] + [item["correct_answer"]]
             random.shuffle(options)
+            # Den neuen Index der richtigen Antwort nach dem Mischen finden
             correct_index = options.index(item["correct_answer"])
             questions.append(
                 {
@@ -213,4 +287,5 @@ def fetch_questions_from_opentdb(amount: int = 20, category_id: int = 9) -> list
             )
         return questions
     except (urllib.error.URLError, json.JSONDecodeError, KeyError):
+        # Bei Netzwerkfehler oder unerwartetem API-Format: leer zurückgeben
         return []
