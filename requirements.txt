@@ -1,0 +1,11 @@
+# BrainBuster – Python-Abhängigkeiten
+# Installation: pip install -r requirements.txt
+
+# ── Web-App ───────────────────────────────────────────────────────────────────
+flask>=3.0.0          # Web-Framework für die Browser-Oberfläche
+
+# ── QS-Tools (für Entwicklung und CI-Pipeline) ────────────────────────────────
+flake8>=7.0.0         # QS 1: Linting / PEP8-Prüfung
+black>=24.0.0         # QS 2: Code-Formatierung
+bandit>=1.7.0         # QS 3: Sicherheits-Scan
+coverage>=7.0.0       # QS 4: Testabdeckung
