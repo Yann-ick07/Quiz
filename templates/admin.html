@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block title %}– Admin{% endblock %}
+{% block extra_style %}
+<style>
+  .tabs { display:flex; gap:0.5rem; margin-bottom:1.5rem; border-bottom:1px solid var(--border); }
+  .tab { padding:0.6rem 1.2rem; border-radius:8px 8px 0 0; cursor:pointer; color:var(--muted); font-weight:600; font-size:0.9rem; border:1px solid transparent; border-bottom:none; transition:all 0.2s; }
+  .tab.active { color:var(--accent2); border-color:var(--border); background:var(--surface); margin-bottom:-1px; }
+  .tab-panel { display:none; }
+  .tab-panel.active { display:block; }
+  .truncate { max-width:300px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+</style>
+{% endblock %}
+{% block content %}
+<h1>⚙️ Admin Backend</h1>
+<p style="color:var(--muted);margin-bottom:1.5rem">Quizfragen verwalten</p>
+<div class="tabs">
+  <div class="tab active" onclick="switchTab('list')">📋 Fragenliste ({{ questions|length }})</div>
+  <div class="tab" onclick="switchTab('add')">➕ Frage hinzufügen</div>
+</div>
+<div class="tab-panel active" id="tab-list">
+  <div class="card">
+    {% if questions %}
+    <table>
+      <thead><tr><th>#</th><th>Frage</th><th>Kategorie</th><th>Aktionen</th></tr></thead>
+      <tbody>
+        {% for q in questions %}
+        <tr>
+          <td style="color:var(--muted)">{{ loop.index0 }}</td>
+          <td class="truncate">{{ q.question }}</td>
+          <td><span class="badge badge-purple">{{ q.category }}</span></td>
+          <td>
+            <a href="/admin/edit/{{ loop.index0 }}" class="btn btn-secondary btn-sm">Bearbeiten</a>
+            <form method="POST" action="/admin/delete/{{ loop.index0 }}" style="display:inline" onsubmit="return confirm('Wirklich löschen?')">
+              <button type="submit" class="btn btn-danger btn-sm">Löschen</button>
+            </form>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% else %}<p style="color:var(--muted)">Noch keine Fragen.</p>{% endif %}
+  </div>
+</div>
+<div class="tab-panel" id="tab-add">
+  <div class="card">
+    <h2>Neue Frage hinzufügen</h2>
+    <form method="POST" action="/admin/add">
+      <div class="form-group"><label>Bestehende Kategorie</label><select class="form-control" name="category">{% for cat in categories %}<option>{{ cat }}</option>{% endfor %}</select></div>
+      <div class="form-group"><label>… oder neue Kategorie</label><input class="form-control" name="new_category" placeholder="z.B. Musik"></div>
+      <div class="form-group"><label>Frage</label><input class="form-control" name="question" required></div>
+      <div class="form-group"><label>Option A (richtige Antwort)</label><input class="form-control" name="option_a" required></div>
+      <div class="form-group"><label>Option B</label><input class="form-control" name="option_b" required></div>
+      <div class="form-group"><label>Option C</label><input class="form-control" name="option_c" required></div>
+      <div class="form-group"><label>Option D</label><input class="form-control" name="option_d" required></div>
+      <input type="hidden" name="correct" value="0">
+      <p style="color:var(--muted);font-size:0.85rem;margin-bottom:1rem">⚠️ Option A ist die richtige Antwort – die Reihenfolge wird beim Spielen gemischt.</p>
+      <button type="submit" class="btn btn-primary">Speichern</button>
+    </form>
+  </div>
+</div>
+<script>
+  function switchTab(name) {
+    document.querySelectorAll('.tab').forEach((t,i) => t.classList.toggle('active', ['list','add'][i] === name));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.toggle('active', p.id === 'tab-' + name));
+  }
+</script>
+{% endblock %}

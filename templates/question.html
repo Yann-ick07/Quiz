@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}– Frage {{ question_number }}{% endblock %}
+{% block extra_style %}
+<style>
+  .progress-bar-wrap { background: var(--surface2); border-radius: 4px; height: 6px; margin-bottom: 2rem; }
+  .progress-bar-fill { background: var(--accent); height: 6px; border-radius: 4px; }
+  .question-text { font-size: 1.3rem; font-weight: 700; margin: 1.5rem 0; line-height: 1.5; }
+  .options { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+  .option-btn { background: var(--surface2); border: 2px solid var(--border); border-radius: var(--radius); padding: 1rem; text-align: left; cursor: pointer; color: var(--text); font-size: 0.95rem; transition: all 0.15s; display: flex; align-items: center; gap: 0.8rem; }
+  .option-btn:hover { border-color: var(--accent); background: #4c1d9520; }
+  .option-label { font-weight: 800; color: var(--accent2); font-size: 1.1rem; min-width: 1.4rem; }
+  .meta { display: flex; justify-content: space-between; color: var(--muted); font-size: 0.85rem; margin-bottom: 0.5rem; }
+  @media(max-width:550px){ .options { grid-template-columns: 1fr; } }
+</style>
+{% endblock %}
+{% block content %}
+<div class="meta">
+  <span>Frage {{ question_number }} / {{ total_questions }}</span>
+  <span>Punkte: <strong>{{ score }}</strong></span>
+  <span>📂 {{ category }}</span>
+</div>
+<div class="progress-bar-wrap">
+  <div class="progress-bar-fill" style="width:{{ (question_number / total_questions * 100)|int }}%"></div>
+</div>
+<div class="card">
+  <div class="question-text">{{ question }}</div>
+  <form method="POST" action="/game/answer" id="answer-form">
+    <input type="hidden" name="answer" id="answer-input">
+    <input type="hidden" name="answer_time" id="answer-time">
+    <div class="options">
+      {% set labels = ['A','B','C','D'] %}
+      {% for i, opt in options|enumerate %}
+      <button type="button" class="option-btn" onclick="submitAnswer({{ i }})">
+        <span class="option-label">{{ labels[i] }}</span><span>{{ opt }}</span>
+      </button>
+      {% endfor %}
+    </div>
+  </form>
+</div>
+<script>
+  const startTime = Date.now();
+  function submitAnswer(index) {
+    document.getElementById('answer-input').value = index;
+    document.getElementById('answer-time').value = ((Date.now() - startTime) / 1000).toFixed(2);
+    document.getElementById('answer-form').submit();
+  }
+</script>
+{% endblock %}

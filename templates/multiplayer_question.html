@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}– Multiplayer Frage{% endblock %}
+{% block extra_style %}
+<style>
+  .player-banner { background:var(--surface2); border:2px solid var(--accent); border-radius:var(--radius); padding:0.8rem 1.2rem; margin-bottom:1.5rem; display:flex; justify-content:space-between; align-items:center; }
+  .scoreboard { display:flex; gap:2rem; }
+  .score-item { text-align:center; }
+  .score-item .name { font-size:0.85rem; color:var(--muted); }
+  .score-item .pts { font-size:1.3rem; font-weight:800; color:var(--accent2); }
+  .options { display:grid; grid-template-columns:1fr 1fr; gap:0.8rem; margin-top:1rem; }
+  .option-btn { background:var(--surface2); border:2px solid var(--border); border-radius:var(--radius); padding:1rem; cursor:pointer; color:var(--text); font-size:0.95rem; transition:all 0.15s; display:flex; gap:0.8rem; align-items:center; }
+  .option-btn:hover { border-color:var(--accent); background:#4c1d9520; }
+  .option-label { font-weight:800; color:var(--accent2); font-size:1.1rem; min-width:1.4rem; }
+  @media(max-width:500px){ .options{grid-template-columns:1fr;} }
+</style>
+{% endblock %}
+{% block content %}
+<div class="player-banner">
+  <div><strong style="color:var(--accent2)">Spieler {{ player_num }} ist dran:</strong> <span style="font-size:1.1rem;font-weight:700;margin-left:0.5rem">{{ current_player.name }}</span></div>
+  <div class="scoreboard">
+    <div class="score-item"><div class="name">{{ p1.name }}</div><div class="pts">{{ p1.score }}</div></div>
+    <div class="score-item" style="color:var(--muted)">vs</div>
+    <div class="score-item"><div class="name">{{ p2.name }}</div><div class="pts">{{ p2.score }}</div></div>
+  </div>
+</div>
+<div class="card">
+  <div style="color:var(--muted);font-size:0.85rem;margin-bottom:0.5rem">Frage {{ question_number }} / {{ total_questions }}</div>
+  <div style="font-size:1.2rem;font-weight:700;margin-bottom:1rem;line-height:1.5">{{ question }}</div>
+  <form method="POST" action="/multiplayer/answer" id="mp-form">
+    <input type="hidden" name="answer" id="mp-answer">
+    <div class="options">
+      {% set labels = ['A','B','C','D'] %}
+      {% for i, opt in options|enumerate %}
+      <button type="button" class="option-btn" onclick="mpAnswer({{ i }})">
+        <span class="option-label">{{ labels[i] }}</span><span>{{ opt }}</span>
+      </button>
+      {% endfor %}
+    </div>
+  </form>
+</div>
+<script>
+  function mpAnswer(idx) {
+    document.getElementById('mp-answer').value = idx;
+    document.getElementById('mp-form').submit();
+  }
+</script>
+{% endblock %}

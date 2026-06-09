@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}– Home{% endblock %}
+{% block extra_style %}
+<style>
+  .hero { text-align: center; padding: 4rem 0 3rem; }
+  .hero h1 { font-size: 3rem; background: linear-gradient(135deg, #a855f7, #7c3aed); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .hero p { color: var(--muted); font-size: 1.1rem; margin: 1rem 0 2rem; }
+  .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  .categories { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1rem; }
+  .cat-chip { background: var(--surface2); border: 1px solid var(--border); padding: 0.3rem 0.9rem; border-radius: 20px; font-size: 0.85rem; color: var(--muted); }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
+  @media(max-width:600px){ .grid2 { grid-template-columns: 1fr; } }
+</style>
+{% endblock %}
+{% block content %}
+<div class="hero">
+  <h1>🧠 BrainBuster</h1>
+  <p>Teste dein Wissen in verschiedenen Kategorien – alleine oder gegen Freunde!</p>
+  <div class="hero-btns">
+    <a href="/play" class="btn btn-primary">Jetzt spielen</a>
+    <a href="/multiplayer" class="btn btn-secondary">Multiplayer</a>
+    <a href="/leaderboard" class="btn btn-secondary">Rangliste</a>
+  </div>
+</div>
+<div class="grid2">
+  <div class="card">
+    <h2>📚 Kategorien</h2>
+    <div class="categories">
+      {% for cat in categories %}<span class="cat-chip">{{ cat }}</span>{% endfor %}
+    </div>
+  </div>
+  <div class="card">
+    <h2>🏆 Top 5 Spieler</h2>
+    {% if top_scores %}
+    <table>
+      <thead><tr><th>#</th><th>Spieler</th><th>Punkte</th></tr></thead>
+      <tbody>
+        {% for entry in top_scores %}
+        <tr><td>{{ loop.index }}</td><td>{{ entry.name }}</td><td><span class="badge badge-purple">{{ entry.score }}</span></td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% else %}<p style="color:var(--muted)">Noch keine Einträge – sei der Erste!</p>{% endif %}
+  </div>
+</div>
+{% endblock %}

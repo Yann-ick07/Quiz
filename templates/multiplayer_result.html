@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}– Multiplayer Ergebnis{% endblock %}
+{% block extra_style %}
+<style>
+  .winner-box { text-align:center; padding:2.5rem 0; }
+  .winner-name { font-size:2.5rem; font-weight:900; color:var(--accent2); }
+  .score-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-top:1.5rem; }
+  .player-card { background:var(--surface2); border-radius:var(--radius); padding:1.5rem; text-align:center; }
+  .player-card.winner { border:2px solid var(--accent); }
+  .player-card .pts { font-size:2.5rem; font-weight:900; color:var(--accent2); }
+</style>
+{% endblock %}
+{% block content %}
+<div class="winner-box">
+  <div style="font-size:3rem">🏆</div>
+  <div style="color:var(--muted);margin-bottom:0.5rem">Gewinner</div>
+  <div class="winner-name">{{ winner }}</div>
+</div>
+<div class="score-grid">
+  <div class="player-card {{ 'winner' if p1.score > p2.score }}">
+    <div style="font-size:0.85rem;color:var(--muted)">Spieler 1</div>
+    <div style="font-weight:800;font-size:1.2rem;margin:0.3rem 0">{{ p1.name }}</div>
+    <div class="pts">{{ p1.score }}</div>
+    <div style="color:var(--muted);font-size:0.85rem;margin-top:0.5rem">{{ p1.correct }}/{{ total }} richtig</div>
+  </div>
+  <div class="player-card {{ 'winner' if p2.score > p1.score }}">
+    <div style="font-size:0.85rem;color:var(--muted)">Spieler 2</div>
+    <div style="font-weight:800;font-size:1.2rem;margin:0.3rem 0">{{ p2.name }}</div>
+    <div class="pts">{{ p2.score }}</div>
+    <div style="color:var(--muted);font-size:0.85rem;margin-top:0.5rem">{{ p2.correct }}/{{ total }} richtig</div>
+  </div>
+</div>
+<div style="text-align:center;margin-top:2rem;display:flex;gap:1rem;justify-content:center">
+  <a href="/multiplayer" class="btn btn-primary">Nochmal spielen</a>
+  <a href="/" class="btn btn-secondary">Hauptmenü</a>
+</div>
+{% endblock %}

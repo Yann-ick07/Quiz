@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BrainBuster {% block title %}{% endblock %}</title>
+  <style>
+    :root {
+      --bg: #0f0f1a; --surface: #1a1a2e; --surface2: #16213e;
+      --accent: #7c3aed; --accent2: #a855f7; --green: #22c55e;
+      --red: #ef4444; --yellow: #f59e0b; --text: #e2e8f0;
+      --muted: #94a3b8; --border: #334155; --radius: 12px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', sans-serif; min-height: 100vh; }
+    nav { background: var(--surface); border-bottom: 1px solid var(--border); padding: 0 2rem; display: flex; align-items: center; gap: 2rem; height: 60px; }
+    .nav-brand { font-size: 1.4rem; font-weight: 800; color: var(--accent2); text-decoration: none; }
+    .nav-links { display: flex; gap: 1rem; margin-left: auto; align-items: center; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; padding: 0.4rem 0.8rem; border-radius: 8px; transition: all 0.2s; }
+    .nav-links a:hover { color: var(--text); background: var(--surface2); }
+    .container { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem; }
+    .btn { display: inline-block; padding: 0.6rem 1.4rem; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; border: none; text-decoration: none; transition: all 0.2s; }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-primary:hover { background: var(--accent2); }
+    .btn-secondary { background: var(--surface2); color: var(--text); border: 1px solid var(--border); }
+    .btn-secondary:hover { border-color: var(--accent); color: var(--accent2); }
+    .btn-danger { background: var(--red); color: #fff; }
+    .btn-sm { padding: 0.35rem 0.8rem; font-size: 0.82rem; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; }
+    .alert { padding: 0.8rem 1.2rem; border-radius: 8px; margin-bottom: 1rem; font-size: 0.9rem; }
+    .alert-success { background: #14532d44; border: 1px solid var(--green); color: var(--green); }
+    .alert-danger  { background: #7f1d1d44; border: 1px solid var(--red); color: var(--red); }
+    .alert-warning { background: #78350f44; border: 1px solid var(--yellow); color: var(--yellow); }
+    .alert-info    { background: #1e3a5f44; border: 1px solid #60a5fa; color: #60a5fa; }
+    .form-group { margin-bottom: 1rem; }
+    .form-group label { display: block; margin-bottom: 0.4rem; color: var(--muted); font-size: 0.9rem; }
+    .form-control { width: 100%; padding: 0.6rem 0.9rem; background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-size: 0.95rem; transition: border-color 0.2s; }
+    .form-control:focus { outline: none; border-color: var(--accent); }
+    select.form-control option { background: var(--surface2); }
+    h1 { font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem; }
+    h2 { font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem; }
+    h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .badge { display: inline-block; padding: 0.2rem 0.6rem; border-radius: 20px; font-size: 0.78rem; font-weight: 600; }
+    .badge-purple { background: #4c1d9544; color: var(--accent2); border: 1px solid var(--accent); }
+    .badge-green  { background: #14532d44; color: var(--green); }
+    .badge-yellow { background: #78350f44; color: var(--yellow); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    th { text-align: left; padding: 0.6rem 1rem; color: var(--muted); font-weight: 600; border-bottom: 1px solid var(--border); }
+    td { padding: 0.7rem 1rem; border-bottom: 1px solid #1e293b; }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: #ffffff06; }
+  </style>
+  {% block extra_style %}{% endblock %}
+</head>
+<body>
+<nav>
+  <a class="nav-brand" href="/">🧠 BrainBuster</a>
+  <div class="nav-links">
+    <a href="/play">Spielen</a>
+    <a href="/multiplayer">Multiplayer</a>
+    <a href="/leaderboard">Rangliste</a>
+    {% if session.username %}
+      <a href="/admin">Admin</a>
+      <a href="/profile">{{ session.username }}</a>
+      <a href="/logout">Logout</a>
+    {% else %}
+      <a href="/login">Login</a>
+      <a href="/register" class="btn btn-primary btn-sm">Registrieren</a>
+    {% endif %}
+  </div>
+</nav>
+<div class="container">
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% for category, message in messages %}
+      <div class="alert alert-{{ category }}">{{ message }}</div>
+    {% endfor %}
+  {% endwith %}
+  {% block content %}{% endblock %}
+</div>
+</body>
+</html>

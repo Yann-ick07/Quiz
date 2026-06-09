@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}– Frage bearbeiten{% endblock %}
+{% block content %}
+<h1>✏️ Frage bearbeiten</h1>
+<div class="card" style="margin-top:1.5rem">
+  <form method="POST">
+    <div class="form-group"><label>Kategorie</label><input class="form-control" name="category" value="{{ question.category }}" required></div>
+    <div class="form-group"><label>Frage</label><input class="form-control" name="question" value="{{ question.question }}" required></div>
+    {% set field_names = ['option_a','option_b','option_c','option_d'] %}
+    {% for i in range(4) %}
+    <div class="form-group"><label>Option {{ ['A','B','C','D'][i] }}</label><input class="form-control" name="{{ field_names[i] }}" value="{{ question.options[i] }}" required></div>
+    {% endfor %}
+    <div class="form-group">
+      <label>Richtige Antwort</label>
+      <select class="form-control" name="correct">
+        {% for i in range(4) %}<option value="{{ i }}" {{ 'selected' if question.answer == i }}>{{ ['A','B','C','D'][i] }}</option>{% endfor %}
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Speichern</button>
+    <a href="/admin" class="btn btn-secondary" style="margin-left:0.5rem">Abbrechen</a>
+  </form>
+</div>
+{% endblock %}

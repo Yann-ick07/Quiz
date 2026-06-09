@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}– Spielen{% endblock %}
+{% block extra_style %}
+<style>
+  .mode-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0; }
+  .mode-card { border: 2px solid var(--border); border-radius: var(--radius); padding: 1.2rem; cursor: pointer; transition: all 0.2s; }
+  .mode-card:hover, .mode-card.selected { border-color: var(--accent); background: #4c1d9520; }
+  .mode-card input { display: none; }
+  .mode-card p { color: var(--muted); font-size: 0.85rem; }
+  @media(max-width:500px){ .mode-cards { grid-template-columns: 1fr; } }
+</style>
+{% endblock %}
+{% block content %}
+<h1>🎯 Spiel starten</h1>
+<p style="color:var(--muted);margin-bottom:2rem">Wähle Kategorie und Modus</p>
+<form method="POST" action="/game/start">
+  <div class="card" style="margin-bottom:1.5rem">
+    <h2>Kategorie</h2>
+    <div class="form-group">
+      <select class="form-control" name="category">
+        <option value="random">🎲 Zufällig (alle Kategorien)</option>
+        {% for cat in categories %}<option value="{{ cat }}">{{ cat }}</option>{% endfor %}
+      </select>
+    </div>
+  </div>
+  <div class="card" style="margin-bottom:1.5rem">
+    <h2>Spielmodus</h2>
+    <div class="mode-cards">
+      <label class="mode-card selected"><input type="radio" name="mode" value="solo" checked><h3>🧍 Solo</h3><p>10 Fragen, kein Zeitlimit</p></label>
+      <label class="mode-card"><input type="radio" name="mode" value="time_attack"><h3>⏱️ Time Attack</h3><p>60 Sekunden, so viele wie möglich</p></label>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary" style="font-size:1.1rem;padding:0.8rem 2rem">Spiel starten ▶</button>
+</form>
+<script>
+  document.querySelectorAll('.mode-card').forEach(card => {
+    card.addEventListener('click', () => {
+      document.querySelectorAll('.mode-card').forEach(c => c.classList.remove('selected'));
+      card.classList.add('selected');
+    });
+  });
+</script>
+{% endblock %}
