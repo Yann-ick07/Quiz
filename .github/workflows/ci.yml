@@ -7,11 +7,9 @@ on:
 
 jobs:
   test:
-
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Repository herunterladen
         uses: actions/checkout@v4
 
@@ -20,5 +18,22 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Abhängigkeiten installieren
+        run: pip install -r requirements.txt
+
+      - name: QS 1 - Linting (flake8)
+        run: flake8 .
+
+      - name: QS 2 - Formatierung (black)
+        run: black --check .
+
+      - name: QS 3 - Sicherheits-Scan (bandit)
+        run: bandit -r . --exclude ./.git,./data,./templates,./htmlcov -ll -q
+
       - name: Tests ausführen
         run: python tests.py
+
+      - name: QS 4 - Testabdeckung (min. 70%)
+        run: |
+          coverage run tests.py
+          coverage report --fail-under=70
