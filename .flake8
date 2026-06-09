@@ -1,0 +1,26 @@
+[flake8]
+# QS-Maßnahme 1: Linting mit flake8
+# Stellt sicher, dass der Code PEP8-konform und fehlerfrei ist.
+#
+# Ausführen: flake8 .
+# In CI:    flake8 . (schlägt fehl bei Verstößen → Pipeline stoppt)
+
+max-line-length = 100
+exclude =
+    __pycache__,
+    .git,
+    data/,
+    templates/
+per-file-ignores =
+    # E501: long lines in test files are acceptable for readability
+    tests.py: E501
+
+[flake8]
+max-line-length = 100
+exclude =
+    __pycache__,
+    .git,
+    data/,
+    templates/
+per-file-ignores =
+    tests.py: E501
