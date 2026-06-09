@@ -16,7 +16,6 @@ from flask import (
     redirect,
     url_for,
     session,
-    jsonify,
     flash,
 )
 from accounts import AccountManager
@@ -41,6 +40,7 @@ leaderboard = Leaderboard()
 def login_required(f):
     """Decorator: redirect to login if user is not in session."""
     from functools import wraps
+
     @wraps(f)
     def decorated(*args, **kwargs):
         if "username" not in session:
