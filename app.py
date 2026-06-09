@@ -498,4 +498,4 @@ def multiplayer_result():
 if __name__ == "__main__":
     print("\n  BrainBuster Web App")
     print("  Open http://localhost:5000 in your browser\n")
-    app.run(debug=True, port=5000)
+    app.run(host="0.0.0.0", debug=debug_mode, port=5000)
