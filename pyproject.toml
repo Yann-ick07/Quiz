@@ -1,0 +1,28 @@
+# pyproject.toml
+# Konfiguration für QS-Maßnahmen 2 und 3
+
+# ── QS-Maßnahme 2: Code-Formatierung mit black ────────────────────────────────
+# Stellt sicher, dass der gesamte Code einheitlich formatiert ist.
+# Ausführen (prüfen): black --check .
+# Ausführen (fix):    black .
+[tool.black]
+line-length = 100
+target-version = ["py312"]
+exclude = '''
+/(
+    __pycache__
+  | data
+  | templates
+)/
+'''
+
+# ── QS-Maßnahme 3: Sicherheits-Scan mit bandit ───────────────────────────────
+# Sucht nach bekannten Sicherheitsproblemen im Code (z.B. schwache Hashes,
+# SQL-Injection-Risiken, unsichere Zufallszahlen).
+# Ausführen: bandit -r . -c pyproject.toml
+[tool.bandit]
+exclude_dirs = ["tests.py", "data", "__pycache__"]
+skips = [
+    "B101",   # assert statements in tests are expected
+    "B311",   # random is fine here (not used for crypto)
+]

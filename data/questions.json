@@ -1,0 +1,178 @@
+[
+  {
+    "category": "Science",
+    "question": "What is the chemical symbol for water?",
+    "options": [
+      "H2O",
+      "CO2",
+      "NaCl",
+      "O2"
+    ],
+    "answer": 0
+  },
+  {
+    "category": "Science",
+    "question": "How many planets are in our solar system?",
+    "options": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Science",
+    "question": "What gas do plants absorb from the atmosphere?",
+    "options": [
+      "Oxygen",
+      "Nitrogen",
+      "Carbon Dioxide",
+      "Hydrogen"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "History",
+    "question": "In which year did World War II end?",
+    "options": [
+      "1943",
+      "1944",
+      "1945",
+      "1946"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "History",
+    "question": "Who was the first person to walk on the moon?",
+    "options": [
+      "Buzz Aldrin",
+      "Yuri Gagarin",
+      "Neil Armstrong",
+      "John Glenn"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "History",
+    "question": "Which empire was ruled by Julius Caesar?",
+    "options": [
+      "Greek",
+      "Roman",
+      "Ottoman",
+      "Byzantine"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Geography",
+    "question": "What is the capital of Australia?",
+    "options": [
+      "Sydney",
+      "Melbourne",
+      "Brisbane",
+      "Canberra"
+    ],
+    "answer": 3
+  },
+  {
+    "category": "Geography",
+    "question": "Which is the longest river in the world?",
+    "options": [
+      "Amazon",
+      "Yangtze",
+      "Mississippi",
+      "Nile"
+    ],
+    "answer": 3
+  },
+  {
+    "category": "Geography",
+    "question": "On which continent is the Sahara Desert located?",
+    "options": [
+      "Asia",
+      "South America",
+      "Africa",
+      "Australia"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Technology",
+    "question": "What does 'CPU' stand for?",
+    "options": [
+      "Central Processing Unit",
+      "Computer Personal Unit",
+      "Central Program Utility",
+      "Core Processing Unit"
+    ],
+    "answer": 0
+  },
+  {
+    "category": "Technology",
+    "question": "Which programming language is known as the 'language of the web'?",
+    "options": [
+      "Python",
+      "Java",
+      "JavaScript",
+      "C++"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Technology",
+    "question": "What does 'HTML' stand for?",
+    "options": [
+      "Hyper Text Markup Language",
+      "High Transfer Machine Language",
+      "Hyper Transfer Meta Language",
+      "Home Tool Markup Language"
+    ],
+    "answer": 0
+  },
+  {
+    "category": "Sports",
+    "question": "How many players are on a standard soccer team?",
+    "options": [
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Sports",
+    "question": "In which sport would you perform a 'slam dunk'?",
+    "options": [
+      "Volleyball",
+      "Basketball",
+      "Tennis",
+      "Baseball"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Sports",
+    "question": "How many rings are on the Olympic flag?",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Technology",
+    "question": "Wer ist der beste Lehrer",
+    "options": [
+      "Arne",
+      "Stephan",
+      "Anna",
+      "Dominik"
+    ],
+    "answer": 0
+  }
+]

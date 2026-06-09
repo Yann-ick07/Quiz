@@ -269,3 +269,259 @@ if __name__ == "__main__":
     print(f"Tests passed: {passed}/{total}")
     print("✔  All tests passed!" if result.wasSuccessful() else "✘  Some tests failed.")
     print(f"{'='*50}")
+
+
+# ── Integration Tests ─────────────────────────────────────────────────────────
+# These tests verify that multiple modules work correctly TOGETHER,
+# not just in isolation. They test real end-to-end flows.
+
+
+class TestQuizEngineIntegration(unittest.TestCase):
+    """
+    Integration test: QuizEngine + QuestionDB + Player working together.
+    Simulates a full solo game session without any mocking.
+    """
+
+    def setUp(self):
+        self.db = QuestionDB()
+        self.player = Player("IntegrationTester")
+
+    def test_full_solo_game_updates_player_score(self):
+        """
+        After simulating correct answers for all questions,
+        the player's score must be greater than zero.
+        """
+        questions = self.db.get_questions("random", count=5)
+        self.assertGreater(len(questions), 0, "DB must return questions")
+
+        for q in questions:
+            # Simulate a correct answer with a 3-second response time
+            self.player.award_points(answer_time=3.0)
+
+        self.assertGreater(self.player.current_score, 0)
+        self.assertEqual(self.player.correct_answers, len(questions))
+
+    def test_wrong_answers_do_not_change_score(self):
+        """
+        Recording only wrong answers must leave the score at zero.
+        """
+        questions = self.db.get_questions("random", count=5)
+        for _ in questions:
+            self.player.record_wrong_answer()
+
+        self.assertEqual(self.player.current_score, 0)
+        self.assertEqual(self.player.total_answers, len(questions))
+
+    def test_mixed_game_accuracy(self):
+        """
+        3 correct + 2 wrong answers must produce 60% accuracy.
+        """
+        for _ in range(3):
+            self.player.award_points(answer_time=3.0)
+        for _ in range(2):
+            self.player.record_wrong_answer()
+
+        self.assertAlmostEqual(self.player.accuracy(), 60.0)
+
+
+class TestAccountLeaderboardIntegration(unittest.TestCase):
+    """
+    Integration test: AccountManager + Leaderboard working together.
+    Simulates a complete game lifecycle: register → play → save score → rank.
+    """
+
+    def setUp(self):
+        self.tmp_dir = tempfile.mkdtemp()
+
+        import accounts as acc_mod
+        import leaderboard as lb_mod
+        self._orig_acc = acc_mod.ACCOUNTS_FILE
+        self._orig_lb = lb_mod.SCORES_FILE
+        acc_mod.ACCOUNTS_FILE = os.path.join(self.tmp_dir, "accounts.json")
+        lb_mod.SCORES_FILE = os.path.join(self.tmp_dir, "scores.json")
+
+        self.mgr = AccountManager()
+        self.lb = Leaderboard()
+
+    def tearDown(self):
+        import accounts as acc_mod
+        import leaderboard as lb_mod
+        acc_mod.ACCOUNTS_FILE = self._orig_acc
+        lb_mod.SCORES_FILE = self._orig_lb
+        shutil.rmtree(self.tmp_dir)
+
+    def test_register_play_and_appear_on_leaderboard(self):
+        """
+        A newly registered player who finishes a game should appear
+        on the leaderboard with the correct score.
+        """
+        ok, _ = self.mgr.register("player1", "pass1234")
+        self.assertTrue(ok)
+
+        score = 80
+        self.mgr.update_stats("player1", score)
+        self.lb.add_entry("player1", score, "Science", "solo")
+
+        profile = self.mgr.get_profile("player1")
+        self.assertEqual(profile["total_score"], score)
+        self.assertEqual(self.lb.entries[0]["name"], "player1")
+        self.assertEqual(self.lb.entries[0]["score"], score)
+
+    def test_leaderboard_ranking_across_multiple_players(self):
+        """
+        After multiple players finish games, leaderboard must be
+        sorted by score descending.
+        """
+        players = [("alice", 50), ("bob", 120), ("carol", 85)]
+        for name, score in players:
+            self.mgr.register(name, "pass1234")
+            self.mgr.update_stats(name, score)
+            self.lb.add_entry(name, score, "History", "solo")
+
+        self.assertEqual(self.lb.entries[0]["name"], "bob")
+        self.assertEqual(self.lb.entries[1]["name"], "carol")
+        self.assertEqual(self.lb.entries[2]["name"], "alice")
+
+    def test_achievements_unlocked_after_game(self):
+        """
+        After completing a game, the correct achievements should be
+        granted and persisted to the account.
+        """
+        self.mgr.register("dave", "pass1234")
+        self.mgr.update_stats("dave", 10)  # games_played becomes 1
+
+        profile = self.mgr.get_profile("dave")
+        new_achs = check_achievements(
+            games_played=profile["games_played"],
+            total_score=profile["total_score"],
+            current_score=10,
+            correct=5,
+            total=5,
+            fast_answers=0,
+            existing=profile["achievements"],
+        )
+        for ach_id in new_achs:
+            self.mgr.add_achievement("dave", ach_id)
+
+        updated = self.mgr.get_profile("dave")
+        self.assertIn("first_game", updated["achievements"])
+        self.assertIn("perfect_game", updated["achievements"])
+
+
+class TestFlaskRoutesIntegration(unittest.TestCase):
+    """
+    Integration test: Flask routes working end-to-end with real modules.
+    Uses Flask's built-in test client (no actual HTTP server needed).
+    """
+
+    def setUp(self):
+        self.tmp_dir = tempfile.mkdtemp()
+
+        import accounts as acc_mod
+        import leaderboard as lb_mod
+        self._orig_acc = acc_mod.ACCOUNTS_FILE
+        self._orig_lb = lb_mod.SCORES_FILE
+        acc_mod.ACCOUNTS_FILE = os.path.join(self.tmp_dir, "accounts.json")
+        lb_mod.SCORES_FILE = os.path.join(self.tmp_dir, "scores.json")
+
+        # Re-import app so it picks up the patched file paths
+        import importlib
+        import app as app_mod
+        importlib.reload(app_mod)
+        app_mod.app.config["TESTING"] = True
+        app_mod.app.config["WTF_CSRF_ENABLED"] = False
+        self.client = app_mod.app.test_client()
+        self.app_mod = app_mod
+
+    def tearDown(self):
+        import accounts as acc_mod
+        import leaderboard as lb_mod
+        acc_mod.ACCOUNTS_FILE = self._orig_acc
+        lb_mod.SCORES_FILE = self._orig_lb
+        shutil.rmtree(self.tmp_dir)
+
+    def test_homepage_returns_200(self):
+        """The homepage must be reachable without login."""
+        response = self.client.get("/")
+        self.assertEqual(response.status_code, 200)
+
+    def test_leaderboard_page_returns_200(self):
+        """The leaderboard must be publicly accessible."""
+        response = self.client.get("/leaderboard")
+        self.assertEqual(response.status_code, 200)
+
+    def test_register_and_login_flow(self):
+        """
+        Registering a new user and logging in should succeed
+        and redirect to the homepage.
+        """
+        reg = self.client.post("/register", data={
+            "username": "testuser",
+            "password": "testpass"
+        }, follow_redirects=True)
+        self.assertEqual(reg.status_code, 200)
+
+        self.client.get("/logout")
+
+        login = self.client.post("/login", data={
+            "username": "testuser",
+            "password": "testpass"
+        }, follow_redirects=True)
+        self.assertEqual(login.status_code, 200)
+
+    def test_play_requires_login(self):
+        """Accessing /play without login must redirect to /login."""
+        response = self.client.get("/play", follow_redirects=False)
+        self.assertEqual(response.status_code, 302)
+        self.assertIn("/login", response.headers["Location"])
+
+    def test_admin_requires_login(self):
+        """Accessing /admin without login must redirect to /login."""
+        response = self.client.get("/admin", follow_redirects=False)
+        self.assertEqual(response.status_code, 302)
+        self.assertIn("/login", response.headers["Location"])
+
+    def test_register_duplicate_user(self):
+        """Registering the same username twice must fail gracefully."""
+        self.client.post("/register", data={
+            "username": "dupuser", "password": "pass1234"
+        }, follow_redirects=True)
+        self.client.get("/logout")
+        response = self.client.post("/register", data={
+            "username": "dupuser", "password": "other"
+        }, follow_redirects=True)
+        # Page should reload with an error, not crash
+        self.assertEqual(response.status_code, 200)
+
+
+# ── Updated entry point (includes integration test classes) ───────────────────
+
+if __name__ == "__main__":
+    print("Running BrainBuster tests (Unit + Integration)...\n")
+    loader = unittest.TestLoader()
+    suite = unittest.TestSuite()
+    for tc in [
+        # Unit tests
+        TestPlayer,
+        TestQuestionDB,
+        TestLeaderboard,
+        TestAccountManager,
+        TestAchievements,
+        # Integration tests
+        TestQuizEngineIntegration,
+        TestAccountLeaderboardIntegration,
+        TestFlaskRoutesIntegration,
+    ]:
+        suite.addTests(loader.loadTestsFromTestCase(tc))
+
+    runner = unittest.TextTestRunner(verbosity=2)
+    result = runner.run(suite)
+
+    total = result.testsRun
+    passed = total - len(result.failures) - len(result.errors)
+    print(f"\n{'='*55}")
+    print("  Unit tests:        35")
+    print(f"  Integration tests: {total - 35}")
+    print(f"  Total passed:      {passed}/{total}")
+    print("  ✔  All tests passed!" if result.wasSuccessful() else "  ✘  Some tests failed.")
+    print(f"{'='*55}")

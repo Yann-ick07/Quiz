@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Robin",
+    "score": 43,
+    "category": "Technology",
+    "mode": "time_attack",
+    "date": "2026-06-09 10:30"
+  },
+  {
+    "name": "Test",
+    "score": 20,
+    "category": "Sports",
+    "mode": "solo",
+    "date": "2026-06-09 10:26"
+  },
+  {
+    "name": "leon",
+    "score": 10,
+    "category": "Sports",
+    "mode": "solo",
+    "date": "2026-06-09 10:26"
+  }
+]

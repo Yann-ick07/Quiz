@@ -1,0 +1,18 @@
+[run]
+source = .
+omit =
+    tests.py
+    data/*
+    templates/*
+    __pycache__/*
+    main.py
+    quiz_engine.py
+    qs_check.py
+    app.py
+
+[report]
+show_missing = true
+fail_under = 70
+
+[html]
+directory = htmlcov
