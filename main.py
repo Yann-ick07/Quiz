@@ -6,11 +6,7 @@ Usage: python main.py [h]
 """
 
 import sys
-import json
 import time
-import random
-import os
-from datetime import datetime
 
 from quiz_engine import QuizEngine
 from leaderboard import Leaderboard

@@ -8,9 +8,7 @@ Then open: http://localhost:5000
 """
 
 import os
-import json
 import time
-import random
 from flask import (
     Flask,
     render_template,
