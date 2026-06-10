@@ -15,8 +15,8 @@ from question_db import QuestionDB
 from accounts import AccountManager
 from achievements import check_achievements, get_all_achievements
 
-
 # ── Player tests ──────────────────────────────────────────────────────────────
+
 
 class TestPlayer(unittest.TestCase):
 
@@ -66,6 +66,7 @@ class TestPlayer(unittest.TestCase):
 
 # ── QuestionDB tests ──────────────────────────────────────────────────────────
 
+
 class TestQuestionDB(unittest.TestCase):
 
     def setUp(self):
@@ -101,12 +102,12 @@ class TestQuestionDB(unittest.TestCase):
     def test_add_question(self):
         before = len(self.db.questions)
         with patch.object(self.db, "_save_questions"):
-            self.db.add_question("Test", "Is this a test?",
-                                 ["Yes", "No", "Maybe", "Always"], 0)
+            self.db.add_question("Test", "Is this a test?", ["Yes", "No", "Maybe", "Always"], 0)
         self.assertEqual(len(self.db.questions), before + 1)
 
 
 # ── Leaderboard tests ─────────────────────────────────────────────────────────
+
 
 class TestLeaderboard(unittest.TestCase):
 
@@ -114,12 +115,14 @@ class TestLeaderboard(unittest.TestCase):
         self.tmp_dir = tempfile.mkdtemp()
         self.scores_file = os.path.join(self.tmp_dir, "scores.json")
         import leaderboard as lb_module
+
         self._orig = lb_module.SCORES_FILE
         lb_module.SCORES_FILE = self.scores_file
         self.lb = Leaderboard()
 
     def tearDown(self):
         import leaderboard as lb_module
+
         lb_module.SCORES_FILE = self._orig
         shutil.rmtree(self.tmp_dir)
 
@@ -137,6 +140,7 @@ class TestLeaderboard(unittest.TestCase):
 
     def test_max_entries_respected(self):
         from leaderboard import MAX_ENTRIES
+
         for i in range(MAX_ENTRIES + 5):
             self.lb.add_entry(f"P{i}", i * 10, "Science", "solo")
         self.assertLessEqual(len(self.lb.entries), MAX_ENTRIES)
@@ -149,18 +153,21 @@ class TestLeaderboard(unittest.TestCase):
 
 # ── AccountManager tests ──────────────────────────────────────────────────────
 
+
 class TestAccountManager(unittest.TestCase):
 
     def setUp(self):
         self.tmp_dir = tempfile.mkdtemp()
         self.acc_file = os.path.join(self.tmp_dir, "accounts.json")
         import accounts as acc_module
+
         self._orig = acc_module.ACCOUNTS_FILE
         acc_module.ACCOUNTS_FILE = self.acc_file
         self.mgr = AccountManager()
 
     def tearDown(self):
         import accounts as acc_module
+
         acc_module.ACCOUNTS_FILE = self._orig
         shutil.rmtree(self.tmp_dir)
 
@@ -215,11 +222,19 @@ class TestAccountManager(unittest.TestCase):
 
 # ── Achievement tests ─────────────────────────────────────────────────────────
 
+
 class TestAchievements(unittest.TestCase):
 
     def _check(self, **kwargs):
-        defaults = dict(games_played=1, total_score=10, current_score=10,
-                        correct=1, total=1, fast_answers=0, existing=[])
+        defaults = dict(
+            games_played=1,
+            total_score=10,
+            current_score=10,
+            correct=1,
+            total=1,
+            fast_answers=0,
+            existing=[],
+        )
         defaults.update(kwargs)
         return check_achievements(**defaults)
 
@@ -256,8 +271,7 @@ if __name__ == "__main__":
     print("Running BrainBuster automated tests...\n")
     loader = unittest.TestLoader()
     suite = unittest.TestSuite()
-    for tc in [TestPlayer, TestQuestionDB, TestLeaderboard,
-               TestAccountManager, TestAchievements]:
+    for tc in [TestPlayer, TestQuestionDB, TestLeaderboard, TestAccountManager, TestAchievements]:
         suite.addTests(loader.loadTestsFromTestCase(tc))
 
     runner = unittest.TextTestRunner(verbosity=2)
@@ -335,6 +349,7 @@ class TestAccountLeaderboardIntegration(unittest.TestCase):
 
         import accounts as acc_mod
         import leaderboard as lb_mod
+
         self._orig_acc = acc_mod.ACCOUNTS_FILE
         self._orig_lb = lb_mod.SCORES_FILE
         acc_mod.ACCOUNTS_FILE = os.path.join(self.tmp_dir, "accounts.json")
@@ -346,6 +361,7 @@ class TestAccountLeaderboardIntegration(unittest.TestCase):
     def tearDown(self):
         import accounts as acc_mod
         import leaderboard as lb_mod
+
         acc_mod.ACCOUNTS_FILE = self._orig_acc
         lb_mod.SCORES_FILE = self._orig_lb
         shutil.rmtree(self.tmp_dir)
@@ -419,6 +435,7 @@ class TestFlaskRoutesIntegration(unittest.TestCase):
 
         import accounts as acc_mod
         import leaderboard as lb_mod
+
         self._orig_acc = acc_mod.ACCOUNTS_FILE
         self._orig_lb = lb_mod.SCORES_FILE
         acc_mod.ACCOUNTS_FILE = os.path.join(self.tmp_dir, "accounts.json")
@@ -427,6 +444,7 @@ class TestFlaskRoutesIntegration(unittest.TestCase):
         # Re-import app so it picks up the patched file paths
         import importlib
         import app as app_mod
+
         importlib.reload(app_mod)
         app_mod.app.config["TESTING"] = True
         app_mod.app.config["WTF_CSRF_ENABLED"] = False
@@ -436,6 +454,7 @@ class TestFlaskRoutesIntegration(unittest.TestCase):
     def tearDown(self):
         import accounts as acc_mod
         import leaderboard as lb_mod
+
         acc_mod.ACCOUNTS_FILE = self._orig_acc
         lb_mod.SCORES_FILE = self._orig_lb
         shutil.rmtree(self.tmp_dir)
@@ -455,18 +474,18 @@ class TestFlaskRoutesIntegration(unittest.TestCase):
         Registering a new user and logging in should succeed
         and redirect to the homepage.
         """
-        reg = self.client.post("/register", data={
-            "username": "testuser",
-            "password": "testpass"
-        }, follow_redirects=True)
+        reg = self.client.post(
+            "/register",
+            data={"username": "testuser", "password": "testpass"},
+            follow_redirects=True,
+        )
         self.assertEqual(reg.status_code, 200)
 
         self.client.get("/logout")
 
-        login = self.client.post("/login", data={
-            "username": "testuser",
-            "password": "testpass"
-        }, follow_redirects=True)
+        login = self.client.post(
+            "/login", data={"username": "testuser", "password": "testpass"}, follow_redirects=True
+        )
         self.assertEqual(login.status_code, 200)
 
     def test_play_requires_login(self):
@@ -483,13 +502,13 @@ class TestFlaskRoutesIntegration(unittest.TestCase):
 
     def test_register_duplicate_user(self):
         """Registering the same username twice must fail gracefully."""
-        self.client.post("/register", data={
-            "username": "dupuser", "password": "pass1234"
-        }, follow_redirects=True)
+        self.client.post(
+            "/register", data={"username": "dupuser", "password": "pass1234"}, follow_redirects=True
+        )
         self.client.get("/logout")
-        response = self.client.post("/register", data={
-            "username": "dupuser", "password": "other"
-        }, follow_redirects=True)
+        response = self.client.post(
+            "/register", data={"username": "dupuser", "password": "other"}, follow_redirects=True
+        )
         # Page should reload with an error, not crash
         self.assertEqual(response.status_code, 200)
 

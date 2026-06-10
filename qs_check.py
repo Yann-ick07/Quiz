@@ -43,18 +43,24 @@ else:
     run("QS 2: Formatierung – Prüfen (black --check)", [PYTHON, "-m", "black", "--check", "."])
 
 # ── 3. Sicherheits-Scan ───────────────────────────────────────────────────────
-run("QS 3: Sicherheits-Scan (bandit)", [
-    PYTHON, "-m", "bandit", "-r", ".",
-    "--exclude", "./.git,./data,./templates,./htmlcov",
-    "-ll",   # only medium+ severity
-    "-q",
-])
+run(
+    "QS 3: Sicherheits-Scan (bandit)",
+    [
+        PYTHON,
+        "-m",
+        "bandit",
+        "-r",
+        ".",
+        "--exclude",
+        "./.git,./data,./templates,./htmlcov",
+        "-ll",  # only medium+ severity
+        "-q",
+    ],
+)
 
 # ── 4. Test-Coverage ──────────────────────────────────────────────────────────
 run("QS 4: Tests + Coverage", [PYTHON, "-m", "coverage", "run", "tests.py"])
-run("QS 4: Coverage Report (min. 70%)", [
-    PYTHON, "-m", "coverage", "report", "--fail-under=70"
-])
+run("QS 4: Coverage Report (min. 70%)", [PYTHON, "-m", "coverage", "report", "--fail-under=70"])
 
 # ── Zusammenfassung ───────────────────────────────────────────────────────────
 print(f"\n{'═'*55}")

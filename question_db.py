@@ -203,7 +203,7 @@ class QuestionDB:
             Gemischte Liste von Frage-Dicts
         """
         if category == "random":
-            pool = list(self.questions)     # Kopie, damit Original unverändert bleibt
+            pool = list(self.questions)  # Kopie, damit Original unverändert bleibt
         else:
             pool = [q for q in self.questions if q["category"] == category]
 
@@ -263,10 +263,7 @@ def fetch_questions_from_opentdb(amount: int = 20, category_id: int = 9) -> list
     Returns:
         Liste von Frage-Dicts im internen Format, oder [] bei Fehler
     """
-    url = (
-        f"https://opentdb.com/api.php?amount={amount}"
-        f"&category={category_id}&type=multiple"
-    )
+    url = f"https://opentdb.com/api.php?amount={amount}" f"&category={category_id}&type=multiple"
     try:
         with urllib.request.urlopen(url, timeout=5) as resp:  # nosec B310
             data = json.loads(resp.read().decode())

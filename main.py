@@ -13,7 +13,6 @@ from leaderboard import Leaderboard
 from question_db import QuestionDB
 from player import Player
 
-
 HELP_TEXT = """
 ╔══════════════════════════════════════════════════════╗
 ║            BrainBuster - Help & Controls             ║

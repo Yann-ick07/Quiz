@@ -7,8 +7,8 @@ Run with: python app.py
 Then open: http://localhost:5000
 """
 
-import os
 import time
+import os
 from flask import (
     Flask,
     render_template,
@@ -37,6 +37,7 @@ leaderboard = Leaderboard()
 
 # ── Helpers ──────────────────────────────────────────────────────────────────
 
+
 def login_required(f):
     """Decorator: redirect to login if user is not in session."""
     from functools import wraps
@@ -47,6 +48,7 @@ def login_required(f):
             flash("Please log in first.", "warning")
             return redirect(url_for("login"))
         return f(*args, **kwargs)
+
     return decorated
 
 
@@ -59,12 +61,16 @@ def get_current_user() -> dict | None:
 
 # ── Auth routes ───────────────────────────────────────────────────────────────
 
+
 @app.route("/")
 def index():
     user = get_current_user()
-    return render_template("index.html", user=user,
-                           categories=question_db.get_categories(),
-                           top_scores=leaderboard.entries[:5])
+    return render_template(
+        "index.html",
+        user=user,
+        categories=question_db.get_categories(),
+        top_scores=leaderboard.entries[:5],
+    )
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -104,24 +110,24 @@ def logout():
 
 # ── Profile ───────────────────────────────────────────────────────────────────
 
+
 @app.route("/profile")
 @login_required
 def profile():
     user = get_current_user()
     all_achievements = get_all_achievements()
-    return render_template("profile.html", user=user,
-                           all_achievements=all_achievements)
+    return render_template("profile.html", user=user, all_achievements=all_achievements)
 
 
 # ── Game routes ───────────────────────────────────────────────────────────────
+
 
 @app.route("/play", methods=["GET", "POST"])
 @login_required
 def play():
     """Game setup page: choose category and mode."""
     categories = question_db.get_categories()
-    return render_template("play.html", categories=categories,
-                           user=get_current_user())
+    return render_template("play.html", categories=categories, user=get_current_user())
 
 
 @app.route("/game/start", methods=["POST"])
@@ -166,6 +172,7 @@ def game_question():
 
     q = questions[idx]
     import html
+
     question_text = html.unescape(q["question"])
     options = [html.unescape(opt) for opt in q["options"]]
 
@@ -208,15 +215,18 @@ def game_answer():
             game["fast_answers"] += 1
 
     import html
-    game["answers"].append({
-        "question": html.unescape(q["question"]),
-        "chosen": chosen,
-        "correct_index": q["answer"],
-        "options": [html.unescape(o) for o in q["options"]],
-        "was_correct": correct,
-        "points": points,
-        "time": round(answer_time, 1),
-    })
+
+    game["answers"].append(
+        {
+            "question": html.unescape(q["question"]),
+            "chosen": chosen,
+            "correct_index": q["answer"],
+            "options": [html.unescape(o) for o in q["options"]],
+            "was_correct": correct,
+            "points": points,
+            "time": round(answer_time, 1),
+        }
+    )
 
     game["current"] += 1
     session["game"] = game  # persist changes back to session
@@ -277,23 +287,25 @@ def game_result():
 
 # ── Leaderboard ───────────────────────────────────────────────────────────────
 
+
 @app.route("/leaderboard")
 def leaderboard_page():
-    return render_template("leaderboard.html",
-                           entries=leaderboard.entries,
-                           user=get_current_user())
+    return render_template("leaderboard.html", entries=leaderboard.entries, user=get_current_user())
 
 
 # ── Admin backend ─────────────────────────────────────────────────────────────
+
 
 @app.route("/admin")
 @login_required
 def admin():
     """Admin page: view and manage questions."""
-    return render_template("admin.html",
-                           questions=question_db.questions,
-                           categories=question_db.get_categories(),
-                           user=get_current_user())
+    return render_template(
+        "admin.html",
+        questions=question_db.questions,
+        categories=question_db.get_categories(),
+        user=get_current_user(),
+    )
 
 
 @app.route("/admin/add", methods=["POST"])
@@ -360,23 +372,24 @@ def admin_edit_question(question_index):
         return redirect(url_for("admin"))
 
     question = question_db.questions[question_index]
-    return render_template("edit_question.html",
-                           question=question,
-                           index=question_index,
-                           categories=question_db.get_categories(),
-                           user=get_current_user())
+    return render_template(
+        "edit_question.html",
+        question=question,
+        index=question_index,
+        categories=question_db.get_categories(),
+        user=get_current_user(),
+    )
 
 
 # ── Multiplayer (simple same-device 2-player mode) ────────────────────────────
+
 
 @app.route("/multiplayer", methods=["GET", "POST"])
 @login_required
 def multiplayer_setup():
     """Setup page for local 2-player multiplayer."""
     categories = question_db.get_categories()
-    return render_template("multiplayer_setup.html",
-                           categories=categories,
-                           user=get_current_user())
+    return render_template("multiplayer_setup.html", categories=categories, user=get_current_user())
 
 
 @app.route("/multiplayer/start", methods=["POST"])
@@ -416,6 +429,7 @@ def multiplayer_question():
 
     q = mp["questions"][idx]
     import html
+
     question_text = html.unescape(q["question"])
     options = [html.unescape(opt) for opt in q["options"]]
     current_player = mp[f"player{mp['current_player']}"]
@@ -488,13 +502,13 @@ def multiplayer_result():
     account_mgr.update_stats(p1["name"], p1["score"])
 
     session.pop("mp_game", None)
-    return render_template("multiplayer_result.html",
-                           p1=p1, p2=p2, winner=winner, total=total,
-                           user=get_current_user())
+    return render_template(
+        "multiplayer_result.html", p1=p1, p2=p2, winner=winner, total=total, user=get_current_user()
+    )
 
 
 if __name__ == "__main__":
     print("\n  BrainBuster Web App")
     print("  Open http://localhost:5000 in your browser\n")
     debug_mode = os.environ.get("FLASK_DEBUG", "false").lower() == "true"
-    app.run(host="0.0.0.0", debug=debug_mode, port=5000)
+    app.run(debug=debug_mode, port=5000)

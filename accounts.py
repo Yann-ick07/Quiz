@@ -164,7 +164,7 @@ class AccountManager:
             return None
         profile = dict(self.accounts[username])
         profile.pop("password_hash", None)  # Hash nie nach außen geben
-        profile["username"] = username       # Für Einfachheit direkt hinzufügen
+        profile["username"] = username  # Für Einfachheit direkt hinzufügen
         return profile
 
     def update_stats(self, username: str, score: int):

@@ -22,9 +22,9 @@ class Player:
         FAST_ANSWER_THRESHOLD  – Zeitlimit in Sekunden für den Speed-Bonus
     """
 
-    BASE_POINTS = 10            # Jede richtige Antwort bringt mindestens 10 Punkte
-    MAX_SPEED_BONUS = 5         # Bis zu 5 Bonuspunkte für sehr schnelle Antworten
-    FAST_ANSWER_THRESHOLD = 5   # Antworten unter 5 Sekunden erhalten einen Bonus
+    BASE_POINTS = 10  # Jede richtige Antwort bringt mindestens 10 Punkte
+    MAX_SPEED_BONUS = 5  # Bis zu 5 Bonuspunkte für sehr schnelle Antworten
+    FAST_ANSWER_THRESHOLD = 5  # Antworten unter 5 Sekunden erhalten einen Bonus
 
     def __init__(self, name: str):
         """
@@ -34,10 +34,10 @@ class Player:
             name: Anzeigename des Spielers (max. 20 Zeichen, geprüft in main.py)
         """
         self.name = name
-        self.current_score = 0      # Punkte in der aktuellen Runde
-        self.correct_answers = 0    # Anzahl richtig beantworteter Fragen
-        self.total_answers = 0      # Gesamtanzahl beantworteter Fragen (richtig + falsch)
-        self.fast_answers = 0       # Anzahl Antworten unter 3 Sekunden (für Achievements)
+        self.current_score = 0  # Punkte in der aktuellen Runde
+        self.correct_answers = 0  # Anzahl richtig beantworteter Fragen
+        self.total_answers = 0  # Gesamtanzahl beantworteter Fragen (richtig + falsch)
+        self.fast_answers = 0  # Anzahl Antworten unter 3 Sekunden (für Achievements)
 
     def reset_score(self):
         """
@@ -68,9 +68,7 @@ class Player:
         speed_bonus = 0
         if answer_time < self.FAST_ANSWER_THRESHOLD:
             # Linearer Bonus: schnellere Antwort = mehr Punkte
-            speed_bonus = int(
-                self.MAX_SPEED_BONUS * (1 - answer_time / self.FAST_ANSWER_THRESHOLD)
-            )
+            speed_bonus = int(self.MAX_SPEED_BONUS * (1 - answer_time / self.FAST_ANSWER_THRESHOLD))
 
         # Separat tracken für das "Speed Demon"-Achievement (3x unter 3s)
         if answer_time < 3:

@@ -91,7 +91,7 @@ class QuizEngine:
         bei sehr schnellen Spielern nie der Vorrat ausgeht.
         """
         questions = self.db.get_questions(self.category)
-        question_pool = questions * 10      # Genug Fragen für jeden Spieler
+        question_pool = questions * 10  # Genug Fragen für jeden Spieler
         deadline = time.time() + TIME_ATTACK_DURATION
 
         print(f"\nYou have {TIME_ATTACK_DURATION} seconds. Go!\n")
@@ -99,12 +99,12 @@ class QuizEngine:
         for idx, question in enumerate(question_pool, 1):
             remaining = deadline - time.time()
             if remaining <= 0:
-                break       # Zeit abgelaufen, bevor eine neue Frage gestartet wird
+                break  # Zeit abgelaufen, bevor eine neue Frage gestartet wird
 
             print(f"\n── Question {idx} | ⏱  {remaining:.0f}s remaining ──")
             answered = self._ask_question(question, time_limit=remaining)
             if not answered:
-                break       # Zeit lief während der Eingabe ab
+                break  # Zeit lief während der Eingabe ab
 
         print("\n⏰  Time's up!")
 
@@ -141,7 +141,7 @@ class QuizEngine:
         elapsed = time.time() - start_time
 
         if answer is None:
-            return False    # Timeout oder Abbruch
+            return False  # Timeout oder Abbruch
 
         if answer == "q":
             print("\nQuitting current game...")
@@ -150,6 +150,7 @@ class QuizEngine:
         if answer == "h":
             # Hilfe anzeigen ohne Zeitstrafe – danach dieselbe Frage wiederholen
             from main import show_help
+
             show_help()
             return self._ask_question(question, time_limit)
 
@@ -190,10 +191,10 @@ class QuizEngine:
         while True:
             answer = input(prompt).strip().lower()
             if not answer:
-                continue    # Leere Eingabe ignorieren
+                continue  # Leere Eingabe ignorieren
 
             if answer in valid_choices:
-                return number_map.get(answer, answer)   # Zahl → Buchstabe umwandeln
+                return number_map.get(answer, answer)  # Zahl → Buchstabe umwandeln
 
             print("  Invalid input. Please enter A, B, C, D (or 1-4).")
 
