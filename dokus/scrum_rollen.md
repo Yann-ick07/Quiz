@@ -1,5 +1,6 @@
 ## Team-Organisation im Scrum
 ==========================
+```text
 Developer - Leon
 ----------------
 Aufgaben:
@@ -26,6 +27,7 @@ Aufgaben:
 - Abstimmung mit dem Lehrerteam und dem Auftraggeber
 - Definition der Sprintziele
 - Abnahme der entwickelten Funktionen
+```
 
 Hinweis:
 Da es sich um ein kleines Projektteam handelt, übernehmen alle Teammitglieder zusätzlich Entwicklungsaufgaben und unterstützen sich gegenseitig bei Tests, Dokumentation und Qualitätssicherung.
