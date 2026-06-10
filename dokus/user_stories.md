@@ -1,5 +1,4 @@
 ## User Stories
-Aufgabe: Jedes Team erstellt mind. 8 User Stories (Abgabe am 17.06.2026)
 
 1.	Als Spieler möchte ich verschiedene Kategorien auswählen können, damit ich genau das Thema spielen kann, für das ich mich interessiere.
 2.	Als User möchte ich mich mit meinem Benutzernamen und Passwort registrieren können, damit ich beim nächsten Besuch wieder auf meinen Punktestand und History zugreifen kann.
