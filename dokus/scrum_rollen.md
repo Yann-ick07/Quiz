@@ -1,5 +1,4 @@
 ## Team-Organisation im Scrum
-==========================
 ```text
 Developer - Leon
 ----------------
