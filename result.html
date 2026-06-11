@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% block title %}– Ergebnis{% endblock %}
+{% block extra_style %}
+<style>
+  .result-hero { text-align:center; padding: 2rem 0; }
+  .big-score { font-size: 4rem; font-weight: 900; color: var(--accent2); }
+  .stat-row { display: flex; justify-content: center; gap: 2rem; margin: 1rem 0; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat-val { font-size: 1.6rem; font-weight: 800; }
+  .stat-lbl { color: var(--muted); font-size: 0.85rem; }
+  .answers-list { margin-top: 1.5rem; }
+  .answer-item { display:flex; align-items:flex-start; gap:0.8rem; padding:0.7rem 0; border-bottom:1px solid var(--border); font-size:0.9rem; }
+  .ach-grid { display:flex; flex-wrap:wrap; gap:0.8rem; margin-top:0.8rem; }
+  .ach-card { background:var(--surface2); border:1px solid var(--accent); border-radius:10px; padding:0.7rem 1rem; display:flex; gap:0.6rem; align-items:center; }
+  .ach-icon { font-size:1.4rem; }
+</style>
+{% endblock %}
+
+{% block content %}
+{% if hardcore_failed %}
+<div class="result-hero">
+  <div style="font-size:4rem">💀</div>
+  <div style="font-size:2rem;font-weight:900;color:var(--red);margin:0.5rem 0">GAME OVER</div>
+  <div style="color:var(--muted);margin-bottom:1rem">Eine falsche Antwort hat dein Hardcore-Run beendet</div>
+  <div class="big-score" style="color:var(--red)">{{ score }} Punkte</div>
+  <div class="stat-row">
+    <div class="stat"><div class="stat-val">{{ correct }}/{{ total }}</div><div class="stat-lbl">Bis zum Fehler</div></div>
+    <div class="stat"><div class="stat-val">{{ accuracy }}%</div><div class="stat-lbl">Genauigkeit</div></div>
+  </div>
+  <a href="/play" class="btn btn-primary" style="background:var(--red)">Nochmal versuchen</a>
+  <a href="/leaderboard" class="btn btn-secondary" style="margin-left:0.5rem">Rangliste</a>
+</div>
+{% else %}
+<div class="result-hero">
+  <div style="font-size:1.1rem;color:var(--muted);margin-bottom:0.5rem">
+    {% if mode == "hardcore" %}
+    ☠️ Hardcore abgeschlossen!
+    {% else %}
+    Spielende – dein Ergebnis
+    {% endif %}
+  </div>
+  <div class="big-score">{{ score }} Punkte</div>
+  <div class="stat-row">
+    <div class="stat"><div class="stat-val">{{ correct }}/{{ total }}</div><div class="stat-lbl">Richtig</div></div>
+    <div class="stat"><div class="stat-val">{{ accuracy }}%</div><div class="stat-lbl">Genauigkeit</div></div>
+  </div>
+  <a href="/play" class="btn btn-primary">Nochmal spielen</a>
+  <a href="/leaderboard" class="btn btn-secondary" style="margin-left:0.5rem">Rangliste</a>
+</div>
+{% endif %}
+
+{% if new_achievements %}
+<div class="card" style="margin-bottom:1.5rem;border-color:var(--accent)">
+  <h2>🎉 Neue Achievements freigeschaltet!</h2>
+  <div class="ach-grid">
+    {% for ach in new_achievements %}
+    <div class="ach-card">
+      <div class="ach-icon">{{ ach.icon }}</div>
+      <div>
+        <div style="font-weight:700">{{ ach.name }}</div>
+        <div style="color:var(--muted);font-size:0.82rem">{{ ach.description }}</div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+<div class="card" style="margin-bottom:1.5rem">
+  <h2>📋 Antworten im Überblick</h2>
+  <div class="answers-list">
+    {% set labels = ['A','B','C','D'] %}
+    {% for ans in answers %}
+    <div class="answer-item">
+      <span style="font-size:1.2rem">{{ '✅' if ans.was_correct else '❌' }}</span>
+      <div>
+        <div>{{ ans.question }}</div>
+        <div style="color:var(--muted);font-size:0.82rem;margin-top:0.2rem">
+          Deine Antwort: <strong>{{ labels[ans.chosen] if ans.chosen >= 0 else '–' }}</strong>
+          {% if not ans.was_correct %}
+            · Richtig: <strong style="color:var(--green)">{{ labels[ans.correct_index] }}</strong>
+          {% endif %}
+          · {{ ans.time }}s
+          {% if ans.points > 10 %}<span class="badge badge-yellow">⚡ +{{ ans.points }}</span>{% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="card">
+  <h2>🏆 Rangliste</h2>
+  <table>
+    <thead><tr><th>#</th><th>Spieler</th><th>Punkte</th><th>Kategorie</th></tr></thead>
+    <tbody>
+      {% for entry in leaderboard %}
+      <tr>
+        <td>{{ loop.index }}</td>
+        <td><strong>{{ entry.name }}</strong></td>
+        <td><span class="badge badge-purple">{{ entry.score }}</span></td>
+        <td style="color:var(--muted)">{{ entry.category }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

@@ -57,6 +57,11 @@ ACHIEVEMENTS = {
         "description": "Score 80% accuracy in a game with at least 5 questions.",
         "icon": "🧠",
     },
+    "hardcore_survivor": {
+        "name": "Hardcore Survivor",
+        "description": "Complete a full Hardcore run without a single mistake.",
+        "icon": "☠️",
+    },
 }
 
 
@@ -126,6 +131,32 @@ def check_achievements(
     if accuracy >= 80:
         unlock("quiz_master")
 
+    # Hardcore survivor: finished a hardcore run without any wrong answers
+    # mode is passed in as an extra kwarg (defaults to None for backwards compat)
+    return newly_unlocked
+
+
+def check_hardcore_completion(
+    games_played, total_score, correct, total, fast_answers, existing
+) -> list:
+    """
+    Separate check for the hardcore_survivor achievement.
+    Called from app.py only after a full, clean hardcore run.
+    """
+    newly_unlocked = []
+
+    def unlock(achievement_id):
+        if achievement_id not in existing and achievement_id not in newly_unlocked:
+            newly_unlocked.append(achievement_id)
+
+    # Grant all normal achievements first
+    normal = check_achievements(
+        games_played, total_score, 0, correct, total, fast_answers, existing
+    )
+    newly_unlocked.extend(normal)
+
+    # Then the exclusive hardcore achievement
+    unlock("hardcore_survivor")
     return newly_unlocked
 
 

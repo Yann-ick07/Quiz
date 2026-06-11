@@ -21,7 +21,12 @@ from flask import (
 from accounts import AccountManager
 from question_db import QuestionDB
 from leaderboard import Leaderboard
-from achievements import check_achievements, get_all_achievements, get_achievement_details
+from achievements import (
+    check_achievements,
+    check_hardcore_completion,
+    get_all_achievements,
+    get_achievement_details,
+)
 
 app = Flask(__name__)
 app.secret_key = "brainbuster-secret-key-change-in-production"
@@ -137,7 +142,12 @@ def game_start():
     category = request.form.get("category", "random")
     mode = request.form.get("mode", "solo")
 
-    questions = question_db.get_questions(category, count=10)
+    # Hardcore uses ALL questions, other modes use 10
+    if mode == "hardcore":
+        questions = question_db.get_questions(category)
+    else:
+        questions = question_db.get_questions(category, count=10)
+
     if not questions:
         flash("No questions found for this category.", "warning")
         return redirect(url_for("play"))
@@ -151,7 +161,8 @@ def game_start():
         "category": category,
         "mode": mode,
         "start_time": time.time(),
-        "answers": [],  # stores per-question results for review
+        "answers": [],
+        "hardcore_failed": False,
     }
     return redirect(url_for("game_question"))
 
@@ -184,6 +195,7 @@ def game_question():
         total_questions=len(questions),
         score=game["score"],
         category=game["category"],
+        mode=game["mode"],
         user=get_current_user(),
     )
 
@@ -229,6 +241,14 @@ def game_answer():
     )
 
     game["current"] += 1
+
+    # Hardcore mode: a wrong answer immediately ends the game
+    if game["mode"] == "hardcore" and not correct:
+        game["hardcore_failed"] = True
+        session["game"] = game
+        session.modified = True
+        return redirect(url_for("game_result"))
+
     session["game"] = game  # persist changes back to session
     session.modified = True
 
@@ -256,21 +276,36 @@ def game_result():
 
     # Check for newly unlocked achievements
     profile = account_mgr.get_profile(username)
-    new_achievements = check_achievements(
-        games_played=profile["games_played"],
-        total_score=profile["total_score"],
-        current_score=score,
-        correct=correct,
-        total=total,
-        fast_answers=game["fast_answers"],
-        existing=profile["achievements"],
-    )
+    hardcore_failed = game.get("hardcore_failed", False)
+
+    if mode == "hardcore" and not hardcore_failed:
+        # Clean hardcore run: check for hardcore_survivor + normal achievements
+        new_achievements = check_hardcore_completion(
+            games_played=profile["games_played"],
+            total_score=profile["total_score"],
+            correct=correct,
+            total=total,
+            fast_answers=game["fast_answers"],
+            existing=profile["achievements"],
+        )
+    else:
+        new_achievements = check_achievements(
+            games_played=profile["games_played"],
+            total_score=profile["total_score"],
+            current_score=score,
+            correct=correct,
+            total=total,
+            fast_answers=game["fast_answers"],
+            existing=profile["achievements"],
+        )
     for ach_id in new_achievements:
         account_mgr.add_achievement(username, ach_id)
 
     new_ach_details = [get_achievement_details(a) for a in new_achievements]
 
     session.pop("game", None)
+
+    hardcore_failed = game.get("hardcore_failed", False)
 
     return render_template(
         "result.html",
@@ -282,6 +317,8 @@ def game_result():
         new_achievements=new_ach_details,
         leaderboard=leaderboard.entries[:10],
         user=get_current_user(),
+        mode=mode,
+        hardcore_failed=hardcore_failed,
     )
 
 
@@ -511,4 +548,4 @@ if __name__ == "__main__":
     print("\n  BrainBuster Web App")
     print("  Open http://localhost:5000 in your browser\n")
     debug_mode = os.environ.get("FLASK_DEBUG", "false").lower() == "true"
-    app.run(debug=debug_mode, port=5000)
+    app.run(host="0.0.0.0", debug=debug_mode, port=5000)
