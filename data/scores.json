@@ -7,6 +7,13 @@
     "date": "2026-06-09 10:30"
   },
   {
+    "name": "Robin",
+    "score": 30,
+    "category": "History",
+    "mode": "solo",
+    "date": "2026-06-11 09:59"
+  },
+  {
     "name": "Test",
     "score": 20,
     "category": "Sports",
