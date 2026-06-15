@@ -1,323 +1,3885 @@
 [
-  {"category":"Wissenschaft","question":"Was ist das chemische Symbol für Wasser?","options":["H2O","CO2","NaCl","O2"],"answer":0},
-  {"category":"Wissenschaft","question":"Wie viele Planeten hat unser Sonnensystem?","options":["7","8","9","10"],"answer":1},
-  {"category":"Wissenschaft","question":"Welches Gas nehmen Pflanzen aus der Atmosphäre auf?","options":["Sauerstoff","Stickstoff","Kohlendioxid","Wasserstoff"],"answer":2},
-  {"category":"Wissenschaft","question":"Was ist die Grundeinheit der Materie?","options":["Molekül","Atom","Proton","Elektron"],"answer":1},
-  {"category":"Wissenschaft","question":"Wie viele Knochen hat der menschliche Körper?","options":["186","206","226","246"],"answer":1},
-  {"category":"Wissenschaft","question":"Was ist die chemische Formel für Kochsalz?","options":["KCl","CaCO3","NaCl","MgO"],"answer":2},
-  {"category":"Wissenschaft","question":"Welcher Planet ist der größte im Sonnensystem?","options":["Saturn","Neptun","Jupiter","Uranus"],"answer":2},
-  {"category":"Wissenschaft","question":"Was misst ein Seismograph?","options":["Luftdruck","Erdbeben","Windgeschwindigkeit","Temperatur"],"answer":1},
-  {"category":"Wissenschaft","question":"Wie lautet die Formel für die Lichtgeschwindigkeit?","options":["E=mv²","F=ma","c=λf","E=mc²"],"answer":3},
-  {"category":"Wissenschaft","question":"Aus welchen Elementen besteht Wasser?","options":["Kohlenstoff und Sauerstoff","Wasserstoff und Stickstoff","Wasserstoff und Sauerstoff","Sauerstoff und Schwefel"],"answer":2},
-  {"category":"Wissenschaft","question":"Was ist Photosynthese?","options":["Wasseraufnahme durch Wurzeln","Umwandlung von Licht in Energie","Zellteilung bei Pflanzen","Aufnahme von Mineralstoffen"],"answer":1},
-  {"category":"Wissenschaft","question":"Welches Organ pumpt das Blut durch den Körper?","options":["Lunge","Leber","Niere","Herz"],"answer":3},
-  {"category":"Wissenschaft","question":"Was ist die kleinste Einheit des Lebens?","options":["Organ","Gewebe","Zelle","Molekül"],"answer":2},
-  {"category":"Wissenschaft","question":"Welches Element hat das Symbol Fe?","options":["Fluor","Eisen","Francium","Fermium"],"answer":1},
-  {"category":"Wissenschaft","question":"Was ist der Siedepunkt von Wasser bei Normaldruck?","options":["90°C","95°C","100°C","105°C"],"answer":2},
-  {"category":"Wissenschaft","question":"Wie viele Chromosomen hat ein normaler menschlicher Körper?","options":["23","44","46","48"],"answer":2},
-  {"category":"Wissenschaft","question":"Was ist die Formel für Geschwindigkeit?","options":["v=a·t","v=s/t","v=F/m","v=P/t"],"answer":1},
-  {"category":"Wissenschaft","question":"Welches Gas macht den größten Anteil der Erdatmosphäre aus?","options":["Sauerstoff","Kohlendioxid","Stickstoff","Argon"],"answer":2},
-  {"category":"Wissenschaft","question":"Was ist ein Neutron?","options":["Positiv geladenes Teilchen","Negativ geladenes Teilchen","Ungeladenes Teilchen","Energiewelle"],"answer":2},
-  {"category":"Wissenschaft","question":"Welche Kraft zieht Objekte zur Erde?","options":["Magnetismus","Schwerkraft","Reibung","Auftrieb"],"answer":1},
-  {"category":"Wissenschaft","question":"Was ist der pH-Wert von reinem Wasser?","options":["5","6","7","8"],"answer":2},
-  {"category":"Wissenschaft","question":"Welches Organ ist für die Blutfilterung zuständig?","options":["Leber","Niere","Milz","Bauchspeicheldrüse"],"answer":1},
-  {"category":"Wissenschaft","question":"Was ist DNS?","options":["Eiweißstruktur","Energiemolekül","Erbgutträger","Zellmembran"],"answer":2},
-  {"category":"Wissenschaft","question":"Welches Metall ist flüssig bei Raumtemperatur?","options":["Blei","Zinn","Quecksilber","Aluminium"],"answer":2},
-  {"category":"Wissenschaft","question":"Was ist die Einheit der elektrischen Spannung?","options":["Ampere","Watt","Volt","Ohm"],"answer":2},
-  {"category":"Wissenschaft","question":"Wie nennt man die Hülle eines Atoms?","options":["Kern","Schale","Nukleon","Quark"],"answer":1},
-  {"category":"Wissenschaft","question":"Was ist Osmose?","options":["Chemische Reaktion","Diffusion durch semipermeable Membran","Lichtabsorption","Zellteilung"],"answer":1},
-  {"category":"Wissenschaft","question":"Welches Element hat die Ordnungszahl 1?","options":["Helium","Lithium","Wasserstoff","Beryllium"],"answer":2},
-  {"category":"Wissenschaft","question":"Was ist ein Ökosystem?","options":["Einzelne Tierart","Lebensgemeinschaft mit Umwelt","Klimazone","Gesteinsschicht"],"answer":1},
-  {"category":"Wissenschaft","question":"Welche Strahlung hat die höchste Energie?","options":["Radiowellen","Infrarot","Gammastrahlung","Ultraviolett"],"answer":2},
-  {"category":"Wissenschaft","question":"Was ist der Unterschied zwischen Masse und Gewicht?","options":["Kein Unterschied","Masse ist ortsabhängig, Gewicht nicht","Gewicht ist ortsabhängig, Masse nicht","Beide sind ortsabhängig"],"answer":2},
-  {"category":"Wissenschaft","question":"Welches Organ produziert Insulin?","options":["Leber","Niere","Bauchspeicheldrüse","Schilddrüse"],"answer":2},
-  {"category":"Wissenschaft","question":"Was ist eine Isotope?","options":["Element mit unterschiedlicher Protonenzahl","Atom mit gleicher Protonenzahl, anderer Neutronenzahl","Molekül mit zwei Atomen","Radioaktives Element"],"answer":1},
-  {"category":"Wissenschaft","question":"Was misst die Einheit Hertz?","options":["Lautstärke","Frequenz","Spannung","Leistung"],"answer":1},
-  {"category":"Wissenschaft","question":"Welches Gas entsteht bei der Verbrennung von Kohlenstoff?","options":["Stickstoff","Wasserdampf","Kohlendioxid","Sauerstoff"],"answer":2},
-  {"category":"Wissenschaft","question":"Was ist ein Magnet?","options":["Elektrisch geladener Körper","Körper mit magnetischem Feld","Strahlender Stoff","Lichtquelle"],"answer":1},
-  {"category":"Wissenschaft","question":"Wie viele Sinne hat der Mensch laut klassischer Lehre?","options":["3","4","5","6"],"answer":2},
-  {"category":"Wissenschaft","question":"Was ist die Relativitätstheorie?","options":["Gravitationsgesetz Newtons","Theorie über Raum, Zeit und Masse von Einstein","Wellenmechanik","Elektrodynamik"],"answer":1},
-  {"category":"Wissenschaft","question":"Was ist Kondensation?","options":["Übergang flüssig → gasförmig","Übergang gasförmig → flüssig","Übergang fest → flüssig","Übergang flüssig → fest"],"answer":1},
-  {"category":"Wissenschaft","question":"Welche Einheit wird für den Strom verwendet?","options":["Volt","Watt","Ohm","Ampere"],"answer":3},
-  {"category":"Wissenschaft","question":"Was ist Kernfusion?","options":["Spaltung schwerer Atomkerne","Vereinigung leichter Atomkerne","Radioaktiver Zerfall","Elektronenübergang"],"answer":1},
-  {"category":"Wissenschaft","question":"Welches Gas schützt die Erde vor UV-Strahlung?","options":["Sauerstoff","Kohlendioxid","Ozon","Stickstoff"],"answer":2},
-  {"category":"Wissenschaft","question":"Was ist ein Polymer?","options":["Einzelnes Atom","Einfaches Molekül","Makromolekül aus Monomeren","Ionenverbindung"],"answer":2},
-  {"category":"Wissenschaft","question":"Was ist Biolumineszenz?","options":["Photosynthese im Wasser","Lichtproduktion durch Lebewesen","Reflexion von Sonnenlicht","Thermische Strahlung"],"answer":1},
-  {"category":"Wissenschaft","question":"Was ist der absolute Nullpunkt?","options":["-100°C","-173°C","-273°C","-373°C"],"answer":2},
-  {"category":"Wissenschaft","question":"Welche Blutgruppe ist der universelle Spender?","options":["A","B","AB","0"],"answer":3},
-  {"category":"Wissenschaft","question":"Was ist ein Enzym?","options":["Energieträger","Biologischer Katalysator","Zellmembranbestandteil","Hormonspeicher"],"answer":1},
-  {"category":"Wissenschaft","question":"Was ist Elektrolyse?","options":["Chemische Synthese durch Licht","Zerlegung von Stoffen durch Strom","Thermische Zersetzung","Biologische Fermentation"],"answer":1},
-  {"category":"Wissenschaft","question":"Welche Kraft beschreibt das Hookesche Gesetz?","options":["Magnetische Kraft","Federkraft","Reibungskraft","Gravitationskraft"],"answer":1},
-  {"category":"Wissenschaft","question":"Was ist Sublimation?","options":["Übergang fest → gasförmig","Übergang flüssig → gasförmig","Übergang gasförmig → fest","Übergang fest → flüssig"],"answer":0},
-  {"category":"Geschichte","question":"In welchem Jahr endete der Zweite Weltkrieg?","options":["1943","1944","1945","1946"],"answer":2},
-  {"category":"Geschichte","question":"Wer war der erste Mensch auf dem Mond?","options":["Buzz Aldrin","Juri Gagarin","Neil Armstrong","John Glenn"],"answer":2},
-  {"category":"Geschichte","question":"Welches Reich wurde von Julius Cäsar regiert?","options":["Griechisch","Römisch","Osmanisch","Byzantinisch"],"answer":1},
-  {"category":"Geschichte","question":"Wann begann der Erste Weltkrieg?","options":["1910","1912","1914","1916"],"answer":2},
-  {"category":"Geschichte","question":"Wer war der erste Bundeskanzler Deutschlands?","options":["Helmut Schmidt","Willy Brandt","Konrad Adenauer","Ludwig Erhard"],"answer":2},
-  {"category":"Geschichte","question":"In welchem Jahr fiel die Berliner Mauer?","options":["1987","1988","1989","1990"],"answer":2},
-  {"category":"Geschichte","question":"Wer schrieb das Kommunistische Manifest?","options":["Lenin und Stalin","Marx und Engels","Trotzki und Lenin","Engels und Bebel"],"answer":1},
-  {"category":"Geschichte","question":"In welchem Jahr wurde die Bundesrepublik Deutschland gegründet?","options":["1945","1947","1949","1951"],"answer":2},
-  {"category":"Geschichte","question":"Wer war der ägyptische Gott der Sonne?","options":["Osiris","Anubis","Ra","Horus"],"answer":2},
-  {"category":"Geschichte","question":"In welchem Jahr entdeckte Kolumbus Amerika?","options":["1488","1490","1492","1498"],"answer":2},
-  {"category":"Geschichte","question":"Welches Land war das erste, das Frauen das Wahlrecht gewährte?","options":["Deutschland","USA","Großbritannien","Neuseeland"],"answer":3},
-  {"category":"Geschichte","question":"Wer war der erste Kaiser von China?","options":["Han Wudi","Qin Shihuangdi","Tang Taizong","Yongle"],"answer":1},
-  {"category":"Geschichte","question":"Welches Ereignis löste den Ersten Weltkrieg aus?","options":["Invasion Belgiens","Attentat auf Erzherzog Franz Ferdinand","Kolonialstreit in Afrika","Österreichisch-serbischer Krieg"],"answer":1},
-  {"category":"Geschichte","question":"In welchem Land liegt das antike Babylon?","options":["Iran","Syrien","Irak","Türkei"],"answer":2},
-  {"category":"Geschichte","question":"Wann wurde die Magna Carta unterzeichnet?","options":["1115","1215","1315","1415"],"answer":1},
-  {"category":"Geschichte","question":"Wer war der erste Präsident der USA?","options":["John Adams","Benjamin Franklin","George Washington","Thomas Jefferson"],"answer":2},
-  {"category":"Geschichte","question":"In welchem Jahr begann die Französische Revolution?","options":["1779","1789","1799","1809"],"answer":1},
-  {"category":"Geschichte","question":"Was war die Berliner Luftbrücke?","options":["Erster Transatlantikflug","Versorgung West-Berlins per Flugzeug","Militärische Luftoperation","Spionageflüge über Berlin"],"answer":1},
-  {"category":"Geschichte","question":"Welches Reich wurde 1453 von den Osmanen erobert?","options":["Weströmisches Reich","Byzantinisches Reich","Persisches Reich","Arabisches Kalifat"],"answer":1},
-  {"category":"Geschichte","question":"Wer war Adolf Hitlers Nachfolger als Reichskanzler?","options":["Hermann Göring","Heinrich Himmler","Joseph Goebbels","Karl Dönitz"],"answer":3},
-  {"category":"Geschichte","question":"Welche Zivilisation baute Machu Picchu?","options":["Azteken","Maya","Inka","Olmeken"],"answer":2},
-  {"category":"Geschichte","question":"In welchem Jahr wurde die UNO gegründet?","options":["1943","1945","1947","1949"],"answer":1},
-  {"category":"Geschichte","question":"Wer war Napoleons erste Frau?","options":["Marie-Louise","Marie Antoinette","Joséphine de Beauharnais","Charlotte Corday"],"answer":2},
-  {"category":"Geschichte","question":"Was war der Marshallplan?","options":["Militärstrategie im Pazifik","US-Hilfsprogramm für Europa nach 1945","NATO-Gründungsvertrag","Berliner Friedensvertrag"],"answer":1},
-  {"category":"Geschichte","question":"In welchem Jahr wurde Israel als Staat gegründet?","options":["1946","1947","1948","1949"],"answer":2},
-  {"category":"Geschichte","question":"Was war der Kalte Krieg?","options":["Arktische Militärexpedition","Ideologischer Konflikt USA–UdSSR","Handelskrieg zwischen Europa und Asien","Bürgerkrieg in Deutschland"],"answer":1},
-  {"category":"Geschichte","question":"Wer baute den Suezkanal?","options":["Ägypten allein","Britisch-ägyptisches Konsortium","Französisch-ägyptisches Unternehmen","Osmanisches Reich"],"answer":2},
-  {"category":"Geschichte","question":"Welche Erfindung revolutionierte den Buchdruck um 1450?","options":["Schreibmaschine","Kopiermaschine","Gutenbergs Druckerpresse","Lithografie"],"answer":2},
-  {"category":"Geschichte","question":"Was war die Boston Tea Party?","options":["Britisches Teezeremoniell","Protest amerikanischer Kolonisten gegen Steuer","Handelsabkommen","Vergiftungsaffäre"],"answer":1},
-  {"category":"Geschichte","question":"Wer erfand das Telefon?","options":["Thomas Edison","Nikola Tesla","Alexander Graham Bell","Guglielmo Marconi"],"answer":2},
-  {"category":"Geschichte","question":"In welchem Jahr landeten die Alliierten in der Normandie?","options":["1942","1943","1944","1945"],"answer":2},
-  {"category":"Geschichte","question":"Welcher Vertrag beendete den Ersten Weltkrieg?","options":["Versailler Vertrag","Münchner Abkommen","Potsdamer Abkommen","Pariser Vertrag"],"answer":0},
-  {"category":"Geschichte","question":"Wer führte die Mongolen zur größten Landherrschaft?","options":["Kublai Khan","Timur","Dschingis Khan","Ögedei Khan"],"answer":2},
-  {"category":"Geschichte","question":"In welchem Jahr wurde die NATO gegründet?","options":["1947","1948","1949","1950"],"answer":2},
-  {"category":"Geschichte","question":"Wer war die erste Frau, die den Nobelpreis erhielt?","options":["Rosalind Franklin","Marie Curie","Florence Nightingale","Lise Meitner"],"answer":1},
-  {"category":"Geschichte","question":"In welchem Jahrhundert war die Renaissance?","options":["13.–14. Jh.","14.–17. Jh.","17.–18. Jh.","18.–19. Jh."],"answer":1},
-  {"category":"Geschichte","question":"Was war das Apartheid-System?","options":["Landreform in Indien","Rassentrennung in Südafrika","Koloniales Steuersystem","Militärdiktatur in Lateinamerika"],"answer":1},
-  {"category":"Geschichte","question":"Wann wurde das Deutsche Kaiserreich gegründet?","options":["1866","1868","1871","1875"],"answer":2},
-  {"category":"Geschichte","question":"Was war die Weimarer Republik?","options":["Herzogtum Sachsen-Weimar","Deutsche Demokratie 1919–1933","Kaiserreich bis 1945","Fürstentum Thüringen"],"answer":1},
-  {"category":"Geschichte","question":"Wer war der erste Mensch im Weltraum?","options":["Neil Armstrong","Buzz Aldrin","Alan Shepard","Juri Gagarin"],"answer":3},
-  {"category":"Geschichte","question":"Welche Krankheit wurde als 'Schwarzer Tod' bezeichnet?","options":["Cholera","Pocken","Pest","Typhus"],"answer":2},
-  {"category":"Geschichte","question":"Wann wurde die DDR offiziell aufgelöst?","options":["9. November 1989","3. Oktober 1990","1. Januar 1991","25. Dezember 1990"],"answer":1},
-  {"category":"Geschichte","question":"Wer war der Begründer des Islam?","options":["Jesus von Nazareth","Muhammad","Abraham","Moses"],"answer":1},
-  {"category":"Geschichte","question":"In welchem Jahr begann der Zweite Weltkrieg?","options":["1937","1938","1939","1940"],"answer":2},
-  {"category":"Geschichte","question":"Wer schrieb 'Mein Kampf'?","options":["Heinrich Himmler","Joseph Goebbels","Adolf Hitler","Rudolf Hess"],"answer":2},
-  {"category":"Geschichte","question":"Was war der Vietnamkrieg?","options":["Bürgerkrieg in China","Konflikt um Vietnam zwischen Nord und Süd mit US-Beteiligung","Kolonialkrieg Frankreichs","Unabhängigkeitskrieg gegen Japan"],"answer":1},
-  {"category":"Geschichte","question":"Welches Land wurde 1953 durch Waffenstillstand geteilt?","options":["Vietnam","Deutschland","China","Korea"],"answer":3},
-  {"category":"Geografie","question":"Was ist die Hauptstadt Australiens?","options":["Sydney","Melbourne","Brisbane","Canberra"],"answer":3},
-  {"category":"Geografie","question":"Welcher ist der längste Fluss der Welt?","options":["Amazonas","Jangtsekiang","Mississippi","Nil"],"answer":3},
-  {"category":"Geografie","question":"Auf welchem Kontinent liegt die Sahara?","options":["Asien","Südamerika","Afrika","Australien"],"answer":2},
-  {"category":"Geografie","question":"Welches ist das größte Land der Welt nach Fläche?","options":["China","USA","Kanada","Russland"],"answer":3},
-  {"category":"Geografie","question":"Was ist die Hauptstadt von Brasilien?","options":["São Paulo","Rio de Janeiro","Brasília","Salvador"],"answer":2},
-  {"category":"Geografie","question":"Welcher Ozean ist der größte?","options":["Atlantik","Indik","Pazifik","Arktis"],"answer":2},
-  {"category":"Geografie","question":"In welchem Land liegt der Amazonas-Regenwald hauptsächlich?","options":["Kolumbien","Peru","Venezuela","Brasilien"],"answer":3},
-  {"category":"Geografie","question":"Welches ist der höchste Berg der Welt?","options":["K2","Kangchendzönga","Mount Everest","Lhotse"],"answer":2},
-  {"category":"Geografie","question":"Wie viele Kontinente gibt es?","options":["5","6","7","8"],"answer":2},
-  {"category":"Geografie","question":"Welches Land hat die meisten Einwohner?","options":["Indien","USA","China","Indonesien"],"answer":2},
-  {"category":"Geografie","question":"Was ist die Hauptstadt von Japan?","options":["Osaka","Kyoto","Tokio","Yokohama"],"answer":2},
-  {"category":"Geografie","question":"Welcher Fluss fließt durch Deutschland in die Nordsee?","options":["Mosel","Elbe","Rhein","Donau"],"answer":2},
-  {"category":"Geografie","question":"Auf welchem Kontinent liegt Ägypten?","options":["Asien","Europa","Afrika","Naher Osten"],"answer":2},
-  {"category":"Geografie","question":"Was ist die Hauptstadt von Kanada?","options":["Toronto","Vancouver","Montreal","Ottawa"],"answer":3},
-  {"category":"Geografie","question":"Welches Meer liegt zwischen Europa und Afrika?","options":["Rotes Meer","Schwarzes Meer","Mittelmeer","Kaspisches Meer"],"answer":2},
-  {"category":"Geografie","question":"In welchem Land liegt der Kilimandscharo?","options":["Kenia","Äthiopien","Tansania","Uganda"],"answer":2},
-  {"category":"Geografie","question":"Was ist die Hauptstadt von Argentinien?","options":["Santiago","Montevideo","Buenos Aires","Lima"],"answer":2},
-  {"category":"Geografie","question":"Welche Stadt ist die bevölkerungsreichste der Welt?","options":["Delhi","Schanghai","Tokio","São Paulo"],"answer":2},
-  {"category":"Geografie","question":"Durch wie viele Länder fließt die Donau?","options":["7","8","9","10"],"answer":3},
-  {"category":"Geografie","question":"Welches Land hat die längste Küstenlinie?","options":["Russland","Norwegen","Kanada","Australien"],"answer":2},
-  {"category":"Geografie","question":"Was ist die Hauptstadt der Schweiz?","options":["Zürich","Genf","Basel","Bern"],"answer":3},
-  {"category":"Geografie","question":"Welches ist das kleinste Land der Welt?","options":["Monaco","San Marino","Liechtenstein","Vatikanstadt"],"answer":3},
-  {"category":"Geografie","question":"In welchem Land liegt der Grand Canyon?","options":["Kanada","Mexiko","USA","Australien"],"answer":2},
-  {"category":"Geografie","question":"Welcher Kontinent hat die meisten Länder?","options":["Asien","Südamerika","Afrika","Europa"],"answer":2},
-  {"category":"Geografie","question":"Welche Stadt ist die Hauptstadt der Türkei?","options":["Istanbul","İzmir","Ankara","Bursa"],"answer":2},
-  {"category":"Geografie","question":"In welchem Land liegt die Großstadt Mumbai?","options":["Pakistan","Bangladesh","Sri Lanka","Indien"],"answer":3},
-  {"category":"Geografie","question":"Welcher See ist der größte Süßwassersee der Welt?","options":["Baikalsee","Tanganjikasee","Viktoriasee","Oberer See"],"answer":3},
-  {"category":"Geografie","question":"Welcher Kontinent ist der trockenste?","options":["Afrika","Antarktis","Australien","Asien"],"answer":1},
-  {"category":"Geografie","question":"In welchem Land liegt der Titicacasee?","options":["Chile und Argentinien","Peru und Bolivien","Kolumbien und Brasilien","Ecuador und Peru"],"answer":1},
-  {"category":"Geografie","question":"Was ist die Hauptstadt von Südafrika (Exekutive)?","options":["Kapstadt","Johannesburg","Durban","Pretoria"],"answer":3},
-  {"category":"Geografie","question":"Wie heißt der längste Gebirgsstreifen der Welt?","options":["Himalaya","Rocky Mountains","Alpen","Anden"],"answer":3},
-  {"category":"Geografie","question":"Welcher Fluss fließt durch Ägypten?","options":["Kongo","Niger","Sambesi","Nil"],"answer":3},
-  {"category":"Geografie","question":"Welches Land hat das meiste Süßwasser der Welt?","options":["China","USA","Russland","Brasilien"],"answer":3},
-  {"category":"Geografie","question":"In welchem Land liegt die Atacama-Wüste?","options":["Peru","Argentinien","Bolivien","Chile"],"answer":3},
-  {"category":"Geografie","question":"Welche Stadt ist die höchstgelegene Hauptstadt der Welt?","options":["Quito","Bogotá","La Paz","Addis Abeba"],"answer":2},
-  {"category":"Geografie","question":"In welchem Kontinent liegt Madagaskar?","options":["Asien","Ozeanien","Südamerika","Afrika"],"answer":3},
-  {"category":"Geografie","question":"Durch welche Stadt fließt die Themse?","options":["Edinburgh","Manchester","London","Birmingham"],"answer":2},
-  {"category":"Geografie","question":"Welches Land liegt nördlich von Deutschland?","options":["Dänemark","Niederlande","Polen","Schweden"],"answer":0},
-  {"category":"Geografie","question":"Welcher Staat liegt auf einer Insel im Mittelmeer südlich von Sizilien?","options":["Zypern","Malta","Korsika","Sardinien"],"answer":1},
-  {"category":"Geografie","question":"In welchem Land liegt Machu Picchu?","options":["Bolivien","Chile","Kolumbien","Peru"],"answer":3},
-  {"category":"Geografie","question":"Was ist der tiefste See der Welt?","options":["Oberer See","Kaspisches Meer","Tanganjikasee","Baikalsee"],"answer":3},
-  {"category":"Geografie","question":"Welches Land hat das Matterhorn?","options":["Österreich","Frankreich","Schweiz (und Italien)","Deutschland"],"answer":2},
-  {"category":"Geografie","question":"Wie nennt man die Meerenge zwischen Spanien und Marokko?","options":["Bosporus","Straße von Gibraltar","Suezkanal","Straße von Hormuz"],"answer":1},
-  {"category":"Geografie","question":"Welcher Ozean liegt östlich von Amerika?","options":["Pazifik","Indik","Arktischer Ozean","Atlantik"],"answer":3},
-  {"category":"Geografie","question":"Was ist die Hauptstadt von Norwegen?","options":["Bergen","Trondheim","Stavanger","Oslo"],"answer":3},
-  {"category":"Geografie","question":"In welchem Land liegt die Gobi-Wüste?","options":["Kasachstan und Russland","China und Mongolei","Iran und Afghanistan","Indien und Pakistan"],"answer":1},
-  {"category":"Geografie","question":"Wie viele Bundesländer hat Deutschland?","options":["14","15","16","17"],"answer":2},
-  {"category":"Technologie","question":"Wofür steht 'CPU'?","options":["Central Processing Unit","Computer Personal Unit","Central Program Utility","Core Processing Unit"],"answer":0},
-  {"category":"Technologie","question":"Welche Programmiersprache gilt als 'Sprache des Webs'?","options":["Python","Java","JavaScript","C++"],"answer":2},
-  {"category":"Technologie","question":"Wofür steht 'HTML'?","options":["Hyper Text Markup Language","High Transfer Machine Language","Hyper Transfer Meta Language","Home Tool Markup Language"],"answer":0},
-  {"category":"Technologie","question":"Was ist ein Betriebssystem?","options":["Antivirenprogramm","Software zur Hardwareverwaltung","Datenbankprogramm","Browser"],"answer":1},
-  {"category":"Technologie","question":"Was bedeutet 'RAM'?","options":["Remote Access Memory","Random Access Memory","Read Accessible Module","Rapid Application Method"],"answer":1},
-  {"category":"Technologie","question":"Was ist eine IP-Adresse?","options":["Netzwerkidentifikation eines Geräts","Passwort im Internet","Dateiformat","Verschlüsselungsverfahren"],"answer":0},
-  {"category":"Technologie","question":"Was ist ein Algorithmus?","options":["Schaltkreis","Schritt-für-Schritt-Anleitung zur Problemlösung","Speicherformat","Datenbank"],"answer":1},
-  {"category":"Technologie","question":"Was bedeutet 'USB'?","options":["Universal Serial Bus","Unified System Boot","Ultra Speed Backup","Universal Software Bridge"],"answer":0},
-  {"category":"Technologie","question":"Was ist Cloud-Computing?","options":["Speicherung auf lokalen Festplatten","Nutzung von IT-Ressourcen über das Internet","Drahtlose Netzwerkverbindung","Verschlüsselung von Daten"],"answer":1},
-  {"category":"Technologie","question":"Was ist eine Firewall?","options":["Antivirus-Software","Netzwerksicherheitssystem","Datensicherung","WLAN-Router"],"answer":1},
-  {"category":"Technologie","question":"Was ist Verschlüsselung (Kryptografie)?","options":["Datenkomprimierung","Umwandlung in unlesbaren Code","Datenübertragung","Datenspeicherung"],"answer":1},
-  {"category":"Technologie","question":"Was bedeutet das Kürzel 'SSD'?","options":["Solid State Drive","Super Speed Disk","Secure Storage Device","Standard System Drive"],"answer":0},
-  {"category":"Technologie","question":"Was ist maschinelles Lernen?","options":["Programmierung von Robotern","KI-Methode, bei der Modelle aus Daten lernen","Automatisierte Softwareinstallation","Netzwerkoptimierung"],"answer":1},
-  {"category":"Technologie","question":"Was ist ein Protokoll im Netzwerk?","options":["Hardware-Stecker","Regelwerk für Datenkommunikation","Betriebssystem","Verschlüsselungskey"],"answer":1},
-  {"category":"Technologie","question":"Was ist Git?","options":["Programmiersprache","Datenbank","Versionskontrollsystem","Texteditor"],"answer":2},
-  {"category":"Technologie","question":"Was ist eine relationale Datenbank?","options":["Datenbank mit verknüpften Tabellen","Dokumenten-basierte Datenbank","Netzwerkdatenbank","Hierarchische Datenbank"],"answer":0},
-  {"category":"Technologie","question":"Was ist ein API?","options":["Grafische Benutzeroberfläche","Schnittstelle für Softwarekommunikation","Datenbankformat","Sicherheitsprotokoll"],"answer":1},
-  {"category":"Technologie","question":"Was bedeutet 'WLAN'?","options":["Wide Local Area Network","Wireless Local Area Network","Wired LAN Access Node","Web Local Access Network"],"answer":1},
-  {"category":"Technologie","question":"Was ist ein Compiler?","options":["Texteditor","Übersetzt Quellcode in Maschinencode","Browser-Plugin","Datenbanksystem"],"answer":1},
-  {"category":"Technologie","question":"Was ist Phishing?","options":["Viren verbreiten","Betrügerische Versuche, Passwörter zu stehlen","Netzwerküberwachung","Software-Update-Methode"],"answer":1},
-  {"category":"Technologie","question":"Was ist ein Byte?","options":["4 Bit","8 Bit","16 Bit","32 Bit"],"answer":1},
-  {"category":"Technologie","question":"Was ist ein Server?","options":["Gerät, das Dienste für andere Computer bereitstellt","Drucker im Netzwerk","Mobiles Endgerät","Eingabegerät"],"answer":0},
-  {"category":"Technologie","question":"Was ist OOP?","options":["Programmierparadigma mit Objekten und Klassen","Datenübertragungsprotokoll","Datenbankdesign","Netzwerkarchitektur"],"answer":0},
-  {"category":"Technologie","question":"Was ist ein Betriebssystemkern (Kernel)?","options":["Grafische Benutzeroberfläche","Zentraler Teil des Betriebssystems","Netzwerktreiber","Speicherverwaltung"],"answer":1},
-  {"category":"Technologie","question":"Was ist HTTPS?","options":["Gesichertes HTTP-Protokoll","E-Mail-Protokoll","Dateiübertragungsprotokoll","DNS-Protokoll"],"answer":0},
-  {"category":"Technologie","question":"Was ist ein Binärcode?","options":["Hexadezimales Zahlensystem","Zahlensystem auf Basis 2 (0 und 1)","ASCII-Zeichensatz","Verschlüsselungsformat"],"answer":1},
-  {"category":"Technologie","question":"Was ist Virtualisierung?","options":["Erstellen virtueller Hardware-Ressourcen auf physischer Hardware","Drahtlose Übertragung","Datenkompression","Cloudbackup"],"answer":0},
-  {"category":"Technologie","question":"Was ist ein Trojaner?","options":["Nützliches Open-Source-Programm","Schadsoftware, die sich als legitimes Programm tarnt","Hardwarefehler","Netzwerkangriff"],"answer":1},
-  {"category":"Technologie","question":"Was ist SQL?","options":["Programmiersprache für Web","Abfragesprache für relationale Datenbanken","Betriebssystem","Netzwerkprotokoll"],"answer":1},
-  {"category":"Technologie","question":"Was ist ein DNS-Server?","options":["Zuordnung von Domainnamen zu IP-Adressen","E-Mail-Server","Datenbankserver","Webserver"],"answer":0},
-  {"category":"Technologie","question":"Was ist ein Darknet?","options":["Abgesichertes Firmennetzwerk","Teil des Internets nur über spezielle Software erreichbar","Experimentelles 5G-Netz","Satelliteninternet"],"answer":1},
-  {"category":"Technologie","question":"Was ist eine MAC-Adresse?","options":["IP-Adresse des Routers","Eindeutige Hardware-Identifikation einer Netzwerkkarte","Passwort für WLAN","Betriebssystem-ID"],"answer":1},
-  {"category":"Technologie","question":"Was ist ein Buffer Overflow?","options":["Zu viele offene Tabs","Speicherüberlauf durch Überschreiben des Puffers","Festplattenüberfüllung","Netzwerküberlastung"],"answer":1},
-  {"category":"Technologie","question":"Was ist Agile Softwareentwicklung?","options":["Schnelles Programmieren ohne Planung","Iterativer Entwicklungsprozess mit kurzen Zyklen","Dokumentationsgetriebene Entwicklung","Monolithische Architektur"],"answer":1},
-  {"category":"Technologie","question":"Was ist DevOps?","options":["Neues Betriebssystem","Kombination aus Entwicklung und Betrieb für schnellere Softwarelieferung","Datenbankmanagement","Netzwerkprotokoll"],"answer":1},
-  {"category":"Technologie","question":"Was ist ein Load Balancer?","options":["Gerät zur Stromverteilung","Software/Hardware zur Lastverteilung auf mehrere Server","Netzwerkkabel","Datenbankoptimierer"],"answer":1},
-  {"category":"Technologie","question":"Was ist das Internet of Things (IoT)?","options":["Soziales Netzwerk","Netzwerk vernetzter physischer Geräte","Cloud-Speicher","Quantencomputer-System"],"answer":1},
-  {"category":"Technologie","question":"Was ist ein REST API?","options":["Relationale Datenbank","Architekturstil für Webdienste über HTTP","Grafikprotokoll","Sicherheitsprotokoll"],"answer":1},
-  {"category":"Technologie","question":"Was ist Blockchain?","options":["Datenbanktyp für Bilder","Dezentrale, unveränderliche Datenstruktur","Verschlüsselungsalgorithmus","Betriebssystem"],"answer":1},
-  {"category":"Technologie","question":"Was bedeutet 'open source'?","options":["Kostenlose Software","Software mit öffentlich zugänglichem Quellcode","Browser-basierte Anwendung","Cloud-Dienst"],"answer":1},
-  {"category":"Technologie","question":"Was ist ein Container (Docker)?","options":["Physischer Server","Virtualisierte Laufzeitumgebung für Anwendungen","Datenbankformat","Netzwerksegment"],"answer":1},
-  {"category":"Technologie","question":"Was ist Latenz im Netzwerk?","options":["Übertragungsgeschwindigkeit","Verzögerungszeit bei der Datenübertragung","Paketverlust","Bandbreite"],"answer":1},
-  {"category":"Technologie","question":"Was ist ein Hash?","options":["Datenbankindex","Feste Ausgabe einer Hash-Funktion für beliebige Eingabe","Verschlüsselungsschlüssel","Komprimierungsformat"],"answer":1},
-  {"category":"Technologie","question":"Was ist ein Interrupt?","options":["Absturzsignal","Signal zur Unterbrechung der CPU für dringende Aufgaben","Netzwerkfehler","Speicherzugriff"],"answer":1},
-  {"category":"Technologie","question":"Was ist RAID?","options":["Remote Access Interface Device","Redundant Array of Independent Disks","Rapid Application Integration Driver","Resource Allocation Index Data"],"answer":1},
-  {"category":"Technologie","question":"Was ist ein Subnet?","options":["Teil eines großen Netzwerks","Separate WLAN-Frequenz","DNS-Unterdomäne","Firewall-Regel"],"answer":0},
-  {"category":"Technologie","question":"Was ist ein Thread in der Programmierung?","options":["Schleifenanweisung","Leichtgewichtiger Ausführungsstrang innerhalb eines Prozesses","Datenbankverbindung","Netzwerkprotokoll"],"answer":1},
-  {"category":"Sport","question":"Wie viele Spieler hat eine Fußballmannschaft auf dem Feld?","options":["9","10","11","12"],"answer":2},
-  {"category":"Sport","question":"Bei welcher Sportart führt man einen 'Slam Dunk' aus?","options":["Volleyball","Basketball","Tennis","Baseball"],"answer":1},
-  {"category":"Sport","question":"Wie viele Ringe hat die olympische Flagge?","options":["4","5","6","7"],"answer":1},
-  {"category":"Sport","question":"Wie lange dauert ein reguläres Fußballspiel?","options":["80 Minuten","90 Minuten","100 Minuten","120 Minuten"],"answer":1},
-  {"category":"Sport","question":"In welcher Stadt fanden die ersten modernen Olympischen Spiele statt?","options":["Paris","London","Athen","Berlin"],"answer":2},
-  {"category":"Sport","question":"Wie viele Spieler hat eine Basketballmannschaft auf dem Feld?","options":["4","5","6","7"],"answer":1},
-  {"category":"Sport","question":"Welche Sportart wird im Wimbledon-Turnier gespielt?","options":["Squash","Badminton","Tennis","Tischtennis"],"answer":2},
-  {"category":"Sport","question":"Wie viele Sets gewinnt man beim Tennis (Herren, Grand Slam)?","options":["2","3","4","5"],"answer":1},
-  {"category":"Sport","question":"Was ist eine Regatta?","options":["Fußballturnier","Schwimmwettkampf","Ruder- oder Segelrennen","Radrennen"],"answer":2},
-  {"category":"Sport","question":"Welche Sportart hat Begriffe wie 'Birdie' und 'Eagle'?","options":["Tennis","Golf","Badminton","Bogenschießen"],"answer":1},
-  {"category":"Sport","question":"In welcher Sportart gibt es einen 'Hat-Trick'?","options":["Basketball","Eishockey (und Fußball)","Volleyball","Rugby"],"answer":1},
-  {"category":"Sport","question":"Wie hoch ist ein Basketballkorb?","options":["2,75 m","3,05 m","3,35 m","3,65 m"],"answer":1},
-  {"category":"Sport","question":"Welcher Sportler gewann die meisten olympischen Goldmedaillen?","options":["Carl Lewis","Usain Bolt","Michael Phelps","Larisa Latynina"],"answer":2},
-  {"category":"Sport","question":"Was ist beim Boxen ein 'KO'?","options":["Kampfunterbrechung","Technischer Fehler","Niederschlag ohne Aufstehen in 10 Sekunden","Aufgabe"],"answer":2},
-  {"category":"Sport","question":"In welchem Sport gibt es eine 'Zeitstrafe'?","options":["Fußball","Eishockey","Basketball","Tennis"],"answer":1},
-  {"category":"Sport","question":"Wie viele Spieler sind in einer Volleyballmannschaft auf dem Feld?","options":["5","6","7","8"],"answer":1},
-  {"category":"Sport","question":"Was ist ein 'Penalty' im Fußball?","options":["Freistoß an der Mittellinie","Elfmeter","Platzverweis","Einwurf"],"answer":1},
-  {"category":"Sport","question":"Welcher Verein hat die Champions League am häufigsten gewonnen?","options":["FC Barcelona","FC Bayern München","AC Milan","Real Madrid"],"answer":3},
-  {"category":"Sport","question":"Wie viele Punkte gibt ein Touchdown im American Football?","options":["4","5","6","7"],"answer":2},
-  {"category":"Sport","question":"Was ist ein 'Ace' beim Tennis?","options":["Gewinnpunkt ohne Bodenkontakt","Aufschlag, den der Gegner nicht berührt","Fehler im Aufschlag","Vorteil nach Einstand"],"answer":1},
-  {"category":"Sport","question":"Welcher Marathon gilt als der älteste und prestigeträchtigste?","options":["Berlin Marathon","New York Marathon","Boston Marathon","London Marathon"],"answer":2},
-  {"category":"Sport","question":"Was ist der Unterschied zwischen Judo und Karate?","options":["Kein Unterschied","Judo ist Wurfsport, Karate betont Schläge","Karate ist Kontaktsport, Judo nicht","Judo aus China, Karate aus Japan"],"answer":1},
-  {"category":"Sport","question":"Wie viele Spieler hat eine Rugbymannschaft (Union)?","options":["11","13","15","17"],"answer":2},
-  {"category":"Sport","question":"Was ist ein 'Dribbling'?","options":["Sprung über Gegner","Ball mit Füßen oder Händen führen","Schussversuch aus der Distanz","Einwurf vom Seitenrand"],"answer":1},
-  {"category":"Sport","question":"Was ist Biathlon?","options":["Schwimmen und Radfahren","Langlauf und Schießen","Skifahren und Snowboard","Laufen und Bogenschießen"],"answer":1},
-  {"category":"Sport","question":"Welcher Sportler hält den Weltrekord im 100-m-Lauf?","options":["Asafa Powell","Justin Gatlin","Usain Bolt","Tyson Gay"],"answer":2},
-  {"category":"Sport","question":"Was ist eine 'Libero'-Position?","options":["Stürmer im Fußball","Verteidigungsspezialist im Volleyball","Mittelfeldposition im Basketball","Torwart im Handball"],"answer":1},
-  {"category":"Sport","question":"Wie oft finden die Olympischen Spiele statt?","options":["Alle 2 Jahre","Alle 3 Jahre","Alle 4 Jahre","Alle 5 Jahre"],"answer":2},
-  {"category":"Sport","question":"Was ist ein 'Grand Slam' im Tennis?","options":["Sieg in einem einzelnen Turnier","Gewinn aller vier Major-Turniere in einem Jahr","Sieg ohne Satzverlust","Gewinn von zehn Titeln in Folge"],"answer":1},
-  {"category":"Sport","question":"In welchem Sport gibt es das 'Florett'?","options":["Ringen","Fechten","Bogenschießen","Modernen Fünfkampf"],"answer":1},
-  {"category":"Sport","question":"Was bedeutet 'Offside' (Abseits) im Fußball?","options":["Der Ball ist im Aus","Stürmer steht hinter letztem Verteidiger bei Zuspiel","Unerlaubtes Foul","Rückpass zum Torwart mit der Hand"],"answer":1},
-  {"category":"Sport","question":"Welche Sportart hat den Begriff 'Scrum'?","options":["American Football","Rugby","Feldhockey","Handball"],"answer":1},
-  {"category":"Sport","question":"Wie viele Spieler hat eine Handballmannschaft auf dem Feld?","options":["5","6","7","8"],"answer":2},
-  {"category":"Sport","question":"Was ist ein 'Doppelfehler' beim Tennis?","options":["Zweimalige Ballberührung","Zwei fehlerhafte Aufschläge hintereinander","Fehler an zwei Positionen","Netz berühren beim Aufschlag"],"answer":1},
-  {"category":"Sport","question":"In welchem Jahr fanden die ersten Fußball-Weltmeisterschaften statt?","options":["1926","1930","1934","1938"],"answer":1},
-  {"category":"Sport","question":"Welcher Sport verwendet einen 'Puck' statt eines Balls?","options":["Polo","Korbball","Eishockey","Lacrosse"],"answer":2},
-  {"category":"Sport","question":"Was ist der 'Decathlon' (Zehnkampf)?","options":["10 Leichtathletikdisziplinen in zwei Tagen","Kombination aus 10 Sportarten","Staffellauf mit 10 Teilnehmern","Triathlon mit 10 km Lauf"],"answer":0},
-  {"category":"Sport","question":"Was ist eine olympische Disziplin seit 1896?","options":["Fußball","Leichtathletik","Basketball","Volleyball"],"answer":1},
-  {"category":"Sport","question":"Wie nennt man den Startblock beim Schwimmen?","options":["Startpodest","Startblock","Sprungblock","Startsteg"],"answer":1},
-  {"category":"Prüfung (AP1)","question":"Welche Schicht des OSI-Modells ist für die physische Übertragung von Bits zuständig?","options":["Vermittlungsschicht","Sicherungsschicht","Bitübertragungsschicht","Transportschicht"],"answer":2},
-  {"category":"Prüfung (AP1)","question":"Was versteht man unter dem Begriff 'Amortisation'?","options":["Abzahlung von Schulden","Zeitraum, in dem sich eine Investition durch Einsparungen bezahlt macht","Steuerliche Abschreibung","Gewinnverteilung"],"answer":1},
-  {"category":"Prüfung (AP1)","question":"Was ist RAID 1?","options":["Striping ohne Redundanz","Striping mit Parität","Spiegelung (Mirroring)","Verteilung mit doppelter Parität"],"answer":2},
-  {"category":"Prüfung (AP1)","question":"Welches RAID-Level benötigt mindestens 3 Festplatten?","options":["RAID 0","RAID 1","RAID 5","RAID 10"],"answer":2},
-  {"category":"Prüfung (AP1)","question":"Was bedeutet 'CIA' in der IT-Sicherheit?","options":["Computer Intelligence Agency","Confidentiality, Integrity, Availability","Cyber Incident Analysis","Central IT Administration"],"answer":1},
-  {"category":"Prüfung (AP1)","question":"Was ist das Ziel der DSGVO?","options":["Förderung des E-Commerce","Schutz personenbezogener Daten natürlicher Personen","Regulierung von Softwarelizenzen","Cybersicherheitsstandards für Unternehmen"],"answer":1},
-  {"category":"Prüfung (AP1)","question":"Welcher DSGVO-Grundsatz besagt, dass Daten nur für den angegebenen Zweck genutzt werden dürfen?","options":["Datenminimierung","Zweckbindung","Speicherbegrenzung","Rechtmäßigkeit"],"answer":1},
-  {"category":"Prüfung (AP1)","question":"Was ist ein VPN?","options":["Virtuelles Privatnetzwerk über öffentliche Infrastruktur","Virenscanner","Datenbankprogramm","WLAN-Verstärker"],"answer":0},
-  {"category":"Prüfung (AP1)","question":"Was beschreibt das EVA-Prinzip?","options":["Eingabe–Verarbeitung–Ausgabe","Entwicklung–Validierung–Anpassung","Entwurf–Verifikation–Abnahme","Erfassung–Verwaltung–Analyse"],"answer":0},
-  {"category":"Prüfung (AP1)","question":"Was ist ein Pflichtenheft?","options":["Lastenheft des Kunden","Detaillierte technische Umsetzungsbeschreibung durch Auftragnehmer","Projektstrukturplan","Testprotokoll"],"answer":1},
-  {"category":"Prüfung (AP1)","question":"Was ist ein Lastenheft?","options":["Technische Spezifikation des Auftragnehmers","Anforderungsdokument des Auftraggebers","Testplan","Benutzerhandbuch"],"answer":1},
-  {"category":"Prüfung (AP1)","question":"Was versteht man unter 'Datenminimierung' laut DSGVO?","options":["Keine Datenspeicherung","Nur so viele Daten erfassen wie nötig","Alle Daten verschlüsseln","Daten nach 30 Tagen löschen"],"answer":1},
-  {"category":"Prüfung (AP1)","question":"Was ist ein Gateway im Netzwerk?","options":["WLAN-Antenne","Verbindungspunkt zwischen verschiedenen Netzwerken","Paketfilter","DNS-Server"],"answer":1},
-  {"category":"Prüfung (AP1)","question":"Was ist der Unterschied zwischen TCP und UDP?","options":["Kein Unterschied","TCP verbindungsorientiert mit Bestätigung, UDP verbindungslos","UDP ist sicherer","TCP ist schneller"],"answer":1},
-  {"category":"Prüfung (AP1)","question":"Was ist ein DHCP-Server?","options":["Verteilt automatisch IP-Adressen im Netzwerk","Speichert Webseiten-Cache","Übersetzt Domainnamen in IPs","Filtert Datenpakete"],"answer":0},
-  {"category":"Prüfung (AP1)","question":"Was ist eine Subnetzmaske?","options":["Passwort für das Netzwerk","Trennt Netzwerk- und Hostanteil einer IP-Adresse","Firewall-Regel","Routing-Protokoll"],"answer":1},
-  {"category":"Prüfung (AP1)","question":"Was versteht man unter Virtualisierung in der IT?","options":["Cloud-Backup","Erstellen virtueller Hardware-Ressourcen auf physischer Hardware","Datenverschlüsselung","Fernwartung"],"answer":1},
-  {"category":"Prüfung (AP1)","question":"Was ist ein Switch im Netzwerk?","options":["Verbindet Netzwerke auf Layer 3","Verbindet Geräte im gleichen Netzwerk auf Layer 2","WLAN-Verteiler","Paketfilter"],"answer":1},
-  {"category":"Prüfung (AP1)","question":"Was ist ein Router?","options":["Vermittelt Datenpakete zwischen verschiedenen Netzwerken (Layer 3)","Verbindet Geräte im LAN","Drahtlose Basisstation","DHCP-Server"],"answer":0},
-  {"category":"Prüfung (AP1)","question":"Was ist der Unterschied zwischen LAN und WAN?","options":["Kein Unterschied","LAN = lokales Netz, WAN = weiträumiges Netz","WAN ist schneller","LAN ist drahtlos"],"answer":1},
-  {"category":"Prüfung (AP1)","question":"Was bedeutet 'Interoperabilität'?","options":["Kompatibilität verschiedener Systeme miteinander","Ausfallsicherheit","Datenschutz","Programmierbarkeit"],"answer":0},
-  {"category":"Prüfung (AP1)","question":"Was ist das ISO/OSI-Modell?","options":["Sicherheitsnorm","7-Schichten-Referenzmodell für Netzwerkkommunikation","Programmierstandard","Hardwarenorm"],"answer":1},
-  {"category":"Prüfung (AP1)","question":"Welche Schicht des OSI-Modells ist für End-zu-End-Kommunikation zuständig?","options":["Sitzungsschicht","Netzwerkschicht","Transportschicht","Darstellungsschicht"],"answer":2},
-  {"category":"Prüfung (AP1)","question":"Was ist RAID 0?","options":["Spiegelung","Striping ohne Redundanz","Parität über 3 Platten","Kombination aus 1 und 0"],"answer":1},
-  {"category":"Prüfung (AP1)","question":"Was ist eine USV?","options":["Notstromaggregat","Puffert Stromausfälle und sichert Betrieb für kurze Zeit","Überspannungsschutz","Netzteilverstärker"],"answer":1},
-  {"category":"Prüfung (AP1)","question":"Was ist ein Ticket-System?","options":["Eintrittsverwaltung","System zur Verwaltung von IT-Anfragen und -Störungen","Abrechnungssystem","Netzwerkmonitor"],"answer":1},
-  {"category":"Prüfung (AP1)","question":"Was beschreibt das Scrum-Framework?","options":["Wasserfallmodell","Agiles Vorgehensmodell mit Sprints und Rollen","Testmethode","Netzwerkprotokoll"],"answer":1},
-  {"category":"Prüfung (AP1)","question":"Was ist ein Sprint in Scrum?","options":["Schnelles Debugging","Festgelegter Entwicklungszeitraum (1–4 Wochen)","Codereview","Release-Prozess"],"answer":1},
-  {"category":"Prüfung (AP1)","question":"Was ist ein Use Case?","options":["Benutzerhandbuch","Beschreibung einer Interaktion zwischen Nutzer und System","Datenbankschema","Netzwerkdiagramm"],"answer":1},
-  {"category":"Prüfung (AP1)","question":"Was ist eine UML?","options":["Einheitliche Modellierungssprache für Software","Netzwerkprotokoll","Datenbanksprache","Betriebssystemstandard"],"answer":0},
-  {"category":"Prüfung (AP1)","question":"Was ist ein Gantt-Diagramm?","options":["Organigramm","Netzwerkplan","Balkendiagramm zur Darstellung von Projektplänen","Flussdiagramm"],"answer":2},
-  {"category":"Prüfung (AP1)","question":"Was ist das Wasserfallmodell?","options":["Agiles Vorgehensmodell","Lineares Entwicklungsmodell mit sequenziellen Phasen","Iteratives Testverfahren","Notfallplan"],"answer":1},
-  {"category":"Prüfung (AP1)","question":"Was ist eine Firewall-Regel (ACL)?","options":["Benutzerliste","Zugriffssteuerungsliste für erlaubten/blockierten Netzwerkverkehr","Dateisystemrecht","Passwortrichtlinie"],"answer":1},
-  {"category":"Prüfung (AP1)","question":"Was ist Zwei-Faktor-Authentifizierung (2FA)?","options":["Zwei verschiedene Passwörter","Kombination aus zwei verschiedenen Authentifizierungsmethoden","Biometrie allein","Sicherheitsfrage"],"answer":1},
-  {"category":"Prüfung (AP1)","question":"Was ist Social Engineering?","options":["IT-Systemoptimierung","Manipulation von Menschen zur Preisgabe vertraulicher Informationen","Netzwerkangriff","Viren verbreiten"],"answer":1},
-  {"category":"Prüfung (AP1)","question":"Was beschreibt das Prinzip 'Need to Know'?","options":["Alle Mitarbeiter erhalten alle Rechte","Zugriff nur auf Daten, die für die Aufgabe notwendig sind","Daten werden öffentlich zugänglich gemacht","Administratoren haben Vollzugriff"],"answer":1},
-  {"category":"Prüfung (AP1)","question":"Was bedeutet IPv4 vs. IPv6?","options":["IPv4 = 32-Bit, IPv6 = 128-Bit Adressraum","Gleicher Adressraum, verschiedene Protokolle","IPv6 ist veraltet","IPv4 hat mehr Adressen"],"answer":0},
-  {"category":"Prüfung (AP1)","question":"Was ist ein Default Gateway?","options":["DNS-Server","Router-Adresse, die bei unbekannten Zielen genutzt wird","DHCP-Endpunkt","Netzwerk-Switch"],"answer":1},
-  {"category":"Prüfung (AP1)","question":"Was ist das Prinzip der Datensparsamkeit?","options":["Keine Datenspeicherung erlaubt","Nur minimal notwendige Daten erheben und verarbeiten","Daten regelmäßig sichern","Daten anonymisieren"],"answer":1},
-  {"category":"Prüfung (AP1)","question":"Was ist ein Proof of Concept (PoC)?","options":["Endprodukt","Erster Prototyp zur Machbarkeitsdemonstration","Testbericht","Benutzerhandbuch"],"answer":1},
-  {"category":"Prüfung (AP1)","question":"Was sind Betroffenenrechte laut DSGVO?","options":["Rechte von Datenschutzbehörden","Rechte von Personen bezüglich ihrer eigenen Daten","Rechte von Unternehmen","Rechte von IT-Administratoren"],"answer":1},
-  {"category":"Prüfung (AP1)","question":"Welche Netzwerktopologie bietet die höchste Ausfallsicherheit?","options":["Bus","Stern","Ring","Vermascht (Mesh)"],"answer":3},
-  {"category":"Prüfung (AP1)","question":"Was ist ein SLA?","options":["Softwarelizenz","Vertrag über vereinbarte IT-Serviceleistungen und -garantien","Sicherheitsrichtlinie","Datenschutzerklärung"],"answer":1},
-  {"category":"Prüfung (AP1)","question":"Was ist ein Backup-Konzept?","options":["Netzwerkplan","Strategie zur Datensicherung und -wiederherstellung","Virenschutzplan","Systemadministrationshandbuch"],"answer":1},
-  {"category":"Prüfung (AP1)","question":"Was ist ein Thin Client?","options":["Leistungsstarker Arbeitsplatzrechner","Endgerät mit minimaler lokaler Verarbeitung, abhängig vom Server","Mobilgerät","Router"],"answer":1},
-  {"category":"Prüfung (AP1)","question":"Was ist das Prinzip der Verfügbarkeit (Availability) im CIA-Dreieck?","options":["Daten dürfen nicht verändert werden","Daten sind nur für Befugte zugänglich","Systeme und Daten sind für Berechtigte jederzeit zugänglich","Daten sind verschlüsselt"],"answer":2},
-  {"category":"Betriebsrat","question":"Auf welchem Gesetz basiert die Arbeit des Betriebsrats in Deutschland?","options":["Bürgerliches Gesetzbuch (BGB)","Betriebsverfassungsgesetz (BetrVG)","Handelsgesetzbuch (HGB)","Arbeitsschutzgesetz (ArbSchG)"],"answer":1},
-  {"category":"Betriebsrat","question":"Ab wie vielen wahlberechtigten Arbeitnehmern kann ein Betriebsrat gegründet werden?","options":["3","5","10","20"],"answer":1},
-  {"category":"Betriebsrat","question":"Wie lange beträgt die reguläre Amtszeit eines Betriebsrats?","options":["2 Jahre","3 Jahre","4 Jahre","5 Jahre"],"answer":2},
-  {"category":"Betriebsrat","question":"Was ist das Mitbestimmungsrecht des Betriebsrats?","options":["Recht, Entscheidungen allein zu treffen","Recht, bei bestimmten Arbeitgeberentscheidungen zustimmen zu müssen","Recht auf Einsicht in Geschäftsbücher","Recht, Mitarbeiter einzustellen"],"answer":1},
-  {"category":"Betriebsrat","question":"Was versteht man unter dem Anhörungsrecht des Betriebsrats?","options":["Recht, Entscheidungen zu blockieren","Arbeitgeber muss BR vor Kündigungen anhören","Recht, Tarifverträge zu schließen","Recht auf Mitarbeiterbefragungen"],"answer":1},
-  {"category":"Betriebsrat","question":"Was ist ein Interessenausgleich?","options":["Gehaltsausgleich zwischen Mitarbeitern","Vereinbarung zwischen Arbeitgeber und BR über geplante Betriebsänderungen","Urlaubsverteilung","Schichtplanregelung"],"answer":1},
-  {"category":"Betriebsrat","question":"Was ist ein Sozialplan?","options":["Sozialversicherungsplan","Regelung zur Abmilderung wirtschaftlicher Nachteile bei Betriebsänderungen","Betriebsausflugplanung","Kantinenkostenplan"],"answer":1},
-  {"category":"Betriebsrat","question":"Wer wählt den Betriebsrat?","options":["Nur Vollzeitbeschäftigte","Alle Arbeitnehmer des Betriebs ab 18 Jahren","Nur gewerkschaftlich organisierte Mitarbeiter","Der Vorstand des Unternehmens"],"answer":1},
-  {"category":"Betriebsrat","question":"Hat der Betriebsrat ein Mitbestimmungsrecht bei Überstunden?","options":["Nein, der Arbeitgeber entscheidet allein","Ja, bei der Anordnung von Überstunden hat der BR ein Mitbestimmungsrecht","Nur bei mehr als 10 Überstunden pro Woche","Nur in tarifgebundenen Betrieben"],"answer":1},
-  {"category":"Betriebsrat","question":"Was bedeutet 'Tendenzschutz' im Betriebsverfassungsrecht?","options":["Schutz vor Kündigung für BR-Mitglieder","Eingeschränkte Mitbestimmung bei weltanschaulich geprägten Betrieben","Geheimhaltungspflicht des BR","Schutz vor Betriebsspionage"],"answer":1},
-  {"category":"Betriebsrat","question":"Darf ein Betriebsratsmitglied wegen seiner BR-Tätigkeit gekündigt werden?","options":["Ja, bei grober Pflichtverletzung jederzeit","Nein, BR-Mitglieder genießen besonderen Kündigungsschutz","Nur nach Zustimmung der Gewerkschaft","Ja, aber nur mit 6 Monaten Frist"],"answer":1},
-  {"category":"Betriebsrat","question":"Was ist eine Betriebsvereinbarung?","options":["Mündliche Absprache zwischen Arbeitgeber und einem Mitarbeiter","Schriftliche Einigung zwischen Arbeitgeber und Betriebsrat","Tarifvertrag","Arbeitsvertrag"],"answer":1},
-  {"category":"Betriebsrat","question":"Welches Gremium ist für übergreifende Angelegenheiten in einem Konzern zuständig?","options":["Gesamtbetriebsrat","Betriebsausschuss","Konzernbetriebsrat","Aufsichtsrat"],"answer":2},
-  {"category":"Betriebsrat","question":"Was ist der Unterschied zwischen Gesamtbetriebsrat und Konzernbetriebsrat?","options":["Kein Unterschied","GBR für ein Unternehmen mit mehreren Betrieben, KBR für einen Konzern","KBR für ein Unternehmen, GBR für einen Konzern","GBR ist zuständig für internationale Angelegenheiten"],"answer":1},
-  {"category":"Betriebsrat","question":"Wie oft muss der Arbeitgeber laut BetrVG den Betriebsrat über wirtschaftliche Angelegenheiten informieren?","options":["Einmal jährlich","Mindestens einmal im Monat","Quartalsweise","Nur bei größeren Veränderungen"],"answer":1},
-  {"category":"Betriebsrat","question":"Was ist das Widerspruchsrecht des Betriebsrats bei Kündigungen?","options":["BR kann Kündigung endgültig verhindern","BR kann Widerspruch einlegen, der Arbeitnehmer bleibt bis Gerichtsurteil beschäftigt","BR muss jeder Kündigung zustimmen","BR hat kein Recht bei Kündigungen"],"answer":1},
-  {"category":"Betriebsrat","question":"Hat der Betriebsrat ein Mitbestimmungsrecht bei der Einführung von Kurzarbeit?","options":["Nein","Ja, ohne Zustimmung des BR ist Kurzarbeit nicht möglich","Nur bei Kurzarbeit über 6 Monate","Nur bei mehr als 50 betroffenen Mitarbeitern"],"answer":1},
-  {"category":"Betriebsrat","question":"Was versteht man unter dem Initiativrecht des Betriebsrats?","options":["Recht, Betriebsratswahlen auszurufen","BR kann von sich aus Verhandlungen zu bestimmten Themen erzwingen","Recht, neue Mitarbeiter einzustellen","BR kann Gesetze vorschlagen"],"answer":1},
-  {"category":"Betriebsrat","question":"Wann findet in der Regel die Betriebsratswahl statt?","options":["Alle 2 Jahre im Frühjahr","Alle 4 Jahre zwischen März und Mai","Jährlich im Januar","Alle 5 Jahre im Herbst"],"answer":1},
-  {"category":"Betriebsrat","question":"Was ist das Recht auf Einsichtnahme in Personalakten für den Betriebsrat?","options":["BR darf jederzeit alle Personalakten einsehen","BR darf Personalakten nur mit Zustimmung des Mitarbeiters einsehen","BR hat kein Recht auf Einsicht in Personalakten","Nur der BR-Vorsitzende darf Personalakten einsehen"],"answer":1},
-  {"category":"Betriebsrat","question":"Was gilt für die Kosten des Betriebsrats?","options":["Werden von den Mitarbeitern getragen","Trägt der Arbeitgeber","Werden von der Gewerkschaft übernommen","Werden geteilt zwischen Arbeitgeber und Arbeitnehmern"],"answer":1},
-  {"category":"Betriebsrat","question":"Hat der Betriebsrat ein Mitbestimmungsrecht bei Versetzungen?","options":["Nein, Versetzungen sind reine Arbeitgebersache","Ja, bei Versetzungen hat der BR ein Mitbestimmungsrecht","Nur bei Versetzungen in andere Bundesländer","Nur bei Versetzungen von mehr als 3 Monaten"],"answer":1},
-  {"category":"Betriebsrat","question":"Was ist die Schweigepflicht des Betriebsrats?","options":["BR darf nie mit Mitarbeitern sprechen","BR muss Betriebs- und Geschäftsgeheimnisse wahren","BR darf keine Protokolle führen","BR darf keine Mitarbeiter beraten"],"answer":1},
-  {"category":"Betriebsrat","question":"Welches Mitbestimmungsrecht hat der BR bei der Gestaltung von Arbeitsplätzen?","options":["Kein Mitbestimmungsrecht","Mitbestimmung bei der menschengerechten Gestaltung von Arbeitsplätzen","Nur bei ergonomischen Fragen","Nur bei Neueinrichtungen"],"answer":1},
-  {"category":"Betriebsrat","question":"Was ist ein Einigungsstellenverfahren?","options":["Gerichtsverfahren bei Arbeitsstreitigkeiten","Außergerichtliche Einigung zwischen Arbeitgeber und BR bei Konflikten","Schiedsverfahren vor dem Arbeitsgericht","Tarifverhandlung"],"answer":1},
-  {"category":"Betriebsrat","question":"Darf der Betriebsrat Streiks organisieren?","options":["Ja, das ist eine Kernaufgabe des BR","Nein, Streiks sind Aufgabe der Gewerkschaften, nicht des BR","Ja, aber nur Warnstreiks","Nur mit Genehmigung des Arbeitgebers"],"answer":1},
-  {"category":"Betriebsrat","question":"Was ist das Mitbestimmungsrecht des BR bei Berufsbildungsmaßnahmen?","options":["Kein Mitbestimmungsrecht","BR hat Mitbestimmungsrecht bei der Durchführung betrieblicher Berufsbildung","Nur bei externen Schulungen","Nur bei Pflichtfortbildungen"],"answer":1},
-  {"category":"Betriebsrat","question":"Was versteht man unter einer 'erzwingbaren Mitbestimmung'?","options":["BR kann Maßnahme des Arbeitgebers erzwingen","Bei Nichteinigung kann der BR die Einigungsstelle anrufen, deren Spruch bindend ist","Arbeitgeber ist zur Umsetzung von BR-Beschlüssen gezwungen","Mitarbeiter können Abstimmungen erzwingen"],"answer":1},
-  {"category":"Betriebsrat","question":"Hat der Betriebsrat Mitbestimmungsrecht bei der Einführung von Videoüberwachung?","options":["Nein, das ist eine Sicherheitsfrage","Ja, da es den Datenschutz und das Persönlichkeitsrecht der Arbeitnehmer berührt","Nur im Außenbereich","Nur bei Diebstahlverdacht"],"answer":1},
-  {"category":"Betriebsrat","question":"Was ist der Unterschied zwischen Mitbestimmung und Mitwirkung?","options":["Kein Unterschied","Bei Mitbestimmung braucht AG die Zustimmung des BR, bei Mitwirkung nur Information/Anhörung","Mitwirkung ist stärker als Mitbestimmung","Mitwirkung gilt nur für den Gesamtbetriebsrat"],"answer":1},
-  {"category":"Betriebsrat","question":"Was ist die Betriebsversammlung?","options":["Versammlung der Aktionäre","Pflichtveranstaltung, bei der der BR alle Mitarbeiter informiert","Monatliche Managementrunde","Tarifverhandlung"],"answer":1},
-  {"category":"Betriebsrat","question":"Wie oft muss laut BetrVG mindestens eine Betriebsversammlung stattfinden?","options":["Einmal im Monat","Einmal im Quartal","Einmal im Halbjahr","Einmal im Jahr"],"answer":1},
-  {"category":"Betriebsrat","question":"Was bedeutet das Beschäftigungssicherungsrecht des BR?","options":["BR kann keine Entlassungen verhindern","BR kann bei drohenden Entlassungen Alternativen vorschlagen und ggf. erzwingen","BR bestimmt allein über Personalabbau","BR schließt direkt Beschäftigungsverträge ab"],"answer":1},
-  {"category":"Betriebsrat","question":"Was ist ein Wirtschaftsausschuss?","options":["Finanzbuchhaltung des Unternehmens","Gremium in Betrieben mit mehr als 100 Mitarbeitern zur wirtschaftlichen Information des BR","Unternehmensvorstand","Steuerberatungsabteilung"],"answer":1},
-  {"category":"Betriebsrat","question":"Hat der Betriebsrat das Recht, Betriebsratssitzungen während der Arbeitszeit abzuhalten?","options":["Nein, nur außerhalb der Arbeitszeit","Ja, und der Arbeitgeber trägt die Kosten","Nur einmal pro Monat","Nur mit ausdrücklicher Genehmigung des Arbeitgebers"],"answer":1},
-  {"category":"Betriebsrat","question":"Was ist das Benachteiligungsverbot für Betriebsratsmitglieder?","options":["BR-Mitglieder dürfen keine Vorteile erhalten","BR-Mitglieder dürfen wegen ihrer Tätigkeit weder benachteiligt noch bevorzugt werden","BR-Mitglieder erhalten automatisch höheres Gehalt","BR-Mitglieder sind von Schichtarbeit befreit"],"answer":1},
-  {"category":"Betriebsrat","question":"Welche Rolle spielt der BR bei der Einführung neuer Technologien?","options":["Keine Rolle","BR hat Mitbestimmungsrecht bei technischen Einrichtungen, die das Verhalten der Mitarbeiter überwachen können","BR darf neue Technologien allein einführen","Nur beratende Funktion ohne Mitbestimmung"],"answer":1},
-  {"category":"Betriebsrat","question":"Was ist das Recht auf Freistellung von BR-Mitgliedern?","options":["BR-Mitglieder müssen mehr arbeiten","Ab einer bestimmten Betriebsgröße werden BR-Mitglieder von der Arbeit freigestellt für BR-Tätigkeiten","Freistellung nur für den BR-Vorsitzenden","Freistellung nur in Ausnahmefällen"],"answer":1},
-  {"category":"Betriebsrat","question":"Hat der BR ein Mitbestimmungsrecht bei der Aufstellung von Urlaubsgrundsätzen?","options":["Nein, Urlaub ist Sache des Arbeitgebers","Ja, bei allgemeinen Urlaubsgrundsätzen und Urlaubsplanung","Nur bei der Reihenfolge der Urlaubsanträge","Nur in Betrieben über 200 Mitarbeiter"],"answer":1},
-  {"category":"Betriebsrat","question":"Wann erlischt das Amt eines Betriebsratsmitglieds?","options":["Nur durch Ablauf der Amtszeit","Bei Ablauf der Amtszeit, Niederlegung, Ausscheiden aus dem Betrieb oder Abberufung durch Gericht","Durch Kündigung des Arbeitgebers","Nur durch Beschluss der Mitarbeiterversammlung"],"answer":1},
-  {"category":"Betriebsrat","question":"Was ist ein Tarifvertrag und was unterscheidet ihn von einer Betriebsvereinbarung?","options":["Kein Unterschied","Tarifvertrag zwischen Gewerkschaft und Arbeitgeberverband, Betriebsvereinbarung zwischen Arbeitgeber und BR","Betriebsvereinbarung ist übergeordnet","Tarifvertrag gilt nur im öffentlichen Dienst"],"answer":1},
-  {"category":"Betriebsrat","question":"Was bedeutet das Günstigkeitsprinzip im Arbeitsrecht?","options":["Günstigere gesetzliche Regelung gilt immer","Für den Arbeitnehmer günstigere Regelung gilt, auch wenn sie von Tarifvertrag abweicht","Arbeitgeber muss immer die günstigste Lösung wählen","Betriebsvereinbarungen gehen immer vor"],"answer":1},
-  {"category":"Betriebsrat","question":"Hat der Betriebsrat ein Mitbestimmungsrecht bei der Verteilung der Arbeitszeit?","options":["Nein","Ja, bei Beginn und Ende der täglichen Arbeitszeit sowie Pausen","Nur bei Schichtarbeit","Nur bei Teilzeitbeschäftigten"],"answer":1},
-  {"category":"Betriebsrat","question":"Was ist ein Arbeitnehmer laut BetrVG?","options":["Nur Vollzeitbeschäftigte","Alle im Betrieb tätigen Personen inkl. Auszubildende, außer leitende Angestellte","Nur unbefristet Beschäftigte","Nur sozialversicherungspflichtig Beschäftigte"],"answer":1},
-  {"category":"Betriebsrat","question":"Was versteht man unter dem Grundsatz der vertrauensvollen Zusammenarbeit im BetrVG?","options":["BR und Arbeitgeber müssen immer einer Meinung sein","BR und Arbeitgeber sollen zum Wohl der Arbeitnehmer und des Betriebs zusammenarbeiten","BR hat keine Rechte gegenüber dem Arbeitgeber","Arbeitgeber hat das letzte Wort"],"answer":1}
+  {
+    "category": "Wissenschaft",
+    "question": "Was ist das chemische Symbol für Wasser?",
+    "options": [
+      "H2O",
+      "CO2",
+      "NaCl",
+      "O2"
+    ],
+    "answer": 0
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Wie viele Planeten hat unser Sonnensystem?",
+    "options": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Welches Gas nehmen Pflanzen auf?",
+    "options": [
+      "Sauerstoff",
+      "Stickstoff",
+      "Kohlendioxid",
+      "Wasserstoff"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Was ist die Grundeinheit der Materie?",
+    "options": [
+      "Molekül",
+      "Atom",
+      "Proton",
+      "Elektron"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Wie viele Knochen hat der Mensch?",
+    "options": [
+      "186",
+      "196",
+      "206",
+      "216"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Chemische Formel für Kochsalz?",
+    "options": [
+      "KCl",
+      "CaCO3",
+      "NaCl",
+      "MgO"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Welcher Planet ist der größte?",
+    "options": [
+      "Saturn",
+      "Neptun",
+      "Jupiter",
+      "Uranus"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Was misst ein Seismograph?",
+    "options": [
+      "Luftdruck",
+      "Erdbeben",
+      "Windstärke",
+      "Temperatur"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Bekannteste Formel Einsteins?",
+    "options": [
+      "F=ma",
+      "E=mv²",
+      "E=mc²",
+      "c=λf"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Woraus besteht Wasser?",
+    "options": [
+      "C und O",
+      "H und N",
+      "H und O",
+      "O und S"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Was ist Photosynthese?",
+    "options": [
+      "Wasseraufnahme",
+      "Licht zu Energie",
+      "Zellteilung",
+      "Mineralaufnahme"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Welches Organ pumpt das Blut?",
+    "options": [
+      "Lunge",
+      "Leber",
+      "Niere",
+      "Herz"
+    ],
+    "answer": 3
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Kleinste Einheit des Lebens?",
+    "options": [
+      "Organ",
+      "Gewebe",
+      "Zelle",
+      "Molekül"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Chemisches Symbol für Eisen?",
+    "options": [
+      "Ei",
+      "Fe",
+      "Ir",
+      "In"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Siedepunkt von Wasser bei Normaldruck?",
+    "options": [
+      "90°C",
+      "95°C",
+      "100°C",
+      "105°C"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Wie viele Chromosomen hat der Mensch?",
+    "options": [
+      "23",
+      "44",
+      "46",
+      "48"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Formel für Geschwindigkeit?",
+    "options": [
+      "v=a·t",
+      "v=s/t",
+      "v=F/m",
+      "v=P/t"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Häufigstes Gas in der Atmosphäre?",
+    "options": [
+      "Sauerstoff",
+      "Kohlendioxid",
+      "Stickstoff",
+      "Argon"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Was ist ein Neutron?",
+    "options": [
+      "Positiv geladen",
+      "Negativ geladen",
+      "Ungeladen",
+      "Energiewelle"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Was zieht Objekte zur Erde?",
+    "options": [
+      "Magnetismus",
+      "Schwerkraft",
+      "Reibung",
+      "Auftrieb"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "pH-Wert von reinem Wasser?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Welches Organ filtert das Blut?",
+    "options": [
+      "Leber",
+      "Niere",
+      "Milz",
+      "Bauchspeicheldrüse"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Was ist DNS?",
+    "options": [
+      "Eiweißstruktur",
+      "Energiemolekül",
+      "Erbgutträger",
+      "Zellmembran"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Welches Metall ist bei Raumtemperatur flüssig?",
+    "options": [
+      "Blei",
+      "Zinn",
+      "Quecksilber",
+      "Aluminium"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Einheit der elektrischen Spannung?",
+    "options": [
+      "Ampere",
+      "Watt",
+      "Volt",
+      "Ohm"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Wie heißt die Hülle eines Atoms?",
+    "options": [
+      "Kern",
+      "Schale",
+      "Nukleon",
+      "Quark"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Was ist Osmose?",
+    "options": [
+      "Chem. Reaktion",
+      "Diffusion durch Membran",
+      "Lichtabsorption",
+      "Zellteilung"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Welches Element hat Ordnungszahl 1?",
+    "options": [
+      "Helium",
+      "Lithium",
+      "Wasserstoff",
+      "Beryllium"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Was ist ein Ökosystem?",
+    "options": [
+      "Eine Tierart",
+      "Lebensgemeinschaft+Umwelt",
+      "Eine Klimazone",
+      "Eine Gesteinsschicht"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Welche Strahlung hat die höchste Energie?",
+    "options": [
+      "Radiowellen",
+      "Infrarot",
+      "Gammastrahlung",
+      "Ultraviolett"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Was ist ortsabhängig?",
+    "options": [
+      "Nur Masse",
+      "Weder noch",
+      "Beide",
+      "Nur Gewicht"
+    ],
+    "answer": 3
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Welches Organ produziert Insulin?",
+    "options": [
+      "Leber",
+      "Niere",
+      "Bauchspeicheldrüse",
+      "Schilddrüse"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Was ist eine Isotope?",
+    "options": [
+      "Gleiche Protonenzahl, andere Neutronenzahl",
+      "Anderer Kern, gleiche Masse",
+      "Zwei verbundene Atome",
+      "Radioaktives Ion"
+    ],
+    "answer": 0
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Was misst die Einheit Hertz?",
+    "options": [
+      "Lautstärke",
+      "Frequenz",
+      "Spannung",
+      "Leistung"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Gas bei Verbrennung von Kohlenstoff?",
+    "options": [
+      "Stickstoff",
+      "Wasserdampf",
+      "Kohlendioxid",
+      "Sauerstoff"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Was ist ein Magnet?",
+    "options": [
+      "Elektrisch geladen",
+      "Hat Magnetfeld",
+      "Strahlt Energie",
+      "Leitet Licht"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Wie viele Sinne hat der Mensch?",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Was beschreibt Einsteins Relativitätstheorie?",
+    "options": [
+      "Gravitation Newton",
+      "Raum, Zeit, Masse",
+      "Wellenmechanik",
+      "Elektrodynamik"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Was ist Kondensation?",
+    "options": [
+      "Flüssig zu Gas",
+      "Gas zu Flüssig",
+      "Fest zu Flüssig",
+      "Flüssig zu Fest"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Einheit für elektrischen Strom?",
+    "options": [
+      "Volt",
+      "Watt",
+      "Ohm",
+      "Ampere"
+    ],
+    "answer": 3
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Was ist Kernfusion?",
+    "options": [
+      "Schwere Kerne spalten",
+      "Leichte Kerne vereinigen",
+      "Radioaktiver Zerfall",
+      "Elektronenübergang"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Was schützt vor UV-Strahlung?",
+    "options": [
+      "Sauerstoff",
+      "Kohlendioxid",
+      "Ozon",
+      "Stickstoff"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Was ist ein Polymer?",
+    "options": [
+      "Ein Atom",
+      "Ein Molekül",
+      "Makromolekül",
+      "Ionenverbindung"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Was ist Biolumineszenz?",
+    "options": [
+      "Photosynthese",
+      "Licht durch Lebewesen",
+      "Sonnenreflexion",
+      "Wärmestrahlung"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Was ist der absolute Nullpunkt?",
+    "options": [
+      "-100°C",
+      "-173°C",
+      "-273°C",
+      "-373°C"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Universelle Spenderblutgruppe?",
+    "options": [
+      "A",
+      "B",
+      "AB",
+      "0"
+    ],
+    "answer": 3
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Was ist ein Enzym?",
+    "options": [
+      "Energieträger",
+      "Biolog. Katalysator",
+      "Zellmembran",
+      "Hormonspeicher"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Was ist Elektrolyse?",
+    "options": [
+      "Synthese durch Licht",
+      "Zerlegung durch Strom",
+      "Therm. Zersetzung",
+      "Fermentation"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Was beschreibt das Hookesche Gesetz?",
+    "options": [
+      "Magnetkraft",
+      "Federkraft",
+      "Reibungskraft",
+      "Schwerkraft"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Wissenschaft",
+    "question": "Was ist Sublimation?",
+    "options": [
+      "Fest zu Gasförmig",
+      "Flüssig zu Gasförmig",
+      "Gasförmig zu Fest",
+      "Fest zu Flüssig"
+    ],
+    "answer": 0
+  },
+  {
+    "category": "Geschichte",
+    "question": "Wann endete der Zweite Weltkrieg?",
+    "options": [
+      "1943",
+      "1944",
+      "1945",
+      "1946"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geschichte",
+    "question": "Wer betrat als Erster den Mond?",
+    "options": [
+      "Buzz Aldrin",
+      "Juri Gagarin",
+      "Neil Armstrong",
+      "John Glenn"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geschichte",
+    "question": "Wessen Reich regierte Julius Cäsar?",
+    "options": [
+      "Griechisch",
+      "Römisch",
+      "Osmanisch",
+      "Byzantinisch"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Geschichte",
+    "question": "Wann begann der Erste Weltkrieg?",
+    "options": [
+      "1910",
+      "1912",
+      "1914",
+      "1916"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geschichte",
+    "question": "Wer war erster Bundeskanzler Deutschlands?",
+    "options": [
+      "H. Schmidt",
+      "W. Brandt",
+      "K. Adenauer",
+      "L. Erhard"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geschichte",
+    "question": "Wann fiel die Berliner Mauer?",
+    "options": [
+      "1987",
+      "1988",
+      "1989",
+      "1990"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geschichte",
+    "question": "Wer schrieb das Kommunistische Manifest?",
+    "options": [
+      "Lenin & Stalin",
+      "Marx & Engels",
+      "Trotzki & Lenin",
+      "Engels & Bebel"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Geschichte",
+    "question": "Wann wurde die BRD gegründet?",
+    "options": [
+      "1945",
+      "1947",
+      "1949",
+      "1951"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geschichte",
+    "question": "Ägyptischer Sonnengott?",
+    "options": [
+      "Osiris",
+      "Anubis",
+      "Ra",
+      "Horus"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geschichte",
+    "question": "Wann entdeckte Kolumbus Amerika?",
+    "options": [
+      "1488",
+      "1490",
+      "1492",
+      "1498"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geschichte",
+    "question": "Welches Land gab Frauen zuerst das Wahlrecht?",
+    "options": [
+      "Deutschland",
+      "USA",
+      "Großbritannien",
+      "Neuseeland"
+    ],
+    "answer": 3
+  },
+  {
+    "category": "Geschichte",
+    "question": "Wer war erster Kaiser von China?",
+    "options": [
+      "Han Wudi",
+      "Qin Shihuangdi",
+      "Tang Taizong",
+      "Yongle"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Geschichte",
+    "question": "Was löste den Ersten Weltkrieg aus?",
+    "options": [
+      "Invasion Belgiens",
+      "Attentat auf Franz Ferdinand",
+      "Kolonialstreit",
+      "Serb.-öst. Krieg"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Geschichte",
+    "question": "Wo lag das antike Babylon?",
+    "options": [
+      "Iran",
+      "Syrien",
+      "Irak",
+      "Türkei"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geschichte",
+    "question": "Wann wurde die Magna Carta unterzeichnet?",
+    "options": [
+      "1115",
+      "1215",
+      "1315",
+      "1415"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Geschichte",
+    "question": "Wer war erster US-Präsident?",
+    "options": [
+      "J. Adams",
+      "B. Franklin",
+      "G. Washington",
+      "T. Jefferson"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geschichte",
+    "question": "Wann begann die Französische Revolution?",
+    "options": [
+      "1779",
+      "1789",
+      "1799",
+      "1809"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Geschichte",
+    "question": "Was war die Berliner Luftbrücke?",
+    "options": [
+      "Transatlantikflug",
+      "Versorgung West-Berlins",
+      "Militärluftoperation",
+      "Spionageflüge"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Geschichte",
+    "question": "Wer eroberte 1453 Konstantinopel?",
+    "options": [
+      "Perser",
+      "Araber",
+      "Osmanen",
+      "Mongolen"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geschichte",
+    "question": "Wer folgte Hitler als Reichskanzler?",
+    "options": [
+      "H. Göring",
+      "H. Himmler",
+      "J. Goebbels",
+      "K. Dönitz"
+    ],
+    "answer": 3
+  },
+  {
+    "category": "Geschichte",
+    "question": "Wer baute Machu Picchu?",
+    "options": [
+      "Azteken",
+      "Maya",
+      "Inka",
+      "Olmeken"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geschichte",
+    "question": "Wann wurde die UNO gegründet?",
+    "options": [
+      "1943",
+      "1945",
+      "1947",
+      "1949"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Geschichte",
+    "question": "Wer war Napoleons erste Frau?",
+    "options": [
+      "Marie-Louise",
+      "Marie Antoinette",
+      "Joséphine",
+      "Charlotte Corday"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geschichte",
+    "question": "Was war der Marshallplan?",
+    "options": [
+      "Militärstrategie",
+      "US-Hilfe für Europa",
+      "NATO-Vertrag",
+      "Friedensvertrag"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Geschichte",
+    "question": "Wann wurde Israel gegründet?",
+    "options": [
+      "1946",
+      "1947",
+      "1948",
+      "1949"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geschichte",
+    "question": "Was war der Kalte Krieg?",
+    "options": [
+      "Arktisexpedition",
+      "USA-UdSSR-Konflikt",
+      "Handelskrieg",
+      "Bürgerkrieg"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Geschichte",
+    "question": "Wer baute den Suezkanal?",
+    "options": [
+      "Nur Ägypten",
+      "Brit.-äg. Konsortium",
+      "Franz.-äg. Unternehmen",
+      "Osmanen"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geschichte",
+    "question": "Was revolutionierte den Buchdruck um 1450?",
+    "options": [
+      "Schreibmaschine",
+      "Kopiermaschine",
+      "Gutenbergs Presse",
+      "Lithografie"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geschichte",
+    "question": "Was war die Boston Tea Party?",
+    "options": [
+      "Brit. Zeremoniell",
+      "Protest gegen Steuer",
+      "Handelsabkommen",
+      "Vergiftungsaffäre"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Geschichte",
+    "question": "Wer erfand das Telefon?",
+    "options": [
+      "T. Edison",
+      "N. Tesla",
+      "A. G. Bell",
+      "G. Marconi"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geschichte",
+    "question": "Wann landeten die Alliierten in der Normandie?",
+    "options": [
+      "1942",
+      "1943",
+      "1944",
+      "1945"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geschichte",
+    "question": "Welcher Vertrag beendete den Ersten Weltkrieg?",
+    "options": [
+      "Versailler Vertrag",
+      "Münchner Abkommen",
+      "Potsdamer Abkommen",
+      "Pariser Vertrag"
+    ],
+    "answer": 0
+  },
+  {
+    "category": "Geschichte",
+    "question": "Wer vereinte das Mongolenreich?",
+    "options": [
+      "Kublai Khan",
+      "Timur",
+      "Dschingis Khan",
+      "Ögedei Khan"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geschichte",
+    "question": "Wann wurde die NATO gegründet?",
+    "options": [
+      "1947",
+      "1948",
+      "1949",
+      "1950"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geschichte",
+    "question": "Wer erhielt als erste Frau den Nobelpreis?",
+    "options": [
+      "R. Franklin",
+      "Marie Curie",
+      "F. Nightingale",
+      "L. Meitner"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Geschichte",
+    "question": "In welchem Jahrhundert war die Renaissance?",
+    "options": [
+      "13.-14. Jh.",
+      "14.-17. Jh.",
+      "17.-18. Jh.",
+      "18.-19. Jh."
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Geschichte",
+    "question": "Was war Apartheid?",
+    "options": [
+      "Landreform",
+      "Rassentrennung",
+      "Kolonialsystem",
+      "Militärdiktatur"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Geschichte",
+    "question": "Wann wurde das Deutsche Kaiserreich gegründet?",
+    "options": [
+      "1866",
+      "1868",
+      "1871",
+      "1875"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geschichte",
+    "question": "Was war die Weimarer Republik?",
+    "options": [
+      "Herzogtum",
+      "Demokratie 1919-1933",
+      "Kaiserreich",
+      "Fürstentum"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Geschichte",
+    "question": "Wer war der erste Mensch im Weltraum?",
+    "options": [
+      "N. Armstrong",
+      "B. Aldrin",
+      "A. Shepard",
+      "J. Gagarin"
+    ],
+    "answer": 3
+  },
+  {
+    "category": "Geschichte",
+    "question": "Wie hieß die mittelalterliche Pest?",
+    "options": [
+      "Cholera",
+      "Pocken",
+      "Schwarzer Tod",
+      "Typhus"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geschichte",
+    "question": "Wann wurde die DDR aufgelöst?",
+    "options": [
+      "9. Nov. 1989",
+      "3. Okt. 1990",
+      "1. Jan. 1991",
+      "25. Dez. 1990"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Geschichte",
+    "question": "Wer gründete den Islam?",
+    "options": [
+      "Jesus",
+      "Muhammad",
+      "Abraham",
+      "Moses"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Geschichte",
+    "question": "Wann begann der Zweite Weltkrieg?",
+    "options": [
+      "1937",
+      "1938",
+      "1939",
+      "1940"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geschichte",
+    "question": "Wer schrieb Mein Kampf?",
+    "options": [
+      "H. Himmler",
+      "J. Goebbels",
+      "A. Hitler",
+      "R. Hess"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geschichte",
+    "question": "Was war der Vietnamkrieg?",
+    "options": [
+      "Bürgerkrieg China",
+      "Nord-Süd-Konflikt+USA",
+      "Kolonialkrieg",
+      "Unabhängigkeitskrieg"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Geschichte",
+    "question": "Welches Land wurde 1953 geteilt?",
+    "options": [
+      "Vietnam",
+      "Deutschland",
+      "China",
+      "Korea"
+    ],
+    "answer": 3
+  },
+  {
+    "category": "Geschichte",
+    "question": "Was war der Wiener Kongress?",
+    "options": [
+      "Musikfestival",
+      "Neuordnung Europas",
+      "Friedensverhandlung",
+      "Handelsgipfel"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Geschichte",
+    "question": "Welcher Krieg dauerte 100 Jahre?",
+    "options": [
+      "Kreuzzüge",
+      "Hundertjähriger Krieg",
+      "Dreißigjähriger Krieg",
+      "Rosenkrieg"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Geschichte",
+    "question": "Wer war erster Kaiser Frankreichs?",
+    "options": [
+      "Ludwig XIV",
+      "Karl der Große",
+      "Napoleon",
+      "Franz I"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geschichte",
+    "question": "Was war die Inquisition?",
+    "options": [
+      "Kirchensteuer",
+      "Ketzerverfolgung",
+      "Kreuzzug",
+      "Bibelübersetzung"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Geografie",
+    "question": "Hauptstadt Australiens?",
+    "options": [
+      "Sydney",
+      "Melbourne",
+      "Brisbane",
+      "Canberra"
+    ],
+    "answer": 3
+  },
+  {
+    "category": "Geografie",
+    "question": "Längster Fluss der Welt?",
+    "options": [
+      "Amazonas",
+      "Jangtse",
+      "Mississippi",
+      "Nil"
+    ],
+    "answer": 3
+  },
+  {
+    "category": "Geografie",
+    "question": "Auf welchem Kontinent liegt die Sahara?",
+    "options": [
+      "Asien",
+      "Südamerika",
+      "Afrika",
+      "Australien"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geografie",
+    "question": "Größtes Land nach Fläche?",
+    "options": [
+      "China",
+      "USA",
+      "Kanada",
+      "Russland"
+    ],
+    "answer": 3
+  },
+  {
+    "category": "Geografie",
+    "question": "Hauptstadt Brasiliens?",
+    "options": [
+      "São Paulo",
+      "Rio de Janeiro",
+      "Brasília",
+      "Salvador"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geografie",
+    "question": "Größter Ozean?",
+    "options": [
+      "Atlantik",
+      "Indik",
+      "Pazifik",
+      "Arktis"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geografie",
+    "question": "In welchem Land liegt der Amazonas?",
+    "options": [
+      "Kolumbien",
+      "Peru",
+      "Venezuela",
+      "Brasilien"
+    ],
+    "answer": 3
+  },
+  {
+    "category": "Geografie",
+    "question": "Höchster Berg der Welt?",
+    "options": [
+      "K2",
+      "Kangchendzönga",
+      "Mt. Everest",
+      "Lhotse"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geografie",
+    "question": "Wie viele Kontinente gibt es?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geografie",
+    "question": "Bevölkerungsreichstes Land?",
+    "options": [
+      "Indien",
+      "USA",
+      "China",
+      "Indonesien"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geografie",
+    "question": "Hauptstadt Japans?",
+    "options": [
+      "Osaka",
+      "Kyoto",
+      "Tokio",
+      "Yokohama"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geografie",
+    "question": "Welcher Fluss mündet in die Nordsee?",
+    "options": [
+      "Mosel",
+      "Elbe",
+      "Rhein",
+      "Donau"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geografie",
+    "question": "Auf welchem Kontinent liegt Ägypten?",
+    "options": [
+      "Asien",
+      "Europa",
+      "Afrika",
+      "Ozeanien"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geografie",
+    "question": "Hauptstadt Kanadas?",
+    "options": [
+      "Toronto",
+      "Vancouver",
+      "Montreal",
+      "Ottawa"
+    ],
+    "answer": 3
+  },
+  {
+    "category": "Geografie",
+    "question": "Meer zwischen Europa und Afrika?",
+    "options": [
+      "Rotes Meer",
+      "Schwarzes Meer",
+      "Mittelmeer",
+      "Kaspisches Meer"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geografie",
+    "question": "In welchem Land liegt der Kilimandscharo?",
+    "options": [
+      "Kenia",
+      "Äthiopien",
+      "Tansania",
+      "Uganda"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geografie",
+    "question": "Hauptstadt Argentiniens?",
+    "options": [
+      "Santiago",
+      "Montevideo",
+      "Buenos Aires",
+      "Lima"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geografie",
+    "question": "Bevölkerungsreichste Stadt der Welt?",
+    "options": [
+      "Delhi",
+      "Schanghai",
+      "Tokio",
+      "São Paulo"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geografie",
+    "question": "Durch wie viele Länder fließt die Donau?",
+    "options": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "answer": 3
+  },
+  {
+    "category": "Geografie",
+    "question": "Land mit längster Küstenlinie?",
+    "options": [
+      "Russland",
+      "Norwegen",
+      "Kanada",
+      "Australien"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geografie",
+    "question": "Hauptstadt der Schweiz?",
+    "options": [
+      "Zürich",
+      "Genf",
+      "Basel",
+      "Bern"
+    ],
+    "answer": 3
+  },
+  {
+    "category": "Geografie",
+    "question": "Kleinstes Land der Welt?",
+    "options": [
+      "Monaco",
+      "San Marino",
+      "Liechtenstein",
+      "Vatikanstadt"
+    ],
+    "answer": 3
+  },
+  {
+    "category": "Geografie",
+    "question": "In welchem Land liegt der Grand Canyon?",
+    "options": [
+      "Kanada",
+      "Mexiko",
+      "USA",
+      "Australien"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geografie",
+    "question": "Kontinent mit den meisten Ländern?",
+    "options": [
+      "Asien",
+      "Südamerika",
+      "Afrika",
+      "Europa"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geografie",
+    "question": "Hauptstadt der Türkei?",
+    "options": [
+      "Istanbul",
+      "Izmir",
+      "Ankara",
+      "Bursa"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geografie",
+    "question": "In welchem Land liegt Mumbai?",
+    "options": [
+      "Pakistan",
+      "Bangladesch",
+      "Sri Lanka",
+      "Indien"
+    ],
+    "answer": 3
+  },
+  {
+    "category": "Geografie",
+    "question": "Größter Süßwassersee der Welt?",
+    "options": [
+      "Baikalsee",
+      "Tanganjika",
+      "Viktoriasee",
+      "Oberer See"
+    ],
+    "answer": 3
+  },
+  {
+    "category": "Geografie",
+    "question": "Trockenster Kontinent?",
+    "options": [
+      "Afrika",
+      "Antarktis",
+      "Australien",
+      "Asien"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Geografie",
+    "question": "In welchen Ländern liegt der Titicacasee?",
+    "options": [
+      "Chile & Arg.",
+      "Peru & Bolivien",
+      "Kol. & Bras.",
+      "Ecuador & Peru"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Geografie",
+    "question": "Exekutivhauptstadt Südafrikas?",
+    "options": [
+      "Kapstadt",
+      "Johannesburg",
+      "Durban",
+      "Pretoria"
+    ],
+    "answer": 3
+  },
+  {
+    "category": "Geografie",
+    "question": "Längster Gebirgszug der Welt?",
+    "options": [
+      "Himalaya",
+      "Rocky Mountains",
+      "Alpen",
+      "Anden"
+    ],
+    "answer": 3
+  },
+  {
+    "category": "Geografie",
+    "question": "Welcher Fluss fließt durch Ägypten?",
+    "options": [
+      "Kongo",
+      "Niger",
+      "Sambesi",
+      "Nil"
+    ],
+    "answer": 3
+  },
+  {
+    "category": "Geografie",
+    "question": "Land mit meistem Süßwasser?",
+    "options": [
+      "China",
+      "USA",
+      "Russland",
+      "Brasilien"
+    ],
+    "answer": 3
+  },
+  {
+    "category": "Geografie",
+    "question": "In welchem Land liegt die Atacamawüste?",
+    "options": [
+      "Peru",
+      "Argentinien",
+      "Bolivien",
+      "Chile"
+    ],
+    "answer": 3
+  },
+  {
+    "category": "Geografie",
+    "question": "Höchstgelegene Hauptstadt der Welt?",
+    "options": [
+      "Quito",
+      "Bogotá",
+      "La Paz",
+      "Addis Abeba"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geografie",
+    "question": "In welchem Kontinent liegt Madagaskar?",
+    "options": [
+      "Asien",
+      "Ozeanien",
+      "Südamerika",
+      "Afrika"
+    ],
+    "answer": 3
+  },
+  {
+    "category": "Geografie",
+    "question": "Durch welche Stadt fließt die Themse?",
+    "options": [
+      "Edinburgh",
+      "Manchester",
+      "London",
+      "Birmingham"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geografie",
+    "question": "Welches Land liegt nördlich von Deutschland?",
+    "options": [
+      "Dänemark",
+      "Niederlande",
+      "Polen",
+      "Schweden"
+    ],
+    "answer": 0
+  },
+  {
+    "category": "Geografie",
+    "question": "Inselstaat südlich von Sizilien?",
+    "options": [
+      "Zypern",
+      "Malta",
+      "Korsika",
+      "Sardinien"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Geografie",
+    "question": "In welchem Land liegt Machu Picchu?",
+    "options": [
+      "Bolivien",
+      "Chile",
+      "Kolumbien",
+      "Peru"
+    ],
+    "answer": 3
+  },
+  {
+    "category": "Geografie",
+    "question": "Tiefster See der Welt?",
+    "options": [
+      "Oberer See",
+      "Kaspisches Meer",
+      "Tanganjika",
+      "Baikalsee"
+    ],
+    "answer": 3
+  },
+  {
+    "category": "Geografie",
+    "question": "In welchem Land liegt das Matterhorn?",
+    "options": [
+      "Österreich",
+      "Frankreich",
+      "Schweiz",
+      "Deutschland"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geografie",
+    "question": "Meerenge zwischen Spanien und Marokko?",
+    "options": [
+      "Bosporus",
+      "Str. v. Gibraltar",
+      "Suezkanal",
+      "Str. v. Hormuz"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Geografie",
+    "question": "Welcher Ozean liegt östlich von Amerika?",
+    "options": [
+      "Pazifik",
+      "Indik",
+      "Arktis",
+      "Atlantik"
+    ],
+    "answer": 3
+  },
+  {
+    "category": "Geografie",
+    "question": "Hauptstadt Norwegens?",
+    "options": [
+      "Bergen",
+      "Trondheim",
+      "Stavanger",
+      "Oslo"
+    ],
+    "answer": 3
+  },
+  {
+    "category": "Geografie",
+    "question": "In welchen Ländern liegt die Gobi?",
+    "options": [
+      "Kasachst. & Russ.",
+      "China & Mongolei",
+      "Iran & Afghani.",
+      "Indien & Pakistan"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Geografie",
+    "question": "Wie viele Bundesländer hat Deutschland?",
+    "options": [
+      "14",
+      "15",
+      "16",
+      "17"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geografie",
+    "question": "Längster Fluss Europas?",
+    "options": [
+      "Rhein",
+      "Donau",
+      "Wolga",
+      "Elbe"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geografie",
+    "question": "In welchem Land liegt der Panamakanal?",
+    "options": [
+      "Kolumbien",
+      "Mexiko",
+      "Panama",
+      "Costa Rica"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Geografie",
+    "question": "Warum ist Canberra Hauptstadt Australiens?",
+    "options": [
+      "Sydney ist kleiner",
+      "Kompromiss Sydney-Melbourne",
+      "Melbourne war Hauptstadt",
+      "Brisbane gewann"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Geografie",
+    "question": "Flächenmäßig größter See der Welt?",
+    "options": [
+      "Baikalsee",
+      "Kaspisches Meer",
+      "Victoriasee",
+      "Oberer See"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Technologie",
+    "question": "Wofür steht CPU?",
+    "options": [
+      "Central Processing Unit",
+      "Computer Personal Unit",
+      "Central Program Utility",
+      "Core Processing Unit"
+    ],
+    "answer": 0
+  },
+  {
+    "category": "Technologie",
+    "question": "Sprache des Webs?",
+    "options": [
+      "Python",
+      "Java",
+      "JavaScript",
+      "C++"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Technologie",
+    "question": "Wofür steht HTML?",
+    "options": [
+      "Hyper Text Markup Language",
+      "High Transfer Machine Language",
+      "Hyper Transfer Meta Language",
+      "Home Tool Markup Language"
+    ],
+    "answer": 0
+  },
+  {
+    "category": "Technologie",
+    "question": "Was ist ein Betriebssystem?",
+    "options": [
+      "Antivirenprogramm",
+      "Hardware-Verwaltungssoftware",
+      "Datenbankprogramm",
+      "Webbrowser"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Technologie",
+    "question": "Wofür steht RAM?",
+    "options": [
+      "Remote Access Memory",
+      "Random Access Memory",
+      "Read Accessible Module",
+      "Rapid Application Method"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Technologie",
+    "question": "Was ist eine IP-Adresse?",
+    "options": [
+      "Netzwerkkennung",
+      "Netzwerkpasswort",
+      "Dateiformat",
+      "Verschlüsselungsverfahren"
+    ],
+    "answer": 0
+  },
+  {
+    "category": "Technologie",
+    "question": "Was ist ein Algorithmus?",
+    "options": [
+      "Schaltkreis",
+      "Lösungsanleitung",
+      "Speicherformat",
+      "Datenbanktyp"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Technologie",
+    "question": "Wofür steht USB?",
+    "options": [
+      "Universal Serial Bus",
+      "Unified System Boot",
+      "Ultra Speed Backup",
+      "Universal Software Bridge"
+    ],
+    "answer": 0
+  },
+  {
+    "category": "Technologie",
+    "question": "Was ist Cloud-Computing?",
+    "options": [
+      "Lokale Datenspeicherung",
+      "IT-Dienste über Internet",
+      "WLAN-Verbindung",
+      "Datenverschlüsselung"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Technologie",
+    "question": "Was ist eine Firewall?",
+    "options": [
+      "Virenschutz",
+      "Netzwerksicherheitssystem",
+      "Datensicherung",
+      "WLAN-Router"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Technologie",
+    "question": "Was ist Kryptografie?",
+    "options": [
+      "Datenkomprimierung",
+      "Daten zu unlesbarem Code",
+      "Datenübertragung",
+      "Datenspeicherung"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Technologie",
+    "question": "Wofür steht SSD?",
+    "options": [
+      "Solid State Drive",
+      "Super Speed Disk",
+      "Secure Storage Device",
+      "Standard System Drive"
+    ],
+    "answer": 0
+  },
+  {
+    "category": "Technologie",
+    "question": "Was ist maschinelles Lernen?",
+    "options": [
+      "Roboterprogrammierung",
+      "KI lernt aus Daten",
+      "Auto-Softwareinstall",
+      "Netzwerkoptimierung"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Technologie",
+    "question": "Was ist ein Netzwerkprotokoll?",
+    "options": [
+      "Hardware-Stecker",
+      "Kommunikationsregelwerk",
+      "Betriebssystem",
+      "Verschlüsselungskey"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Technologie",
+    "question": "Was ist Git?",
+    "options": [
+      "Programmiersprache",
+      "Datenbank",
+      "Versionskontrollsystem",
+      "Texteditor"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Technologie",
+    "question": "Was ist eine relationale Datenbank?",
+    "options": [
+      "Verknüpfte Tabellen",
+      "Dokumentenbasiert",
+      "Netzwerkdatenbank",
+      "Hierarchisch"
+    ],
+    "answer": 0
+  },
+  {
+    "category": "Technologie",
+    "question": "Was ist ein API?",
+    "options": [
+      "Benutzeroberfläche",
+      "Softwareschnittstelle",
+      "Datenbankformat",
+      "Sicherheitsprotokoll"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Technologie",
+    "question": "Wofür steht WLAN?",
+    "options": [
+      "Wide Local Area Network",
+      "Wireless Local Area Network",
+      "Wired LAN Access Node",
+      "Web Local Access Network"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Technologie",
+    "question": "Was ist ein Compiler?",
+    "options": [
+      "Texteditor",
+      "Quellcode zu Maschinencode",
+      "Browser-Plugin",
+      "Datenbanksystem"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Technologie",
+    "question": "Was ist Phishing?",
+    "options": [
+      "Viren verbreiten",
+      "Passwort-Diebstahl",
+      "Netzwerküberwachung",
+      "Software-Update"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Technologie",
+    "question": "Wie viele Bit hat ein Byte?",
+    "options": [
+      "4",
+      "8",
+      "16",
+      "32"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Technologie",
+    "question": "Was ist ein Server?",
+    "options": [
+      "Stellt Dienste bereit",
+      "Netzwerkdrucker",
+      "Mobilgerät",
+      "Eingabegerät"
+    ],
+    "answer": 0
+  },
+  {
+    "category": "Technologie",
+    "question": "Was ist OOP?",
+    "options": [
+      "Objekte und Klassen",
+      "Übertragungsprotokoll",
+      "Datenbankdesign",
+      "Netzwerkarchitektur"
+    ],
+    "answer": 0
+  },
+  {
+    "category": "Technologie",
+    "question": "Was ist ein Kernel?",
+    "options": [
+      "Benutzeroberfläche",
+      "Kern des Betriebssystems",
+      "Netzwerktreiber",
+      "Speicherverwaltung"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Technologie",
+    "question": "Was ist HTTPS?",
+    "options": [
+      "Gesichertes HTTP",
+      "E-Mail-Protokoll",
+      "Dateiübertragung",
+      "DNS-Protokoll"
+    ],
+    "answer": 0
+  },
+  {
+    "category": "Technologie",
+    "question": "Was ist Binärcode?",
+    "options": [
+      "Hexadezimal",
+      "Basis-2-System",
+      "ASCII-Zeichensatz",
+      "Verschlüsselung"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Technologie",
+    "question": "Was ist Virtualisierung?",
+    "options": [
+      "Virtuelle HW auf phys. HW",
+      "Drahtlose Übertragung",
+      "Datenkompression",
+      "Cloudbackup"
+    ],
+    "answer": 0
+  },
+  {
+    "category": "Technologie",
+    "question": "Was ist ein Trojaner?",
+    "options": [
+      "Open-Source-Tool",
+      "Getarnte Schadsoftware",
+      "Hardwarefehler",
+      "Netzwerkangriff"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Technologie",
+    "question": "Was ist SQL?",
+    "options": [
+      "Web-Programmiersprache",
+      "Datenbankabfragesprache",
+      "Betriebssystem",
+      "Netzwerkprotokoll"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Technologie",
+    "question": "Was macht ein DNS-Server?",
+    "options": [
+      "Domain zu IP zuordnen",
+      "E-Mails versenden",
+      "Daten speichern",
+      "Pakete filtern"
+    ],
+    "answer": 0
+  },
+  {
+    "category": "Technologie",
+    "question": "Was ist das Darknet?",
+    "options": [
+      "Firmennetzwerk",
+      "Nur per Spezialsoftware erreichbar",
+      "5G-Testnetz",
+      "Satelliteninternet"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Technologie",
+    "question": "Was ist eine MAC-Adresse?",
+    "options": [
+      "Router-IP",
+      "Hardware-Netzwerkkennung",
+      "WLAN-Passwort",
+      "Betriebssystem-ID"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Technologie",
+    "question": "Was ist ein Buffer Overflow?",
+    "options": [
+      "Zu viele Tabs",
+      "Pufferüberlauf",
+      "Festplatte voll",
+      "Netzwerküberlastung"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Technologie",
+    "question": "Was ist Agile Entwicklung?",
+    "options": [
+      "Schnelles Coden",
+      "Iterativer Prozess",
+      "Dokumentationsprozess",
+      "Monolith-Architektur"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Technologie",
+    "question": "Was ist DevOps?",
+    "options": [
+      "Neues Betriebssystem",
+      "Entwicklung+Betrieb vereint",
+      "Datenbankmanagement",
+      "Netzwerkprotokoll"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Technologie",
+    "question": "Was ist ein Load Balancer?",
+    "options": [
+      "Stromverteiler",
+      "Lastverteilung auf Server",
+      "Netzwerkkabel",
+      "Datenbankoptimierer"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Technologie",
+    "question": "Was ist IoT?",
+    "options": [
+      "Soziales Netzwerk",
+      "Vernetzte phys. Geräte",
+      "Cloud-Speicher",
+      "Quantencomputer"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Technologie",
+    "question": "Was ist REST?",
+    "options": [
+      "Relationale DB",
+      "Architektur für Webdienste",
+      "Grafikprotokoll",
+      "Sicherheitsprotokoll"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Technologie",
+    "question": "Was ist Blockchain?",
+    "options": [
+      "Bilddatenbank",
+      "Dezentrale Datenstruktur",
+      "Verschlüsselungsalgo",
+      "Betriebssystem"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Technologie",
+    "question": "Was bedeutet Open Source?",
+    "options": [
+      "Kostenlos",
+      "Öffentl. Quellcode",
+      "Browser-Anwendung",
+      "Cloud-Dienst"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Technologie",
+    "question": "Was ist Docker?",
+    "options": [
+      "Physischer Server",
+      "Virtuelle Laufzeitumgebung",
+      "Datenbankformat",
+      "Netzwerksegment"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Technologie",
+    "question": "Was ist Latenz?",
+    "options": [
+      "Übertragungsrate",
+      "Verzögerungszeit",
+      "Paketverlust",
+      "Bandbreite"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Technologie",
+    "question": "Was ist ein Hash?",
+    "options": [
+      "Datenbankindex",
+      "Feste Ausgabe der Hashfunktion",
+      "Schlüssel",
+      "Komprimierungsformat"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Technologie",
+    "question": "Was ist ein Interrupt?",
+    "options": [
+      "Absturzsignal",
+      "CPU-Unterbrechungssignal",
+      "Netzwerkfehler",
+      "Speicherzugriff"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Technologie",
+    "question": "Wofür steht RAID?",
+    "options": [
+      "Remote Access Interface",
+      "Redundant Array of Indep. Disks",
+      "Rapid App Integration",
+      "Resource Alloc. Index"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Technologie",
+    "question": "Was ist ein Subnetz?",
+    "options": [
+      "Teil eines Netzwerks",
+      "Eigene WLAN-Frequenz",
+      "DNS-Unterdomäne",
+      "Firewall-Regel"
+    ],
+    "answer": 0
+  },
+  {
+    "category": "Technologie",
+    "question": "Was ist ein Thread?",
+    "options": [
+      "Schleifenanweisung",
+      "Ausführungsstrang",
+      "Datenbankverbindung",
+      "Netzwerkprotokoll"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Technologie",
+    "question": "Was ist NAT?",
+    "options": [
+      "Netzwerkadressübersetzung",
+      "Datenbanknorm",
+      "Verschlüsselung",
+      "Routing-Protokoll"
+    ],
+    "answer": 0
+  },
+  {
+    "category": "Technologie",
+    "question": "Was ist ein Proxy-Server?",
+    "options": [
+      "Mittler zu Internet",
+      "Datenbankserver",
+      "Virenschutz",
+      "DHCP-Ersatz"
+    ],
+    "answer": 0
+  },
+  {
+    "category": "Technologie",
+    "question": "Was ist TLS?",
+    "options": [
+      "Textformat",
+      "Verschlüsselungsprotokoll",
+      "Dateiübertragung",
+      "Datenbanksprache"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Sport",
+    "question": "Spielerzahl Fußball (Feld)?",
+    "options": [
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Sport",
+    "question": "Sportart mit Slam Dunk?",
+    "options": [
+      "Volleyball",
+      "Basketball",
+      "Tennis",
+      "Baseball"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Sport",
+    "question": "Ringe auf der olympischen Flagge?",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Sport",
+    "question": "Dauer Fußballspiel regulär?",
+    "options": [
+      "80 Min",
+      "90 Min",
+      "100 Min",
+      "120 Min"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Sport",
+    "question": "Stadt der ersten modernen Olympischen Spiele?",
+    "options": [
+      "Paris",
+      "London",
+      "Athen",
+      "Berlin"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Sport",
+    "question": "Spielerzahl Basketball (Feld)?",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Sport",
+    "question": "Sportart bei Wimbledon?",
+    "options": [
+      "Squash",
+      "Badminton",
+      "Tennis",
+      "Tischtennis"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Sport",
+    "question": "Gewinnsets Herren-Tennis (Grand Slam)?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Sport",
+    "question": "Was ist eine Regatta?",
+    "options": [
+      "Fußballturnier",
+      "Schwimmrennen",
+      "Ruder-/Segelrennen",
+      "Radrennen"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Sport",
+    "question": "Sportart mit Birdie und Eagle?",
+    "options": [
+      "Tennis",
+      "Golf",
+      "Badminton",
+      "Bogenschießen"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Sport",
+    "question": "Sportart mit Hat-Trick?",
+    "options": [
+      "Basketball",
+      "Eishockey/Fußball",
+      "Volleyball",
+      "Rugby"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Sport",
+    "question": "Höhe eines Basketballkorbs?",
+    "options": [
+      "2,75 m",
+      "3,05 m",
+      "3,35 m",
+      "3,65 m"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Sport",
+    "question": "Meiste Olympia-Goldmedaillen aller Zeiten?",
+    "options": [
+      "Carl Lewis",
+      "Usain Bolt",
+      "Michael Phelps",
+      "L. Latynina"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Sport",
+    "question": "Was ist ein KO beim Boxen?",
+    "options": [
+      "Kampfpause",
+      "Regelverstoß",
+      "10-Sek.-Niederschlag",
+      "Aufgabe"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Sport",
+    "question": "Sportart mit Zeitstrafe?",
+    "options": [
+      "Fußball",
+      "Eishockey",
+      "Basketball",
+      "Tennis"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Sport",
+    "question": "Spielerzahl Volleyball (Feld)?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Sport",
+    "question": "Was ist ein Penalty im Fußball?",
+    "options": [
+      "Freistoß Mittellinie",
+      "Elfmeter",
+      "Platzverweis",
+      "Einwurf"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Sport",
+    "question": "Champions-League-Rekordsieger?",
+    "options": [
+      "FC Barcelona",
+      "FC Bayern",
+      "AC Milan",
+      "Real Madrid"
+    ],
+    "answer": 3
+  },
+  {
+    "category": "Sport",
+    "question": "Punkte für einen Touchdown?",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Sport",
+    "question": "Was ist ein Ace beim Tennis?",
+    "options": [
+      "Punkt ohne Bodenkontakt",
+      "Aufschlag unberührt",
+      "Aufschlagfehler",
+      "Einstandsvorteil"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Sport",
+    "question": "Ältester bekanntester Marathon?",
+    "options": [
+      "Berlin",
+      "New York",
+      "Boston",
+      "London"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Sport",
+    "question": "Unterschied Judo vs. Karate?",
+    "options": [
+      "Kein Unterschied",
+      "Judo=Werfen, Karate=Schläge",
+      "Karate=Kontakt, Judo nicht",
+      "Verschiedene Länder"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Sport",
+    "question": "Spielerzahl Rugby Union?",
+    "options": [
+      "11",
+      "13",
+      "15",
+      "17"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Sport",
+    "question": "Was ist Dribbling?",
+    "options": [
+      "Sprung über Gegner",
+      "Ball führen",
+      "Distanzschuss",
+      "Einwurf"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Sport",
+    "question": "Was ist Biathlon?",
+    "options": [
+      "Schwimmen+Rad",
+      "Langlauf+Schießen",
+      "Ski+Snowboard",
+      "Laufen+Bogen"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Sport",
+    "question": "Wer hält den 100m-Weltrekord?",
+    "options": [
+      "A. Powell",
+      "J. Gatlin",
+      "Usain Bolt",
+      "T. Gay"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Sport",
+    "question": "Was ist die Libero-Position?",
+    "options": [
+      "Stürmer Fußball",
+      "Abwehrspez. Volleyball",
+      "Mittelfeld Basketball",
+      "Torwart Handball"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Sport",
+    "question": "Wie oft finden Olympische Spiele statt?",
+    "options": [
+      "Alle 2 Jahre",
+      "Alle 3 Jahre",
+      "Alle 4 Jahre",
+      "Alle 5 Jahre"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Sport",
+    "question": "Was ist ein Grand Slam im Tennis?",
+    "options": [
+      "Einzelturniersieg",
+      "Alle 4 Majors im Jahr",
+      "Sieg ohne Satzverlust",
+      "10 Titel in Folge"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Sport",
+    "question": "Sportart mit Florett?",
+    "options": [
+      "Ringen",
+      "Fechten",
+      "Bogenschießen",
+      "Fünfkampf"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Sport",
+    "question": "Was bedeutet Abseits im Fußball?",
+    "options": [
+      "Ball im Aus",
+      "Stürmer hinter Verteidiger",
+      "Unerlaubtes Foul",
+      "Handspiel Torwart"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Sport",
+    "question": "Sportart mit Scrum?",
+    "options": [
+      "American Football",
+      "Rugby",
+      "Feldhockey",
+      "Handball"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Sport",
+    "question": "Spielerzahl Handball (Feld)?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Sport",
+    "question": "Was ist ein Doppelfehler beim Tennis?",
+    "options": [
+      "Doppelte Ballberührung",
+      "Zwei Aufschlagfehler",
+      "Fehler an zwei Stellen",
+      "Netz beim Aufschlag"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Sport",
+    "question": "Erste Fußball-WM?",
+    "options": [
+      "1926",
+      "1930",
+      "1934",
+      "1938"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Sport",
+    "question": "Sportart mit Puck?",
+    "options": [
+      "Polo",
+      "Korbball",
+      "Eishockey",
+      "Lacrosse"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Sport",
+    "question": "Was ist der Zehnkampf?",
+    "options": [
+      "10 Leichtathletik-Disziplinen",
+      "10 Sportarten gemischt",
+      "10er-Staffellauf",
+      "Triathlon 10km"
+    ],
+    "answer": 0
+  },
+  {
+    "category": "Sport",
+    "question": "Olympische Disziplin seit 1896?",
+    "options": [
+      "Fußball",
+      "Leichtathletik",
+      "Basketball",
+      "Volleyball"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Sport",
+    "question": "Was ist ein Startblock beim Schwimmen?",
+    "options": [
+      "Startpodest",
+      "Sprungblock",
+      "Startplattform",
+      "Startsteg"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Sport",
+    "question": "Was ist ein Salchow?",
+    "options": [
+      "Pirouette",
+      "Sprung vom Innenring",
+      "Hebefigur",
+      "Schrittfolge"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Sport",
+    "question": "Was ist ein Velodrom?",
+    "options": [
+      "Schwimmhalle",
+      "Radrennbahn",
+      "Eisschnelllaufbahn",
+      "Rollhockeyhalle"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Sport",
+    "question": "Distanz olympischer Triathlon?",
+    "options": [
+      "500m/20km/5km",
+      "750m/20km/5km",
+      "1500m/40km/10km",
+      "3800m/180km/42km"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Sport",
+    "question": "Was bewertet die Haltungsnote beim Skispringen?",
+    "options": [
+      "Anlaufhaltung",
+      "Flug- und Landungsstil",
+      "Gewichtsprüfung",
+      "Sprungweite"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Sport",
+    "question": "Spielerzahl Wasserball?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Sport",
+    "question": "Was ist ein Bogey beim Golf?",
+    "options": [
+      "1 unter Par",
+      "Genau Par",
+      "1 über Par",
+      "2 über Par"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Sport",
+    "question": "Was ist eine Halfpipe?",
+    "options": [
+      "Wasserrohr",
+      "Halbzylindrische Rampe",
+      "Leichtathletikgerät",
+      "Schwimmbahn"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Sport",
+    "question": "Wo findet die Tour de France statt?",
+    "options": [
+      "Belgien",
+      "Spanien",
+      "Frankreich",
+      "Schweiz"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Sport",
+    "question": "Was ist Sparring?",
+    "options": [
+      "Wettkampf",
+      "Trainingsübungskampf",
+      "Aufwärmübung",
+      "Taktikbesprechung"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Sport",
+    "question": "Spielerzahl American Football (Feld)?",
+    "options": [
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Sport",
+    "question": "Was ist Sumo?",
+    "options": [
+      "Japanischer Ringkampf",
+      "Japanisches Schwert",
+      "Japanische Kampfkunst",
+      "Japanisches Brettspiel"
+    ],
+    "answer": 0
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "OSI-Schicht für physische Bitübertragung?",
+    "options": [
+      "Vermittlung",
+      "Sicherung",
+      "Bitübertragung",
+      "Transport"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Was ist Amortisation?",
+    "options": [
+      "Schulden abzahlen",
+      "Investition rechnet sich",
+      "Steuerliche Abschreibung",
+      "Gewinnverteilung"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Was ist RAID 1?",
+    "options": [
+      "Striping",
+      "Parität",
+      "Spiegelung",
+      "Doppelparität"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Min. Plattenanzahl für RAID 5?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "CIA in der IT-Sicherheit?",
+    "options": [
+      "Computer Intelligence",
+      "Confidentiality, Integrity, Availability",
+      "Cyber Incident Analysis",
+      "Central IT Admin"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Ziel der DSGVO?",
+    "options": [
+      "E-Commerce-Förderung",
+      "Schutz personenbez. Daten",
+      "Softwarelizenzen",
+      "Cybersicherheitsstandards"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Welcher DSGVO-Grundsatz bindet Daten an den Zweck?",
+    "options": [
+      "Datenminimierung",
+      "Zweckbindung",
+      "Speicherbegrenzung",
+      "Rechtmäßigkeit"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Was ist ein VPN?",
+    "options": [
+      "Virtuelles Privatnetzwerk",
+      "Virenscanner",
+      "Datenbankprogramm",
+      "WLAN-Verstärker"
+    ],
+    "answer": 0
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Was beschreibt EVA?",
+    "options": [
+      "Eingabe-Verarbeitung-Ausgabe",
+      "Entwicklung-Validierung-Anpassung",
+      "Entwurf-Verifikation-Abnahme",
+      "Erfassung-Verwaltung-Analyse"
+    ],
+    "answer": 0
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Was ist ein Pflichtenheft?",
+    "options": [
+      "Kundenwünsche",
+      "Umsetzungsbeschreibung",
+      "Projektstrukturplan",
+      "Testprotokoll"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Was ist ein Lastenheft?",
+    "options": [
+      "Techn. Spezifikation",
+      "Anforderungsdokument",
+      "Testplan",
+      "Benutzerhandbuch"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Was bedeutet Datenminimierung?",
+    "options": [
+      "Keine Datenspeicherung",
+      "Nur nötige Daten erfassen",
+      "Alle Daten verschlüsseln",
+      "Nach 30 Tagen löschen"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Was ist ein Gateway?",
+    "options": [
+      "WLAN-Antenne",
+      "Verbindung zw. Netzen",
+      "Paketfilter",
+      "DNS-Server"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Unterschied TCP vs. UDP?",
+    "options": [
+      "Kein Unterschied",
+      "TCP verbindungsorientiert, UDP nicht",
+      "UDP ist sicherer",
+      "TCP ist schneller"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Was macht ein DHCP-Server?",
+    "options": [
+      "IP-Adressen vergeben",
+      "Webseiten cachen",
+      "Domains auflösen",
+      "Pakete filtern"
+    ],
+    "answer": 0
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Was ist eine Subnetzmaske?",
+    "options": [
+      "Netzwerkpasswort",
+      "Trennt Netz- und Hostanteil",
+      "Firewall-Regel",
+      "Routing-Protokoll"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Was ist Virtualisierung?",
+    "options": [
+      "Cloud-Backup",
+      "Virtuelle HW auf phys. HW",
+      "Datenverschlüsselung",
+      "Fernwartung"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Was macht ein Switch?",
+    "options": [
+      "Verbindet Netze (L3)",
+      "Verbindet Geräte im LAN (L2)",
+      "WLAN-Verteiler",
+      "Paketfilter"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Was macht ein Router?",
+    "options": [
+      "Pakete zw. Netzen weiterleiten",
+      "Geräte im LAN verbinden",
+      "Drahtlose Basisstation",
+      "IP-Adressen vergeben"
+    ],
+    "answer": 0
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Unterschied LAN vs. WAN?",
+    "options": [
+      "Kein Unterschied",
+      "LAN lokal, WAN weiträumig",
+      "WAN ist schneller",
+      "LAN ist drahtlos"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Was ist Interoperabilität?",
+    "options": [
+      "Systeme arbeiten zusammen",
+      "Ausfallsicherheit",
+      "Datenschutz",
+      "Programmierbarkeit"
+    ],
+    "answer": 0
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Was ist das OSI-Modell?",
+    "options": [
+      "Sicherheitsnorm",
+      "7-Schichten-Referenzmodell",
+      "Programmierstandard",
+      "Hardwarenorm"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "OSI-Schicht für End-zu-End?",
+    "options": [
+      "Sitzung",
+      "Netzwerk",
+      "Transport",
+      "Darstellung"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Was ist RAID 0?",
+    "options": [
+      "Spiegelung",
+      "Striping ohne Redundanz",
+      "Parität",
+      "Kombination"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Was ist eine USV?",
+    "options": [
+      "Notstromaggregat",
+      "Kurzzeit-Stromüberbrückung",
+      "Überspannungsschutz",
+      "Netzteilverstärker"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Was ist ein Ticket-System?",
+    "options": [
+      "Eintrittsverwaltung",
+      "IT-Anfragen verwalten",
+      "Abrechnungssystem",
+      "Netzwerkmonitor"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Was ist Scrum?",
+    "options": [
+      "Wasserfallmodell",
+      "Agiles Vorgehensmodell",
+      "Testmethode",
+      "Netzwerkprotokoll"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Was ist ein Sprint in Scrum?",
+    "options": [
+      "Schnelles Debuggen",
+      "Fester Entwicklungszeitraum",
+      "Codereview",
+      "Release-Prozess"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Was ist ein Use Case?",
+    "options": [
+      "Benutzerhandbuch",
+      "Nutzer-System-Interaktion",
+      "Datenbankschema",
+      "Netzwerkdiagramm"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Was ist UML?",
+    "options": [
+      "Modellierungssprache",
+      "Netzwerkprotokoll",
+      "Datenbanksprache",
+      "Betriebssystemstandard"
+    ],
+    "answer": 0
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Was ist ein Gantt-Diagramm?",
+    "options": [
+      "Organigramm",
+      "Netzwerkplan",
+      "Projektbalkendiagramm",
+      "Flussdiagramm"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Was ist das Wasserfallmodell?",
+    "options": [
+      "Agiles Modell",
+      "Sequenzielles Phasenmodell",
+      "Iteratives Testen",
+      "Notfallplan"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Was ist eine ACL?",
+    "options": [
+      "Benutzerliste",
+      "Zugriffssteuerungsliste",
+      "Dateisystemrecht",
+      "Passwortrichtlinie"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Was ist 2FA?",
+    "options": [
+      "Zwei Passwörter",
+      "Zwei Authentifizierungsmethoden",
+      "Biometrie allein",
+      "Sicherheitsfrage"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Was ist Social Engineering?",
+    "options": [
+      "IT-Optimierung",
+      "Menschen manipulieren",
+      "Netzwerkangriff",
+      "Viren verbreiten"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Was ist das Need-to-Know-Prinzip?",
+    "options": [
+      "Alle bekommen alles",
+      "Nur nötige Zugriffsrechte",
+      "Daten sind öffentlich",
+      "Admins bekommen alles"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "IPv4 vs. IPv6?",
+    "options": [
+      "32-Bit vs. 128-Bit",
+      "Gleich, andere Protokolle",
+      "IPv6 ist veraltet",
+      "IPv4 hat mehr Adressen"
+    ],
+    "answer": 0
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Was ist ein Default Gateway?",
+    "options": [
+      "DNS-Server",
+      "Router für unbekannte Ziele",
+      "DHCP-Endpunkt",
+      "Netzwerk-Switch"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Was ist Datensparsamkeit?",
+    "options": [
+      "Keine Datenspeicherung",
+      "Nur nötige Daten erheben",
+      "Daten sichern",
+      "Daten anonymisieren"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Was ist ein Proof of Concept?",
+    "options": [
+      "Endprodukt",
+      "Machbarkeitsprototyp",
+      "Testbericht",
+      "Benutzerhandbuch"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Was sind Betroffenenrechte laut DSGVO?",
+    "options": [
+      "Rechte der Behörden",
+      "Rechte der betroffenen Person",
+      "Rechte von Unternehmen",
+      "Rechte von Admins"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Topologie mit höchster Ausfallsicherheit?",
+    "options": [
+      "Bus",
+      "Stern",
+      "Ring",
+      "Vermascht"
+    ],
+    "answer": 3
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Was ist ein SLA?",
+    "options": [
+      "Softwarelizenz",
+      "Servicegarantie-Vertrag",
+      "Sicherheitsrichtlinie",
+      "Datenschutzerklärung"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Was ist ein Backup-Konzept?",
+    "options": [
+      "Netzwerkplan",
+      "Datensicherungsstrategie",
+      "Virenschutzplan",
+      "Adminhandbuch"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Was ist ein Thin Client?",
+    "options": [
+      "Leistungsstarker PC",
+      "Serverabhängiges Endgerät",
+      "Mobilgerät",
+      "Router"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Was bedeutet Availability im CIA-Dreieck?",
+    "options": [
+      "Keine Veränderung",
+      "Nur Befugte haben Zugang",
+      "Jederzeit verfügbar",
+      "Verschlüsselt"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Was ist eine Sterntopologie?",
+    "options": [
+      "Alle direkt verbunden",
+      "Alles über Zentralknoten",
+      "Ringförmig verbunden",
+      "Hierarchisch"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Was ist ein Domänencontroller?",
+    "options": [
+      "Router",
+      "Zentrale Benutzerverwaltung",
+      "Firewall",
+      "DNS-Server"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Was ist VLAN?",
+    "options": [
+      "Virtuelles LAN",
+      "Drahtloses Netz",
+      "VPN-Variante",
+      "Subnetztyp"
+    ],
+    "answer": 0
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Was ist ein Betriebskonzept?",
+    "options": [
+      "Marketingplan",
+      "Dokumentation IT-Betrieb",
+      "Angebot",
+      "Netzwerkplan"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Prüfung (AP1)",
+    "question": "Min. Plattenanzahl für RAID 10?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Gesetzliche Grundlage des BR?",
+    "options": [
+      "BGB",
+      "BetrVG",
+      "HGB",
+      "ArbSchG"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Ab wie vielen AN kann BR gegründet werden?",
+    "options": [
+      "3",
+      "5",
+      "10",
+      "20"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Amtszeit des Betriebsrats?",
+    "options": [
+      "2 Jahre",
+      "3 Jahre",
+      "4 Jahre",
+      "5 Jahre"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Was ist das Mitbestimmungsrecht?",
+    "options": [
+      "Allein entscheiden",
+      "Zustimmung bei Entscheidungen",
+      "Bucheinsicht",
+      "Einstellungen vornehmen"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Was ist das Anhörungsrecht?",
+    "options": [
+      "Entscheidungen blockieren",
+      "AG hört BR vor Kündigung",
+      "Tarifverträge schließen",
+      "Befragungen starten"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Was ist ein Interessenausgleich?",
+    "options": [
+      "Gehaltsausgleich",
+      "Einigung über Betriebsänderung",
+      "Urlaubsplan",
+      "Schichtplan"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Was ist ein Sozialplan?",
+    "options": [
+      "Sozialversicherungsplan",
+      "Abmilderung wirtschaftl. Nachteile",
+      "Betriebsausflug",
+      "Kantinenkosten"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Wer wählt den Betriebsrat?",
+    "options": [
+      "Nur Vollzeit",
+      "Alle Arbeitnehmer ab 18",
+      "Nur Gewerkschaftsmitgl.",
+      "Der Vorstand"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Mitbestimmung bei Überstunden?",
+    "options": [
+      "Nein",
+      "Ja",
+      "Nur über 10 Std./Woche",
+      "Nur tarifgebunden"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Was ist Tendenzschutz?",
+    "options": [
+      "Kündigungsschutz BR",
+      "Eingeschr. Mitbestimmung",
+      "Geheimhaltungspflicht",
+      "Betriebsschutz"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Kann BR-Mitglied wegen BR-Tätigkeit gekündigt werden?",
+    "options": [
+      "Ja, jederzeit",
+      "Nein, Kündigungsschutz",
+      "Nur mit Gewerkschaft",
+      "Ja, 6 Monate Frist"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Was ist eine Betriebsvereinbarung?",
+    "options": [
+      "Mündliche Absprache",
+      "Schriftliche AG-BR-Einigung",
+      "Tarifvertrag",
+      "Arbeitsvertrag"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Zuständiges Gremium für Konzerne?",
+    "options": [
+      "Gesamtbetriebsrat",
+      "Betriebsausschuss",
+      "Konzernbetriebsrat",
+      "Aufsichtsrat"
+    ],
+    "answer": 2
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Unterschied GBR und KBR?",
+    "options": [
+      "Kein Unterschied",
+      "GBR=Unternehmen, KBR=Konzern",
+      "KBR=Unternehmen, GBR=Konzern",
+      "GBR=International"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Wie oft wirtschaftliche Info an BR?",
+    "options": [
+      "Jährlich",
+      "Monatlich",
+      "Quartalsweise",
+      "Bei Bedarf"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Was ist das Widerspruchsrecht?",
+    "options": [
+      "Kündigung verhindern",
+      "BR widerspricht, MA bleibt",
+      "BR muss zustimmen",
+      "Kein Recht"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Mitbestimmung bei Kurzarbeit?",
+    "options": [
+      "Nein",
+      "Ja, Zustimmung nötig",
+      "Nur über 6 Monate",
+      "Nur über 50 Betroffene"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Was ist das Initiativrecht?",
+    "options": [
+      "Wahlen ausrufen",
+      "Verhandlungen erzwingen",
+      "Einstellungen vornehmen",
+      "Gesetze vorschlagen"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Wann findet die BR-Wahl statt?",
+    "options": [
+      "Alle 2 J. Frühjahr",
+      "Alle 4 J. März-Mai",
+      "Jährl. im Januar",
+      "Alle 5 J. Herbst"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Darf BR Personalakten einsehen?",
+    "options": [
+      "Jederzeit",
+      "Nur mit MA-Zustimmung",
+      "Gar nicht",
+      "Nur Vorsitzender"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Wer trägt die BR-Kosten?",
+    "options": [
+      "Arbeitnehmer",
+      "Arbeitgeber",
+      "Gewerkschaft",
+      "Geteilt"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Mitbestimmung bei Versetzungen?",
+    "options": [
+      "Nein",
+      "Ja",
+      "Nur andere Bundesländer",
+      "Nur über 3 Monate"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Was ist die Schweigepflicht des BR?",
+    "options": [
+      "Nie mit MA sprechen",
+      "Betriebsgeheimnisse wahren",
+      "Keine Protokolle",
+      "Keine Beratung"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Mitbestimmung bei Arbeitsplatzgestaltung?",
+    "options": [
+      "Kein Recht",
+      "Menschengerechte Gestaltung",
+      "Nur Ergonomie",
+      "Nur Neueinrichtungen"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Was ist ein Einigungsstellenverfahren?",
+    "options": [
+      "Gerichtsverfahren",
+      "Außergerichtl. AG-BR-Einigung",
+      "Schiedsgericht",
+      "Tarifverhandlung"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Kann der BR Streiks organisieren?",
+    "options": [
+      "Ja, Kernaufgabe",
+      "Nein, Gewerkschaftsaufgabe",
+      "Nur Warnstreiks",
+      "Mit AG-Genehmigung"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Mitbestimmung bei Berufsbildung?",
+    "options": [
+      "Kein Recht",
+      "Ja, bei betrieblicher Bildung",
+      "Nur extern",
+      "Nur Pflichtfortbildungen"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Was ist erzwingbare Mitbestimmung?",
+    "options": [
+      "AG erzwingen",
+      "Einigungsstelle entscheidet",
+      "BR-Beschlüsse umsetzen",
+      "MA erzwingen"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Mitbestimmung bei Videoüberwachung?",
+    "options": [
+      "Nein",
+      "Ja, Datenschutz berührt",
+      "Nur außen",
+      "Nur bei Diebstahl"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Unterschied Mitbestimmung vs. Mitwirkung?",
+    "options": [
+      "Kein Unterschied",
+      "Mitbest.=Zustimmung, Mitwirk.=Info",
+      "Mitwirkung stärker",
+      "Nur für GBR"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Was ist eine Betriebsversammlung?",
+    "options": [
+      "Aktionärsversammlung",
+      "BR informiert alle MA",
+      "Managementrunde",
+      "Tarifverhandlung"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Mindesthäufigkeit Betriebsversammlungen?",
+    "options": [
+      "Monatlich",
+      "Quartalsweise",
+      "Halbjährlich",
+      "Jährlich"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Was ist das Beschäftigungssicherungsrecht?",
+    "options": [
+      "Keine Entlassungen",
+      "BR schlägt Alternativen vor",
+      "BR bestimmt Abbau",
+      "BR schliesst Verträge"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Was ist ein Wirtschaftsausschuss?",
+    "options": [
+      "Buchhaltung",
+      "BR-Infogremium ab 100 MA",
+      "Vorstand",
+      "Steuerberatung"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Darf BR während Arbeitszeit tagen?",
+    "options": [
+      "Nein",
+      "Ja, AG trägt Kosten",
+      "Nur einmal/Monat",
+      "Nur mit AG-Genehmigung"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Was ist das Benachteiligungsverbot?",
+    "options": [
+      "Keine Vorteile",
+      "Weder Benachteil. noch Vorteil",
+      "Autom. höheres Gehalt",
+      "Keine Schichten"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "BR-Rolle bei neuen Technologien?",
+    "options": [
+      "Keine Rolle",
+      "Mitbest. bei Überwachungstechnik",
+      "Allein einführen",
+      "Nur Beratung"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Was ist die Freistellung von BR-Mitgliedern?",
+    "options": [
+      "Mehr Arbeit",
+      "Ab best. Größe freigestellt",
+      "Nur Vorsitzender",
+      "Nur Ausnahmen"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Mitbestimmung bei Urlaubsgrundsätzen?",
+    "options": [
+      "Nein",
+      "Ja, bei Urlaubsplanung",
+      "Nur Reihenfolge",
+      "Nur über 200 MA"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Wann erlischt ein BR-Amt?",
+    "options": [
+      "Nur Amtsablauf",
+      "Ablauf, Niederlegung oder Abberufung",
+      "Durch Kündigung",
+      "Nur Mitarbeiterbeschluss"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Unterschied Tarifvertrag vs. Betriebsvereinbarung?",
+    "options": [
+      "Kein Unterschied",
+      "TV=Gewerkschaft+AGV, BV=AG+BR",
+      "BV ist übergeordnet",
+      "TV nur öffentl. Dienst"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Was ist das Günstigkeitsprinzip?",
+    "options": [
+      "Günstigstes Gesetz gilt",
+      "Günstigere Regelung für MA",
+      "AG wählt günstigste",
+      "BV geht immer vor"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Mitbestimmung bei Arbeitszeit?",
+    "options": [
+      "Nein",
+      "Ja, bei Beginn/Ende/Pausen",
+      "Nur Schichtarbeit",
+      "Nur Teilzeit"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Wer ist Arbeitnehmer laut BetrVG?",
+    "options": [
+      "Nur Vollzeit",
+      "Alle inkl. Azubis außer leit. Ang.",
+      "Nur Unbefristete",
+      "Nur Sozialversicherungspfl."
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Was ist vertrauensvolle Zusammenarbeit?",
+    "options": [
+      "Immer einer Meinung",
+      "Zum Wohl von MA und Betrieb",
+      "BR ohne Rechte",
+      "AG hat letztes Wort"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Welche Kündigung braucht BR-Anhörung?",
+    "options": [
+      "Nur Massenentlassungen",
+      "Jede Kündigung",
+      "Nur fristlose",
+      "Nur Langzeitbeschaeftigte"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Was regelt § 87 BetrVG?",
+    "options": [
+      "Kündigungsschutz",
+      "Erzwingbare Mitbestimmung",
+      "Betriebsratswahl",
+      "Betriebsvereinbarung"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Was ist ein Betriebsübergang?",
+    "options": [
+      "Standortwechsel",
+      "Betrieb auf neuen Inhaber",
+      "Fusionierung",
+      "Insolvenz"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Gilt ein Tarifvertrag für alle?",
+    "options": [
+      "Nur Gewerkschaftsmitgl.",
+      "Alle im Geltungsbereich",
+      "Nur unbefristet",
+      "Nur Vollzeit"
+    ],
+    "answer": 1
+  },
+  {
+    "category": "Betriebsrat",
+    "question": "Was ist das Mitbestimmungsrecht bei Einstellungen?",
+    "options": [
+      "BR stellt selbst ein",
+      "BR kann Zustimmung verweigern",
+      "Kein Mitbestimmungsrecht",
+      "Nur leit. Angestellte"
+    ],
+    "answer": 1
+  }
 ]

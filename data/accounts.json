@@ -20,11 +20,13 @@
   "Robin": {
     "password_hash": "287782ef42356ef3d6551590f1ef0117b71d876df0f9b3eb58d088864770c74c",
     "created_at": "2026-06-09 10:28",
-    "total_score": 43,
-    "games_played": 1,
+    "total_score": 148,
+    "games_played": 2,
     "achievements": [
       "first_game",
-      "perfect_game"
+      "perfect_game",
+      "century",
+      "quiz_master"
     ]
   }
 }

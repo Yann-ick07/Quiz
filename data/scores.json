@@ -1,6 +1,13 @@
 [
   {
     "name": "Robin",
+    "score": 105,
+    "category": "Prüfung (AP1)",
+    "mode": "solo",
+    "date": "2026-06-12 09:10"
+  },
+  {
+    "name": "Robin",
     "score": 43,
     "category": "Technology",
     "mode": "time_attack",
