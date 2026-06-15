@@ -2772,7 +2772,7 @@
     "answer": 0
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "OSI-Schicht für physische Bitübertragung?",
     "options": [
       "Vermittlung",
@@ -2783,7 +2783,7 @@
     "answer": 2
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Was ist Amortisation?",
     "options": [
       "Schulden abzahlen",
@@ -2794,7 +2794,7 @@
     "answer": 1
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Was ist RAID 1?",
     "options": [
       "Striping",
@@ -2805,7 +2805,7 @@
     "answer": 2
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Min. Plattenanzahl für RAID 5?",
     "options": [
       "2",
@@ -2816,7 +2816,7 @@
     "answer": 1
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "CIA in der IT-Sicherheit?",
     "options": [
       "Computer Intelligence",
@@ -2827,7 +2827,7 @@
     "answer": 1
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Ziel der DSGVO?",
     "options": [
       "E-Commerce-Förderung",
@@ -2838,7 +2838,7 @@
     "answer": 1
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Welcher DSGVO-Grundsatz bindet Daten an den Zweck?",
     "options": [
       "Datenminimierung",
@@ -2849,7 +2849,7 @@
     "answer": 1
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Was ist ein VPN?",
     "options": [
       "Virtuelles Privatnetzwerk",
@@ -2860,7 +2860,7 @@
     "answer": 0
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Was beschreibt EVA?",
     "options": [
       "Eingabe-Verarbeitung-Ausgabe",
@@ -2871,7 +2871,7 @@
     "answer": 0
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Was ist ein Pflichtenheft?",
     "options": [
       "Kundenwünsche",
@@ -2882,7 +2882,7 @@
     "answer": 1
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Was ist ein Lastenheft?",
     "options": [
       "Techn. Spezifikation",
@@ -2893,7 +2893,7 @@
     "answer": 1
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Was bedeutet Datenminimierung?",
     "options": [
       "Keine Datenspeicherung",
@@ -2904,7 +2904,7 @@
     "answer": 1
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Was ist ein Gateway?",
     "options": [
       "WLAN-Antenne",
@@ -2915,7 +2915,7 @@
     "answer": 1
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Unterschied TCP vs. UDP?",
     "options": [
       "Kein Unterschied",
@@ -2926,7 +2926,7 @@
     "answer": 1
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Was macht ein DHCP-Server?",
     "options": [
       "IP-Adressen vergeben",
@@ -2937,7 +2937,7 @@
     "answer": 0
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Was ist eine Subnetzmaske?",
     "options": [
       "Netzwerkpasswort",
@@ -2948,7 +2948,7 @@
     "answer": 1
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Was ist Virtualisierung?",
     "options": [
       "Cloud-Backup",
@@ -2959,7 +2959,7 @@
     "answer": 1
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Was macht ein Switch?",
     "options": [
       "Verbindet Netze (L3)",
@@ -2970,7 +2970,7 @@
     "answer": 1
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Was macht ein Router?",
     "options": [
       "Pakete zw. Netzen weiterleiten",
@@ -2981,7 +2981,7 @@
     "answer": 0
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Unterschied LAN vs. WAN?",
     "options": [
       "Kein Unterschied",
@@ -2992,7 +2992,7 @@
     "answer": 1
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Was ist Interoperabilität?",
     "options": [
       "Systeme arbeiten zusammen",
@@ -3003,7 +3003,7 @@
     "answer": 0
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Was ist das OSI-Modell?",
     "options": [
       "Sicherheitsnorm",
@@ -3014,7 +3014,7 @@
     "answer": 1
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "OSI-Schicht für End-zu-End?",
     "options": [
       "Sitzung",
@@ -3025,7 +3025,7 @@
     "answer": 2
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Was ist RAID 0?",
     "options": [
       "Spiegelung",
@@ -3036,7 +3036,7 @@
     "answer": 1
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Was ist eine USV?",
     "options": [
       "Notstromaggregat",
@@ -3047,7 +3047,7 @@
     "answer": 1
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Was ist ein Ticket-System?",
     "options": [
       "Eintrittsverwaltung",
@@ -3058,7 +3058,7 @@
     "answer": 1
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Was ist Scrum?",
     "options": [
       "Wasserfallmodell",
@@ -3069,7 +3069,7 @@
     "answer": 1
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Was ist ein Sprint in Scrum?",
     "options": [
       "Schnelles Debuggen",
@@ -3080,7 +3080,7 @@
     "answer": 1
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Was ist ein Use Case?",
     "options": [
       "Benutzerhandbuch",
@@ -3091,7 +3091,7 @@
     "answer": 1
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Was ist UML?",
     "options": [
       "Modellierungssprache",
@@ -3102,7 +3102,7 @@
     "answer": 0
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Was ist ein Gantt-Diagramm?",
     "options": [
       "Organigramm",
@@ -3113,7 +3113,7 @@
     "answer": 2
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Was ist das Wasserfallmodell?",
     "options": [
       "Agiles Modell",
@@ -3124,7 +3124,7 @@
     "answer": 1
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Was ist eine ACL?",
     "options": [
       "Benutzerliste",
@@ -3135,7 +3135,7 @@
     "answer": 1
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Was ist 2FA?",
     "options": [
       "Zwei Passwörter",
@@ -3146,7 +3146,7 @@
     "answer": 1
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Was ist Social Engineering?",
     "options": [
       "IT-Optimierung",
@@ -3157,7 +3157,7 @@
     "answer": 1
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Was ist das Need-to-Know-Prinzip?",
     "options": [
       "Alle bekommen alles",
@@ -3168,7 +3168,7 @@
     "answer": 1
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "IPv4 vs. IPv6?",
     "options": [
       "32-Bit vs. 128-Bit",
@@ -3179,7 +3179,7 @@
     "answer": 0
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Was ist ein Default Gateway?",
     "options": [
       "DNS-Server",
@@ -3190,7 +3190,7 @@
     "answer": 1
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Was ist Datensparsamkeit?",
     "options": [
       "Keine Datenspeicherung",
@@ -3201,7 +3201,7 @@
     "answer": 1
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Was ist ein Proof of Concept?",
     "options": [
       "Endprodukt",
@@ -3212,7 +3212,7 @@
     "answer": 1
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Was sind Betroffenenrechte laut DSGVO?",
     "options": [
       "Rechte der Behörden",
@@ -3223,7 +3223,7 @@
     "answer": 1
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Topologie mit höchster Ausfallsicherheit?",
     "options": [
       "Bus",
@@ -3234,7 +3234,7 @@
     "answer": 3
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Was ist ein SLA?",
     "options": [
       "Softwarelizenz",
@@ -3245,7 +3245,7 @@
     "answer": 1
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Was ist ein Backup-Konzept?",
     "options": [
       "Netzwerkplan",
@@ -3256,7 +3256,7 @@
     "answer": 1
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Was ist ein Thin Client?",
     "options": [
       "Leistungsstarker PC",
@@ -3267,7 +3267,7 @@
     "answer": 1
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Was bedeutet Availability im CIA-Dreieck?",
     "options": [
       "Keine Veränderung",
@@ -3278,7 +3278,7 @@
     "answer": 2
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Was ist eine Sterntopologie?",
     "options": [
       "Alle direkt verbunden",
@@ -3289,7 +3289,7 @@
     "answer": 1
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Was ist ein Domänencontroller?",
     "options": [
       "Router",
@@ -3300,7 +3300,7 @@
     "answer": 1
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Was ist VLAN?",
     "options": [
       "Virtuelles LAN",
@@ -3311,7 +3311,7 @@
     "answer": 0
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Was ist ein Betriebskonzept?",
     "options": [
       "Marketingplan",
@@ -3322,7 +3322,7 @@
     "answer": 1
   },
   {
-    "category": "Prüfung (AP1)",
+    "category": "Prüfung",
     "question": "Min. Plattenanzahl für RAID 10?",
     "options": [
       "2",

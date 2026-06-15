@@ -8,6 +8,13 @@
   },
   {
     "name": "Robin",
+    "score": 65,
+    "category": "Betriebsrat",
+    "mode": "solo",
+    "date": "2026-06-15 10:03"
+  },
+  {
+    "name": "Robin",
     "score": 43,
     "category": "Technology",
     "mode": "time_attack",
