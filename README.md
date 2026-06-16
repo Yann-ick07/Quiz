@@ -18,7 +18,11 @@ python main.py h   # Hilfe
 
 # Alle Tests ausführen
 python tests.py
+```
 
+## Sequenzdiagramm
+
+```text
 Entwickler        GitHub         GitHub Actions      Runner (Ubuntu)
     |               |                  |                   |
     | git push      |                  |                   |
@@ -34,7 +38,11 @@ Entwickler        GitHub         GitHub Actions      Runner (Ubuntu)
     |               |                  | Ergebnis zurück   |
     |<--------------|                  |                   |
     | Ergebnis sehen|                  |                   |
+```
 
+## Klassendiagramm
+
+```mermaid
 classDiagram
 
     class Player {
@@ -126,9 +134,12 @@ classDiagram
     app_Flask   ..> achievements     : uses
 
     AccountManager ..> achievements  : uses
+```
+
+## Achievements
 
 | Icon | Name | Bedingung |
-| --- | --- | --- |
+|------|------|-----------|
 | 🎮 | First Steps | Erstes Spiel abschließen |
 | 🏆 | Perfect Mind | Alle Fragen richtig |
 | ⚡ | Speed Demon | 3 Fragen unter 3 Sekunden |
@@ -137,12 +148,17 @@ classDiagram
 | 🎖 | Veteran | 10 Spiele gespielt |
 | 🧠 | Quiz Master | 80% Genauigkeit (mind. 5 Fragen) |
 
+## Punkte-System
+
 | Ereignis | Punkte |
-| --- | --- |
+|----------|--------|
 | Richtige Antwort | +10 |
 | Speed Bonus (< 5s) | +0 bis +5 |
 | Falsche Antwort | 0 |
 
+## Team-Organisation im Scrum
+
+```text
 ==========================
 Leon = Developer
 ----------------
@@ -173,19 +189,15 @@ Aufgaben:
 
 Hinweis:
 Da es sich um ein kleines Projektteam handelt, übernehmen alle Teammitglieder zusätzlich Entwicklungsaufgaben und unterstützen sich gegenseitig bei Tests, Dokumentation und Qualitätssicherung.
+```
 
 ## User Stories
 
-1. Als Spieler möchte ich verschiedene Kategorien auswählen können, damit ich genau das Thema spielen kann, das mich interessiert.
-
-2. Als User möchte ich mich mit meinem Benutzernamen und Passwort registrieren können, damit ich beim nächsten Besuch wieder auf meinen Punktestand und meine Spielhistorie zugreifen kann.
-
-3. Als User möchte ich mich mit meinem Benutzernamen und Passwort einloggen können, damit ich meine Spielhistorie einsehen kann.
-
-4. Als Spieler möchte ich am Ende eines Spiels eine Rangliste sehen, damit ich einen Anreiz habe, mich zu verbessern und mich mit Freunden vergleichen kann.
-
-5. Als Spieler möchte ich das Spiel über den Browser spielen können, damit ich es auch ohne Terminal unterwegs nutzen kann.
-
-6. Als Spieler möchte ich einen Schwierigkeitsgrad auswählen können, damit ich das Quiz individuell an mein Wissen anpassen kann.
-
-7. Als Admin möchte ich über ein einfaches Web-Backend neue Quizfragen oder Kategorien hinzufügen können, damit die
+1. Als Spieler möchte ich verschiedene Kategorien auswählen können, damit ich genau das Thema spielen kann, das mich interessiert.  
+2. Als User möchte ich mich mit meinem Benutzernamen und Passwort registrieren können, damit ich beim nächsten Besuch wieder auf meinen Punktestand und meine Spielhistorie zugreifen kann.  
+3. Als User möchte ich mich mit meinem Benutzernamen und Passwort einloggen können, damit ich meine Spielhistorie einsehen kann.  
+4. Als Spieler möchte ich am Ende eines Spiels eine Rangliste sehen, damit ich einen Anreiz habe, mich zu verbessern und mich mit Freunden vergleichen kann.  
+5. Als Spieler möchte ich das Spiel über den Browser spielen können, damit ich es auch ohne Terminal unterwegs nutzen kann.  
+6. Als Spieler möchte ich einen Schwierigkeitsgrad auswählen können, damit ich das Quiz individuell an mein Wissen anpassen kann.  
+7. Als Admin möchte ich über ein einfaches Web-Backend neue Quizfragen oder Kategorien hinzufügen können, damit die Datenbank ohne Code erweitert werden kann.  
+8. Als Spieler möchte ich einen Online-Mehrspieler-Modus nutzen können, damit ich gegen Freunde um den Sieg spielen kann.  
