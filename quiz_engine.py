@@ -80,7 +80,9 @@ class QuizEngine:
 
         for idx, question in enumerate(questions, 1):
             print(f"\n── Question {idx}/{len(questions)} ──")
-            self._ask_question(question)
+            answered = self._ask_question(question)
+            if not answered:
+                break  # Ctrl+C wurde gedrückt – Schleife sauber beenden
 
     # ── Time-Attack-Modus ─────────────────────────────────────────────────────
 
@@ -104,7 +106,7 @@ class QuizEngine:
             print(f"\n── Question {idx} | ⏱  {remaining:.0f}s remaining ──")
             answered = self._ask_question(question, time_limit=remaining)
             if not answered:
-                break  # Zeit lief während der Eingabe ab
+                break  # Zeit lief während der Eingabe ab oder Ctrl+C
 
         print("\n⏰  Time's up!")
 
@@ -141,7 +143,7 @@ class QuizEngine:
         elapsed = time.time() - start_time
 
         if answer is None:
-            return False  # Timeout oder Abbruch
+            return False  # Ctrl+C oder Timeout
 
         if answer == "q":
             print("\nQuitting current game...")
@@ -175,21 +177,26 @@ class QuizEngine:
         Liest eine Eingabe von der Konsole und gibt sie normalisiert zurück.
 
         Akzeptiert: A/B/C/D (Buchstaben) und 1/2/3/4 (Zahlen, werden umgewandelt).
-        Gibt None zurück, wenn der Spieler "q" eingibt oder die Zeit abläuft.
+        Gibt None zurück bei Ctrl+C oder ungültigem Timeout.
 
         Args:
             time_limit: Nicht direkt genutzt (Eingabe blockiert), aber für
                         zukünftige non-blocking Eingabe vorbereitet
 
         Returns:
-            Kleinbuchstabe "a"-"d", "h" oder "q", oder None bei Timeout
+            Kleinbuchstabe "a"-"d", "h" oder "q", oder None bei Abbruch
         """
         valid_choices = {"a", "b", "c", "d", "1", "2", "3", "4", "h", "q"}
         number_map = {"1": "a", "2": "b", "3": "c", "4": "d"}
         prompt = "\nYour answer (A/B/C/D, h=help, q=quit): "
 
         while True:
-            answer = input(prompt).strip().lower()
+            try:
+                answer = input(prompt).strip().lower()
+            except KeyboardInterrupt:
+                print("\n\nSpiel abgebrochen.")
+                return None
+
             if not answer:
                 continue  # Leere Eingabe ignorieren
 
