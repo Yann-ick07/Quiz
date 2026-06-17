@@ -54,7 +54,11 @@ def show_banner():
 def get_player_name() -> str:
     """Prompt the player for their name."""
     while True:
-        name = input("Enter your name (or press Enter for 'Anonymous'): ").strip()
+        try:
+            name = input("Enter your name (or press Enter for 'Anonymous'): ").strip()
+        except KeyboardInterrupt:
+            print("\n\nGoodbye!\n")
+            sys.exit(0)
         if not name:
             return "Anonymous"
         if len(name) <= 20:
@@ -72,7 +76,11 @@ def select_category(db: QuestionDB) -> str:
     print("  0. Random (mixed categories)")
 
     while True:
-        choice = input("\nSelect a category (0 to mix): ").strip()
+        try:
+            choice = input("\nSelect a category (0 to mix): ").strip()
+        except KeyboardInterrupt:
+            print("\n\nReturning to menu.\n")
+            return None
         if choice == "0":
             return "random"
         if choice.isdigit() and 1 <= int(choice) <= len(categories):
@@ -87,7 +95,11 @@ def select_game_mode() -> str:
     print("  2. Time Attack (as many as possible in 60 seconds)")
 
     while True:
-        choice = input("\nSelect mode: ").strip()
+        try:
+            choice = input("\nSelect mode: ").strip()
+        except KeyboardInterrupt:
+            print("\n\nReturning to menu.\n")
+            return None
         if choice == "1":
             return "solo"
         if choice == "2":
@@ -98,7 +110,12 @@ def select_game_mode() -> str:
 def play_game(player: Player, db: QuestionDB, leaderboard: Leaderboard):
     """Run a full game session."""
     category = select_category(db)
+    if category is None:
+        return  # Ctrl+C während Kategorienwahl
+
     mode = select_game_mode()
+    if mode is None:
+        return  # Ctrl+C während Modusauswahl
 
     print(f"\nGet ready, {player.name}! Starting in 3...")
     for i in (2, 1):
@@ -139,7 +156,11 @@ def main():
         print("  3. Help")
         print("  4. Quit")
 
-        choice = input("\nYour choice: ").strip().lower()
+        try:
+            choice = input("\nYour choice: ").strip().lower()
+        except KeyboardInterrupt:
+            print("\n\nThanks for playing BrainBuster! Goodbye!\n")
+            break
 
         if choice == "h" or choice == "3":
             show_help()
